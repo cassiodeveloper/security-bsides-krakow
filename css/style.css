@@ -6851,7 +6851,11 @@ display:table;
 }
 
 .sponsor-logo {
-	width: 200px;
+	width: 250px;
+}
+
+.sponsor-logo-small {
+	width: 150px;
 }
 /* ================================================== */
 /* R E S P O N S I V E */
