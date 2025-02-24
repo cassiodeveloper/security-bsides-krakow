@@ -23,6 +23,12 @@
     <!-- color scheme -->
 	<link rel="stylesheet" href="css/colors/magenta.css" type="text/css" id="colors">
 
+    <!-- RS5.0 Stylesheet -->
+    <link rel="stylesheet" href="revolution/css/settings.css" type="text/css">
+    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css">
+    <link rel="stylesheet" href="revolution/css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
+	
 	<!-- custom font -->
 	<link rel="stylesheet" href="css/font-style.css" type="text/css">
 </head>
@@ -122,36 +128,169 @@
 
         <!-- content begin -->
         <div id="content" class="no-bottom no-top">
-				
-			<!-- parallax section -->
-            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.jpg) fixed top center" data-stellar-background-ratio=".2">
-                <div id="particles-js"></div>
-				<div class="center-y text-center z-index1000">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div id="defaultCountdown" class="countdown-s1"></div>
-								<div class="spacer-single"></div>
-								<h1 class="title-3">
-									Creative Design<br>Expo <span class="id-color">2024</span>
-								</h1>
-								
-								<div class="spacer-single"></div>
-								<div class="d-lg-flex justify-content-center">
+
+            <!-- revolution slider begin -->
+            <section id="section-hero" class="fullwidthbanner-container" aria-label="section-slider" data-bgcolor="#101010">
+                <div id="slider-revolution">
+                    <ul>
+                        <li data-transition="random-premium" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+							<img alt="" class="rev-slidebg" data-bgparallax="0" src="images/slider/wide1.jpg">
+                        </li>
+						
+						<li data-transition="random-premium" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+							<img alt="" class="rev-slidebg" data-bgparallax="0" src="images/slider/wide2.jpg">
+                        </li>
+
+                    </ul>
+					
+					<div style="" class="tp-static-layers">
+                            <div
+                                class="text-center tp-caption size-28 font-weight-bold text-white tp-static-layer"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0']"
+                                data-y="['top','top','top','top']"
+                                data-voffset="['185']"
+                                data-lineheight="['90','90','90','90']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-startslide="0"
+                                data-endslide="3"
+                                data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                            >
+                                <span class="id-color-2">January 20, 2024</span>
+                            </div>
+							
+                            <div
+                                class="text-center tp-caption size-84 font-weight-bold text-white tp-static-layer"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0']"
+                                data-y="['center','center','center','center']"
+                                data-lineheight="['90','90','90','90']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-startslide="0"
+                                data-endslide="3"
+                                data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                            >
+                                Creative Design<br>
+								Expo 2024
+                            </div>
+							
+							
+							<div
+                                class="text-center tp-caption size-20 text-white tp-static-layer"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0']"
+                                data-y="['top','top','top','top']"
+                                data-voffset="['430']"
+                                data-lineheight="['90','90','90','90']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-startslide="0"
+                                data-endslide="3"
+                                data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                            >
+                                
+                                <div class="spacer-single"></div>
+                                    <div class="d-lg-flex justify-content-center sm-hide">
                                         <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-calendar-check-o id-color"></i>January 20th to 25th</div>
                                         <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-user id-color"></i>12 Speakers</div>
                                         <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-map-marker id-color"></i>Palo Alto, California</div>
                                     </div>
-								<div class="spacer-single"></div>
-								
-								<a href="#section-ticket" class="btn-custom text-white scroll-to">Get Ticket</a>
-							</div>
+                            </div>
+
+                            
+                            <div
+                                class="tp-caption tp-static-layer"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0']"
+                                data-y="['top','top','top','top']"
+                                data-voffset="['506']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                                data-type="button"
+                                
+                                data-responsive_offset="on"
+                                data-responsive="off"
+                                data-startslide="0"
+                                data-endslide="3"
+                                data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(255, 255, 255, 0.15);bw:2px 2px 2px 2px;"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[12,12,12,12]"
+                                data-paddingright="[20,20,20,20]"
+                                data-paddingbottom="[12,12,12,12]"
+                                data-paddingleft="[20,20,20,20]"
+                            >
+                                <a href="#section-ticket" class="btn-custom text-white scroll-to">Get Ticket</a>
+                            </div>
+							
+							<div
+                                class="tp-caption tp-static-layer"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0']"
+                                data-y="['top','top','top','top']"
+                                data-voffset="['506']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                                data-type="button"
+                                
+                                data-responsive_offset="on"
+                                data-responsive="off"
+                                data-startslide="0"
+                                data-endslide="3"
+                                data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(255, 255, 255, 0.15);bw:2px 2px 2px 2px;"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[12,12,12,12]"
+                                data-paddingright="[20,20,20,20]"
+                                data-paddingbottom="[12,12,12,12]"
+                                data-paddingleft="[20,20,20,20]"
+                            >
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <!-- revolution slider close -->
+			
+			<section id="section-countdown" aria-label="section" class="gradient-to-right pt40 pb40">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<div class="spacer-single"></div>
+							<div id="defaultCountdown"></div>
 						</div>
 					</div>
 				</div>
-            </section>
-            <!-- section close -->
+			</section>
 			
+			<!-- section begin -->
 			<section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat">
 				<div class="wm wm-border dark wow fadeInDown">welcome</div>
                     <div class="container">
@@ -171,8 +310,8 @@
 							<div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
                                 <div class="de-images">
 									<img class="di-small wow fadeIn" src="images/misc/2.jpg" alt="">
-									<img class="di-small-2" src="images/misc/3.jpg" alt="">
-									<img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/misc/1.jpg" alt="">
+									<img class="di-small-2 wow fadeIn" src="images/misc/3.jpg" alt="">
+									<img class="di-big img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/misc/1.jpg" alt="">
 								</div>
                             </div>
 
@@ -918,7 +1057,7 @@
             <!-- section close -->
 			
 			<!-- section begin -->
-            <section id="section-testimonials" aria-label="section" class="text-light">
+            <section id="section-testimonials" class="text-light" aria-label="section">
 				<div class="wm wm-border dark wow fadeInDown">testimonials</div>
                 <div class="container">
                     <div class="row">
@@ -1094,44 +1233,44 @@
             </section>
             <!-- logo carousel section close -->
 			
-			<section id="section-fun-facts" class="jarallax text-light">
+		    <section id="section-fun-facts" class="jarallax text-light">
                 <img src="images/bg/3.jpg" class="jarallax-img" alt="">
                 <div class="container">
-						<div class="row">
-                            <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count" >
-                                    <i class="icon_id-2 id-color-2"></i>
-                                    <h3>8800</h3>
-                                    <span class="text-white">Participants</span>
-                                </div>
+					<div class="row">
+                        <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="de_count" >
+                                <i class="icon_id-2 id-color-2"></i>
+                                <h3>8800</h3>
+                                <span class="text-white">Participants</span>
                             </div>
+                        </div>
 
-                            <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count">
-                                    <i class="icon_easel id-color-2"></i>
-                                    <h3>300</h3>
-                                    <span class="text-white">Topics</span>
-                                </div>
+                        <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="de_count">
+                                <i class="icon_easel id-color-2"></i>
+                                <h3>300</h3>
+                                <span class="text-white">Topics</span>
                             </div>
+                        </div>
 
-                            <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count">
-                                    <i class="icon_headphones id-color-2"></i>
-                                    <h3>50</h3>
-                                    <span class="text-white">Speakers</span>
-                                </div>
+                        <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="de_count">
+                                <i class="icon_headphones id-color-2"></i>
+                                <h3>50</h3>
+                                <span class="text-white">Speakers</span>
                             </div>
+                        </div>
 
-                            <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count">
-                                    <i class="icon_globe id-color-2"></i>
-                                    <h3>20</h3>
-                                    <span class="text-white">Awards</span>
-                                </div>
+                        <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="de_count">
+                                <i class="icon_globe id-color-2"></i>
+                                <h3>20</h3>
+                                <span class="text-white">Awards</span>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
 
             <!-- footer begin -->
@@ -1205,9 +1344,51 @@
     <script src="js/designesia.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/countdown-custom.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/particles-settings.js"></script>
-    
+
+    <!-- RS5.0 Core JS Files -->
+    <script src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+
+    <!-- RS5.0 Extensions Files -->
+    <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            // revolution slider
+            jQuery("#slider-revolution").revolution({
+                sliderType: "standard",
+                sliderLayout: "fullwidth",
+                delay: 5000,
+                navigation: {
+                    arrows: {
+                        enable: true
+                    },
+                    bullets: {
+                        enable: false,
+                        style: 'hermes'
+                    },
+
+                },
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                },
+                spinner: "off",
+                gridwidth: 1140,
+                gridheight: 700,
+                disableProgressBar: "on"
+            });
+        });
+    </script>
 	
 	</body>
 
