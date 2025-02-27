@@ -1,0 +1,6 @@
+Sitemap: https://bsideskrakow.pl/sitemap.xml
+
+User-agent: *
+Disallow: /css
+Disallow: /fonts
+Disallow: /js
