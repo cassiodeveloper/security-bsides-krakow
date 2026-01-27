@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "title": "BSides Kraków Meetups",
+        "timezone": "Europe/Warsaw",
+        "updatedAt": "2026-01-27"
+    },
+    "meetups": [
+        {
+            "id": "2026-01-28-january-meetup",
+            "title": "Hello World!",
+            "date": "2026-01-28",
+            "startTime": "17:00",
+            "endTime": "19:00",
+            "venueName": "Commerce Media Tech",
+            "address": "Lubicz 17G 4º floor, 31-503 · Kraków, Poland",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=50.064644%2C%2019.948397",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/311402876/",
+            "theme": " 2026 Kickoff Meetup",
+            "speakers": [
+                {
+                    "name": "Cássio Pereira",
+                    "role": "Host",
+                    "link": "https://www.linkedin.com/in/cassiodeveloper/?locale=en_US"
+                },
+                {
+                    "name": "Fernando Cardoso",
+                    "role": "Host",
+                    "link": "https://www.linkedin.com/in/sfcardoso/"
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:00. Bring ID.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "CM Tech",
+                    "logoUrl": "./images/logo/cmt.png",
+                    "url": "https://cm.tech"
+                }
+            ]
+        }
+    ]
+}

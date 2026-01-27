@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YXMKT406M"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0YXMKT406M');
+        </script>    
+        
+        <meta charset="utf-8">
+        
+        <title>Security BSides Kraków - Meetups</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Security BSides Kraków. BSides Kraków is an Internatinal Information Security conference organized by the local community that aims to promote hacker culture and share knowledge.">
+        <meta name="keywords" content="conference, cyber, security, bsides, blackhat, poland, krakow, event, free, community, hacker, infosec">
+        <meta name="author" content="Cássio Pereira">
+        <meta name="referrer" content="strict-origin">
+        <meta name="robots" content="index,follow">
+
+        <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+        
+        <link rel="canonical" href="https://bsideskrakow.pl/meetups.html" />
+
+        <meta property="og:image" content="https://bsideskakow.pl/images/logo.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bsideskrakow.pl/meetups.html" />
+        <meta property="og:description" content="Security BSides Kraków. BSides Kraków is an Internatinal Information Security conference organized by the local community that aims to promote hacker culture and share knowledge." />
+        <meta property="og:determiner" content="the" />
+        <meta property="og:locale" content="pl_PL" />
+        <meta property="og:site_name" content="BSides Kraków" />
+        <meta property="og:video" content="https://www.youtube.com/watch?v=ZK47SF8XTfA" />  
+
+    <link rel="stylesheet" href="./css/meetup.css" />
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="topbar">
+                <a class="brand" href="./meetups.html">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="BSides Kraków logo" />
+                    </div>
+                </a>
+                <a class="back" href="https://bsideskrakow.pl">← Back to main site</a>
+            </div>
+            <header class="hero">
+            <h1>BSides Kraków Meetups</h1>
+            <p class="sub">
+                Upcoming and past BSides Kraków meetups. To share knowledge all year long.
+                This does not replace the main conference event, but complements it.
+            </p>
+            <div class="metaLine">
+                Data source: <span id="src">meetups.json</span> · Updated: <span id="updated">–</span>
+            </div>
+            </header>
+
+            <main>
+            <section class="section" id="upcomingSection">
+                <div class="sectionTitle">
+                    <h2>Upcoming</h2>
+                    <div class="count" id="upcomingCount">0</div>
+                </div>
+                <div class="list" id="upcomingList"></div>
+                <div class="empty" id="upcomingEmpty" style="display:none">No upcoming meetups. Either the hackers are hibernating or you forgot to update the JSON.</div>
+            </section>
+            <section class="section" id="pastSection">
+                <div class="sectionTitle">
+                    <h2>Past</h2>
+                    <div class="count" id="pastCount">0</div>
+                </div>
+                <div class="list" id="pastList"></div>
+                <div class="empty" id="pastEmpty" style="display:none">No past meetups yet.</div>
+            </section>
+            </main>
+            <footer class="footer">
+                <div><a href="https://bsideskrakow.pl" title="BSides Kraków" target="_blank"><span id="yyyy"></span> Security BSides Kraków</a></div>
+                <div style="font-family: var(--mono);"><a href="https://cassiodeveloper.com.br/en" target="_blank" title="Cássio Pereira">Cássio B. Pereira a.k.a. @cassiodeveloper.</a></div>
+            </footer>
+
+        </div>
+
+        <script src="js/meetup.js"></script>
+    </body>
+</html>
