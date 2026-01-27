@@ -47,6 +47,11 @@
                     "name": "CM Tech",
                     "logoUrl": "./images/logo/cmt.png",
                     "url": "https://cm.tech"
+                },
+                {
+                    "name": "AI Security Engineers / DevSecCon Community",
+                    "logoUrl": "./images/logo/DSC.avif",
+                    "url": "https://snyk.io/community/chapters/"
                 }
             ]
         }
