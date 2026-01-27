@@ -54,6 +54,99 @@
                     "url": "https://snyk.io/community/chapters/"
                 }
             ]
+        },
+        {
+            "id": "2026-02-25-february-meetup",
+            "title": "Offensive night!",
+            "date": "2026-02-25",
+            "startTime": "17:00",
+            "endTime": "19:00",
+            "venueName": "Yolk Coworking Krakow",
+            "address": "Józefa Sarego 5, 31-047 Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/igi8kwmNh76AcxbM9",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups",
+            "theme": "Offensive Security",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": "TBD"
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Offensive Security",
+                "Red Team"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:00. Bring ID.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "Yolk Coworking Kraków",
+                    "logoUrl": "./images/logo/yolk.png",
+                    "url": "https://yolkfolk.pl/"
+                },
+                {
+                    "name": "Blackhills Information Security",
+                    "logoUrl": "./images/logo/bhs.png",
+                    "url": "https://www.blackhillsinfosec.com/"
+                },
+                {
+                    "name": "Antisyphon Training",
+                    "logoUrl": "./images/logo/antisyphon.png",
+                    "url": "https://www.antisyphontraining.com/"
+                }
+            ]
+        },
+        {
+            "id": "2026-03-25-march-meetup",
+            "title": "Cloud Security Focus",
+            "date": "2026-03-25",
+            "startTime": "17:00",
+            "endTime": "19:00",
+            "venueName": "Heineken",
+            "address": "al. Jana Pawła II 43a, 31-564 Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/PJMXNKvQHoY5tK6z6",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups",
+            "theme": "Cloud Security",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": "TBD"
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Cloud Security"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:00. Bring ID.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "Heineken",
+                    "logoUrl": "./images/logo/heineken.svg",
+                    "url": "https://careers.theheinekencompany.com/PolandHGSS/"
+                }
+            ]
         }
     ]
 }
