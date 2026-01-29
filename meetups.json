@@ -37,6 +37,11 @@
             "status": "scheduled",
             "language": "EN",
             "notes": "Doors open 17:00. Bring ID.",
+            "slides": [
+                {
+                    "url": "./slides/01-26/Slides.pptx"
+                }
+            ],
             "sponsors": [
                 {
                     "name": "Nova8 Cybersecurity",

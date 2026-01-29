@@ -87,6 +87,21 @@ function card(m, now){
     `
     : "";
 
+  const slides = Array.isArray(m.slides) ? m.slides : [];
+  const slidesStack = slides.length
+    ? `
+      <div class="sponsorStack">
+        <div class="sponsorLabel">Download slides</div>
+        <div class="sponsorLogos">
+          ${slides.slice(0, 10).map(s => {
+            const url = safeText(s.url);
+            if(url) return `<a class="btn primary" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Download"}">Download slides</a>`;
+          }).join("")}
+        </div>
+      </div>
+    `
+    : "";    
+
   const regBtn = reg
     ? `<a class="btn primary" href="${reg}" target="_blank" rel="noopener noreferrer">Register now!</a>`
     : `<button class="btn primary" disabled>Register</button>`;
@@ -129,14 +144,15 @@ function card(m, now){
           </div>
         </div>
 
-      <div>
-        <div class="actions">
-          ${regBtn}
-          ${mapBtn}
-          ${icsBtn}
+        <div>
+          <div class="actions">
+            ${regBtn}
+            ${mapBtn}
+            ${icsBtn}
+          </div>
+          ${sponsorStack}
         </div>
-        ${sponsorStack}
-      </div>
+        ${slidesStack}
       </div>
     </article>
   `;
