@@ -147,6 +147,47 @@
                     "url": "https://careers.theheinekencompany.com/PolandHGSS/"
                 }
             ]
+        },
+        {
+            "id": "2026-04-29-april-meetup",
+            "title": "Cloud Security Focus",
+            "date": "2026-04-29",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venueName": "Yolk",
+            "address": "Józefa Sarego 5, 31-047 Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/6eMewApNjYq9f3y48",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/314052279/",
+            "theme": "Humans in InfoSec",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": ""
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Humans in InfoSec"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:30.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "Yolk Coworking Krakow",
+                    "logoUrl": "./images/logo/yolk.png",
+                    "url": "https://yolkfolk.pl/"
+                }
+            ]
         }
     ]
 }
