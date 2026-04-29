@@ -150,7 +150,7 @@
         },
         {
             "id": "2026-04-29-april-meetup",
-            "title": "Cloud Security Focus",
+            "title": "Humans in InfoSec",
             "date": "2026-04-29",
             "startTime": "18:00",
             "endTime": "20:00",
@@ -161,9 +161,9 @@
             "theme": "Humans in InfoSec",
             "speakers": [
                 {
-                    "name": "TBD",
-                    "role": "TBD",
-                    "link": ""
+                    "name": "Cássio B. Pereira",
+                    "role": "Application Security Specialist",
+                    "link": "https://linktr.ee/cassiodeveloper"
                 }
             ],
             "tags": [
