@@ -188,6 +188,47 @@
                     "url": "https://yolkfolk.pl/"
                 }
             ]
+        },
+        {
+            "id": "2026-05-27-may-meetup",
+            "title": "Web & API Security",
+            "date": "2026-05-27",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venueName": "Yolk",
+            "address": "Józefa Sarego 5, 31-047 Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/6eMewApNjYq9f3y48",
+            "registrationUrl": "",
+            "theme": "Web & API Security",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": "TBD"
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Web & API Security"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:30.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "Yolk Coworking Krakow",
+                    "logoUrl": "./images/logo/yolk.png",
+                    "url": "https://yolkfolk.pl/"
+                }
+            ]
         }
     ]
 }
