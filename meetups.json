@@ -229,6 +229,52 @@
                     "url": "https://yolkfolk.pl/"
                 }
             ]
+        },
+        {
+            "id": "2026-06-24-june-meetup",
+            "title": "Underground Hacks",
+            "date": "2026-06-24",
+            "startTime": "17:00",
+            "endTime": "19:00",
+            "venueName": "Radocha",
+            "address": "Swietego Sebastiana, 6, Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/6zWHxtK7Q3nFg3Ad9",
+            "registrationUrl": "",
+            "theme": "Underground Hacks",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": ""
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Underground Hacks"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:00. Bring ID.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "Blackhills Information Security",
+                    "logoUrl": "./images/logo/bhs.png",
+                    "url": "https://www.blackhillsinfosec.com/"
+                },
+                {
+                    "name": "Antisyphon Training",
+                    "logoUrl": "./images/logo/antisyphon.png",
+                    "url": "https://www.antisyphontraining.com/"
+                }
+            ]
         }
     ]
 }
