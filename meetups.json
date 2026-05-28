@@ -239,7 +239,7 @@
             "venueName": "Radocha",
             "address": "Swietego Sebastiana, 6, Kraków, Poland",
             "mapUrl": "https://maps.app.goo.gl/6zWHxtK7Q3nFg3Ad9",
-            "registrationUrl": "",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/314991237/",
             "theme": "Underground Hacks",
             "speakers": [
                 {
@@ -273,6 +273,42 @@
                     "name": "Antisyphon Training",
                     "logoUrl": "./images/logo/antisyphon.png",
                     "url": "https://www.antisyphontraining.com/"
+                }
+            ]
+        },
+        {
+            "id": "2026-07-29-july-meetup",
+            "title": "Summer Hack & BBQ",
+            "date": "2026-07-29",
+            "startTime": "17:00",
+            "endTime": "19:00",
+            "venueName": "TBD",
+            "address": "TBD, Kraków, Poland",
+            "mapUrl": "",
+            "registrationUrl": "",
+            "theme": "Summer Hack & BBQ",
+            "speakers": [
+                {
+                    "name": "TBD",
+                    "role": "TBD",
+                    "link": ""
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Summer Hack & BBQ"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 17:00. Bring ID.",
+            "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
                 }
             ]
         }
