@@ -243,10 +243,15 @@
             "theme": "Underground Hacks",
             "speakers": [
                 {
-                    "name": "TBD",
-                    "role": "TBD",
+                    "name": "Steve Borosh",
+                    "role": "",
                     "link": ""
-                }
+                },
+                {
+                    "name": "Julian B.",
+                    "role": "Senior Penetration Tester",
+                    "link": ""
+                }                
             ],
             "tags": [
                 "Community",
