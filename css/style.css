@@ -4085,9 +4085,23 @@ border:solid 1px #ddd;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
 	}
+
+	#section-speakers .de-team-list{
+		height:360px;
+	}
+
+	#section-speakers .de-team-list .team-pic{
+		height:100%;
+	}
 	
 	.de-team-list img{
 		width:100%;
+	}
+
+	#section-speakers .de-team-list img{
+		height:100%;
+		object-fit:cover;
+		display:block;
 	}
 	
 	.de-team-list .team-desc{
@@ -4101,17 +4115,48 @@ border:solid 1px #ddd;
 		background:#111;
 		color:#ccc;
 	}
+
+	#section-speakers .de-team-list .team-desc{
+		display:flex;
+		flex-direction:column;
+		overflow:hidden;
+		padding:24px;
+		scrollbar-width:thin;
+	}
 	
 	.de-team-list p{
 		clear:both;
+	}
+
+	#section-speakers .de-team-list p{
+		overflow-wrap:break-word;
+	}
+
+	#section-speakers .de-team-list .team-desc > p:not(.lead){
+		flex:1 1 auto;
+		min-height:0;
+		overflow-y:auto;
+		padding-right:4px;
+		margin-bottom:0;
+		scrollbar-width:thin;
 	}
 	
 	.de-team-list .team-desc h3{
 		color:#fff;
 		margin-bottom:5px;
 	}
+
+	#section-speakers .de-team-list .team-desc h3{
+		overflow-wrap:break-word;
+	}
 	
 	.de-team-list .social{
+	}
+
+	#section-speakers .de-team-list .social{
+		flex:0 0 auto;
+		margin-top:10px;
+		padding-top:10px;
 	}
 	
 	.de-team-list .social a{
