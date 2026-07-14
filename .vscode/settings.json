@@ -1,5 +1,6 @@
 {
     "sarif-viewer.connectToGithubCodeScanning": "off",
     "codeQL.githubDatabase.update": "never",
-    "codeQL.githubDatabase.download": "never"
+    "codeQL.githubDatabase.download": "never",
+    "liveServer.settings.port": 5501
 }
