@@ -283,15 +283,15 @@
         },
         {
             "id": "2026-07-29-july-meetup",
-            "title": "Summer Hack & BBQ",
+            "title": "Summer Hack",
             "date": "2026-07-29",
-            "startTime": "17:00",
-            "endTime": "19:00",
-            "venueName": "TBD",
-            "address": "TBD, Kraków, Poland",
-            "mapUrl": "",
-            "registrationUrl": "",
-            "theme": "Summer Hack & BBQ",
+            "startTime": "18:00",
+            "endTime": "20:00",
+            "venueName": "Yolk",
+            "address": "Józefa Sarego 5, 31-047 Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/6eMewApNjYq9f3y48",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/315787979/",
+            "theme": "Summer Hack",
             "speakers": [
                 {
                     "name": "TBD",
@@ -304,17 +304,22 @@
                 "Conference",
                 "Meetup",
                 "Event",
-                "Summer Hack & BBQ"
+                "Summer Hack"
             ],
             "status": "scheduled",
             "language": "EN",
-            "notes": "Doors open 17:00. Bring ID.",
+            "notes": "Doors open 18:00. Bring ID.",
             "sponsors": [
                 {
                     "name": "Nova8 Cybersecurity",
                     "logoUrl": "./images/logo/nova8.png",
                     "url": "http://nova8.pl"
-                }
+                },
+                {
+                    "name": "Yolk Coworking Krakow",
+                    "logoUrl": "./images/logo/yolk.png",
+                    "url": "https://yolkfolk.pl/"
+                }                
             ]
         },
         {
