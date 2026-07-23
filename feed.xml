@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BSides Kraków Blog</title>
+    <link>https://bsideskrakow.pl/blog.html</link>
+    <description>Practical guides, community stories and event updates from BSides Kraków.</description>
+    <language>en</language>
+    <copyright>Copyright 2026 Security BSides Krakow</copyright>
+    <generator>BSides Krakow static blog</generator>
+    <ttl>1440</ttl>
+    <lastBuildDate>Thu, 23 Jul 2026 07:30:00 GMT</lastBuildDate>
+    <atom:link href="https://bsideskrakow.pl/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BSides Kraków 2026: the essential event guide</title>
+      <link>https://bsideskrakow.pl/blog-bsides-krakow-2026-guide.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-bsides-krakow-2026-guide.html</guid>
+      <pubDate>Thu, 23 Jul 2026 07:00:00 GMT</pubDate>
+      <description>Date, venue, tickets, talks, villages and practical details for planning your conference day.</description>
+    </item>
+    <item>
+      <title>Your first BSides conference: a practical guide</title>
+      <link>https://bsideskrakow.pl/blog-first-bsides-conference.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-first-bsides-conference.html</guid>
+      <pubDate>Thu, 23 Jul 2026 07:15:00 GMT</pubDate>
+      <description>How to choose sessions, meet people and enjoy your first community cybersecurity conference.</description>
+    </item>
+    <item>
+      <title>Why community cybersecurity events matter</title>
+      <link>https://bsideskrakow.pl/blog-why-community-security-events-matter.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-why-community-security-events-matter.html</guid>
+      <pubDate>Thu, 23 Jul 2026 07:30:00 GMT</pubDate>
+      <description>How accessible learning, shared practice and local relationships strengthen cybersecurity.</description>
+    </item>
+    <item>
+      <title>Meet all 28 speakers at BSides Kraków 2026</title>
+      <link>https://bsideskrakow.pl/blog-bsides-krakow-2026-speakers.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-bsides-krakow-2026-speakers.html</guid>
+      <pubDate>Sat, 18 Jul 2026 08:00:00 GMT</pubDate>
+      <description>Meet the researchers, builders and practitioners speaking at BSides Kraków 2026.</description>
+    </item>
+    <item>
+      <title>Women Go Tech Village: visibility, careers and connection</title>
+      <link>https://bsideskrakow.pl/blog-village-women-go-tech.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-village-women-go-tech.html</guid>
+      <pubDate>Wed, 08 Jul 2026 07:40:00 GMT</pubDate>
+      <description>Explore a village focused on professional growth, shared experience and an inclusive tech community.</description>
+    </item>
+    <item>
+      <title>Cyber Games Village: learn security by playing it</title>
+      <link>https://bsideskrakow.pl/blog-village-cyber-games.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-village-cyber-games.html</guid>
+      <pubDate>Wed, 24 Jun 2026 12:10:00 GMT</pubDate>
+      <description>Discover collaborative security games built around practice, decision-making and shared learning.</description>
+    </item>
+    <item>
+      <title>AppSec &amp; Red Team Village: where builders meet breakers</title>
+      <link>https://bsideskrakow.pl/blog-village-appsec-red-team.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-village-appsec-red-team.html</guid>
+      <pubDate>Thu, 11 Jun 2026 09:20:00 GMT</pubDate>
+      <description>Explore the practical feedback loop between secure software engineering and offensive testing.</description>
+    </item>
+    <item>
+      <title>Business Village: turning security into better decisions</title>
+      <link>https://bsideskrakow.pl/blog-village-business.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-village-business.html</guid>
+      <pubDate>Fri, 29 May 2026 06:30:00 GMT</pubDate>
+      <description>Connect technical risk with governance, resilience, priorities and security strategy.</description>
+    </item>
+    <item>
+      <title>Meet the sponsors and partners behind BSides Kraków 2026</title>
+      <link>https://bsideskrakow.pl/blog-bsides-krakow-2026-sponsors.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-bsides-krakow-2026-sponsors.html</guid>
+      <pubDate>Thu, 14 May 2026 07:00:00 GMT</pubDate>
+      <description>Meet every organisation helping make BSides Kraków 2026 possible, presented by partnership level.</description>
+    </item>  </channel>
+</rss>
