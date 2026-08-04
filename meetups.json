@@ -328,15 +328,15 @@
             "date": "2026-08-26",
             "startTime": "17:00",
             "endTime": "19:00",
-            "venueName": "TBD",
-            "address": "TBD, Kraków, Poland",
-            "mapUrl": "",
-            "registrationUrl": "",
+            "venueName": "Radocha",
+            "address": "Swietego Sebastiana, 6, Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/6zWHxtK7Q3nFg3Ad9",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/315977403/",
             "theme": "No talks, Just Labs",
             "speakers": [
                 {
-                    "name": "TBD",
-                    "role": "TBD",
+                    "name": "Hermon Kidane",
+                    "role": "Threat Hunting on the Network",
                     "link": ""
                 }
             ],
