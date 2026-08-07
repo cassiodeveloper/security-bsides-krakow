@@ -337,7 +337,7 @@
                 {
                     "name": "Hermon Kidane",
                     "role": "Threat Hunting on the Network",
-                    "link": ""
+                    "link": "https://events.zoom.us/ev/AvnB0c0VCSsPLfhwxJQIPOWII5yj4_wJZp175OSqIjMYbDKqZg0t~ApNJC2wPQQlpcdqo77SQbaMbGzFQMvNualerFzZpq24-5DUxfh7KPb8OiA"
                 }
             ],
             "tags": [
@@ -362,6 +362,47 @@
                     "url": "https://www.antisyphontraining.com/"
                 }
             ]
-        }
+        },
+        {
+            "id": "2026-09-26-september-meetup",
+            "title": "Security BSides Kraków 2026",
+            "date": "2026-09-26",
+            "startTime": "08:00",
+            "endTime": "18:00",
+            "venueName": "AGH University of Science and Technology",
+            "address": "Informatyki, AGH, D-17 - 21 Kawiory 30-055, Kraków, Poland",
+            "mapUrl": "https://maps.app.goo.gl/VXwu29F1TTWsBt8T9",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/316015782/",
+            "theme": "Security BSides Kraków 2026",
+            "speakers": [
+                {
+                    "name": "",
+                    "role": "",
+                    "link": ""
+                }
+            ],
+            "tags": [
+                "Community",
+                "Conference",
+                "Meetup",
+                "Event",
+                "Security BSides Kraków 2026"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "Doors open 08:00. Bring ticket.",
+            "sponsors": [
+                {
+                    "name": "Blackhills Information Security",
+                    "logoUrl": "./images/logo/bhs.png",
+                    "url": "https://www.blackhillsinfosec.com/"
+                },
+                {
+                    "name": "Antisyphon Training",
+                    "logoUrl": "./images/logo/antisyphon.png",
+                    "url": "https://www.antisyphontraining.com/"
+                }
+            ]
+        }        
     ]
 }
