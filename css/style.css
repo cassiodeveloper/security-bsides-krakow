@@ -6597,6 +6597,98 @@ transition:.5s;
 	font-weight:500;
 }
 
+.schedule-item.has-multiple-speakers {
+	display: grid;
+	grid-template-columns: 136px minmax(310px, 390px) minmax(0, 1fr);
+	gap: 24px;
+	align-items: start;
+}
+
+.schedule-item.has-multiple-speakers > div {
+	float: none;
+}
+
+.schedule-item.has-multiple-speakers > .clearfix {
+	display: none;
+}
+
+.schedule-item.has-multiple-speakers .sc-time,
+.schedule-item.has-multiple-speakers .sc-info {
+	width: auto;
+}
+
+.schedule-item.has-multiple-speakers .sc-info {
+	min-width: 0;
+}
+
+.schedule-item.has-multiple-speakers .sc-speakers {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px 16px;
+}
+
+.schedule-item.has-multiple-speakers .sc-speaker {
+	display: grid;
+	grid-template-columns: 64px minmax(0, 1fr);
+	gap: 10px;
+	align-items: center;
+	min-width: 0;
+}
+
+.schedule-item.has-multiple-speakers .sc-speaker img {
+	width: 64px;
+	height: 64px;
+	padding: 4px;
+	object-fit: cover;
+}
+
+.schedule-item.has-multiple-speakers .sc-speaker-details {
+	min-width: 0;
+}
+
+.schedule-item.has-multiple-speakers .sc-speaker h4 {
+	font-size: 14px;
+	line-height: 1.35em;
+	margin: 0 0 3px;
+	overflow-wrap: anywhere;
+}
+
+.schedule-item.has-multiple-speakers .sc-speaker span {
+	display: block;
+	font-size: 11px;
+	line-height: 1.4em;
+	color: var(--primary-color-1);
+	overflow-wrap: anywhere;
+}
+
+@media only screen and (max-width: 991px) {
+	.schedule-item.has-multiple-speakers {
+		grid-template-columns: 112px minmax(0, 1fr);
+	}
+
+	.schedule-item.has-multiple-speakers .sc-info {
+		grid-column: 1 / -1;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.schedule-item.has-multiple-speakers {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.schedule-item.has-multiple-speakers .sc-time,
+	.schedule-item.has-multiple-speakers .sc-info {
+		grid-column: auto;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.schedule-item.has-multiple-speakers .sc-speakers {
+		grid-template-columns: 1fr;
+	}
+}
 #section-trainings .training-actions{
 	display:flex;
 	flex-wrap:wrap;
