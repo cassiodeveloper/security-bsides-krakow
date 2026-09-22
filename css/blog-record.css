@@ -1,0 +1,146 @@
+/* BSides Kraków 2026 sold-out announcement */
+.record-hero {
+  background: radial-gradient(circle at 82% 32%, rgba(240, 90, 103, .38), transparent 24%), linear-gradient(135deg, #0b0b0e, #211217 54%, #721b28);
+}
+
+.record-stamp {
+  border: 3px solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  margin-bottom: 24px;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.milestone-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 38px 0 52px;
+}
+
+.milestone-card {
+  background: #fff;
+  border: 1px solid var(--blog-line);
+  border-top: 4px solid var(--blog-red);
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+  padding: 24px 20px;
+}
+
+.milestone-card strong {
+  color: var(--blog-ink);
+  font-size: 24px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.milestone-card span {
+  color: var(--blog-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.training-post-list {
+  display: grid;
+  gap: 16px;
+  margin: 32px 0 48px;
+}
+
+.article-body .training-post-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--blog-line);
+  border-left: 4px solid var(--blog-red);
+  box-shadow: none;
+  color: var(--blog-ink);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 0;
+  padding: 25px 28px;
+}
+
+.article-body .training-post-card span {
+  color: var(--blog-red);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.article-body .training-post-card h3 {
+  color: var(--blog-ink) !important;
+  font-size: 21px;
+  margin: 0 0 7px;
+}
+
+.article-body .training-post-card p {
+  color: var(--blog-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.article-body .training-post-card > a {
+  border: 1px solid var(--blog-red);
+  color: var(--blog-red-dark);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 13px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.article-body .training-post-card > a:hover,
+.article-body .training-post-card > a:focus-visible {
+  background: var(--blog-red);
+  color: #fff;
+}
+
+.sold-out-label {
+  background: var(--blog-red);
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  margin-bottom: 18px;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.record-cover {
+  background: radial-gradient(circle at 80% 28%, rgba(240, 90, 103, .45), transparent 28%), linear-gradient(135deg, #0c0c0f, #751d2a);
+  gap: 18px;
+}
+
+.record-cover .record-cover-stamp {
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  padding: 9px 14px;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+
+@media (max-width: 991px) {
+  .milestone-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 575px) {
+  .milestone-grid { grid-template-columns: 1fr; }
+  .milestone-card { min-height: 0; }
+  .article-body .training-post-card { grid-template-columns: 1fr; padding: 22px 20px; }
+  .article-body .training-post-card > a { white-space: normal; }
+}

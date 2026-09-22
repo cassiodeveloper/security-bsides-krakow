@@ -309,6 +309,21 @@
   display: block;
   padding: 14px 0;
 }
+.blog-page .article-section .article-sidebar-card a.related-link,
+.blog-page .article-section .article-sidebar-card a.related-link:visited {
+  color: var(--blog-ink) !important;
+}
+
+.blog-page .article-section .article-sidebar-card a.related-link:hover,
+.blog-page .article-section .article-sidebar-card a.related-link:focus-visible {
+  color: var(--blog-red-dark) !important;
+  text-decoration: underline;
+}
+
+.blog-page .article-section .article-sidebar-card a.related-link:focus-visible {
+  outline: 2px solid var(--blog-red);
+  outline-offset: 3px;
+}
 
 .related-link:first-of-type {
   border-top: 0;
