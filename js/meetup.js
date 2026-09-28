@@ -102,9 +102,12 @@ function card(m, now){
     `
     : "";    
 
-  const regBtn = reg
-    ? `<a class="btn primary" href="${reg}" target="_blank" rel="noopener noreferrer">Register now!</a>`
-    : `<button class="btn primary" disabled>Register</button>`;
+  const registrationClosed = !isUpcoming || ["cancelled", "postponed"].includes(m.status);
+  const regBtn = registrationClosed
+    ? `<button class="btn primary" disabled>Registration closed</button>`
+    : reg
+      ? `<a class="btn primary" href="${reg}" target="_blank" rel="noopener noreferrer">Register now!</a>`
+      : `<button class="btn primary" disabled>Registration - SOON</button>`;
 
   const mapBtn = map
     ? `<a class="btn" href="${map}" target="_blank" rel="noopener noreferrer">How to get there</a>`

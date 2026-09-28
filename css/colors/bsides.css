@@ -2,3 +2,36 @@
   --primary-color-1:#be1f2e;
   --secondary-color:#d63e32;
 }
+
+/* Keep unavailable event actions aligned with the navigation links. */
+#mainmenu li > span[aria-disabled="true"] {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 25px 0 25px 20px;
+  line-height: 35px;
+  color: #fff;
+  background: none;
+  cursor: default;
+}
+#mainmenu li li > span[aria-disabled="true"] {
+  display: block;
+  width: 201px;
+  padding: 0 12px;
+  line-height: 30px;
+  color: #ccc;
+}
+header.smaller #mainmenu > li > span[aria-disabled="true"] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media (max-width: 992px) {
+  #mainmenu li > span[aria-disabled="true"],
+  header.smaller #mainmenu > li > span[aria-disabled="true"] {
+    display: block;
+    width: auto;
+    padding: 10px 0;
+    text-align: left;
+  }
+}
