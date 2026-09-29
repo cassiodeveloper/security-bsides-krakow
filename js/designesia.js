@@ -1173,7 +1173,7 @@ jQuery(document).ready(function () {
 
         jQuery("#mainmenu a, #homepage nav a, .scroll-to, #mo-menu a").click(function (evn) {
 
-            if (this.href.indexOf('#') != -1) {
+            if (this.hash && this.pathname === window.location.pathname && this.hostname === window.location.hostname) {
                 evn.preventDefault();
                 jQuery('html,body').scrollTo(this.hash, this.hash);
             }
