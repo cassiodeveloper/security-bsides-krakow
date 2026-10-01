@@ -35,3 +35,12 @@ header.smaller #mainmenu > li > span[aria-disabled="true"] {
     text-align: left;
   }
 }
+
+/* Hacker Club guide: allow the descriptive submenu label to fit. */
+#mainmenu .club-nav-item > ul { width: 280px; }
+#mainmenu .club-nav-item > ul > li > a { width: 280px; white-space: normal; }
+#mainmenu .club-nav-item:focus-within > ul { visibility: visible; opacity: 1; }
+@media (max-width: 992px) {
+    #mainmenu .club-nav-item > ul,
+    #mainmenu .club-nav-item > ul > li > a { width: 100%; }
+}

@@ -17,6 +17,7 @@
     var names = ['Classic', 'Terminal', 'Signal', 'Circuit'];
     var current = 0;
     function show(index) {
+        var previous = current;
         current = (index + slides.length) % slides.length;
         slides.forEach(function (slide, i) { slide.hidden = i !== current; });
         dots.forEach(function (dot, i) {
@@ -25,6 +26,7 @@
         });
         slider.querySelector('.club-badge-caption').textContent =
             '0' + (current + 1) + ' / 04 — ' + names[current];
+        if (previous !== current) slider.dispatchEvent(new CustomEvent('club:badge-change', { bubbles: true, detail: { concept: names[current].toLowerCase() } }));
     }
     slider.querySelector('.club-badge-controls').hidden = false;
     slider.querySelectorAll('[data-badge-step]').forEach(function (button) {
