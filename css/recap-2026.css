@@ -1,0 +1,466 @@
+.recap-page {
+  --recap-red: #be1f2e;
+  --recap-ink: #171719;
+  --recap-paper: #f7f6f3;
+  --recap-line: #dedbd5;
+  --recap-muted: #68686f;
+}
+
+.recap-hero {
+  align-items: end;
+  display: flex;
+  min-height: 720px;
+  overflow: hidden;
+  padding: 170px 0 86px;
+  position: relative;
+}
+
+.recap-hero::after {
+  background: linear-gradient(90deg, rgba(7, 7, 9, .92) 0%, rgba(7, 7, 9, .72) 45%, rgba(7, 7, 9, .25) 100%), linear-gradient(0deg, rgba(7, 7, 9, .76), transparent 55%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.recap-hero-media,
+.recap-hero-media img {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.recap-hero-media img {
+  object-fit: cover;
+  object-position: center 44%;
+}
+
+.recap-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.recap-hero h1 {
+  color: #fff;
+  font-size: clamp(44px, 7vw, 86px);
+  line-height: .98;
+  margin: 14px 0 22px;
+  max-width: 980px;
+}
+
+.recap-hero .recap-hero-intro {
+  color: rgba(255, 255, 255, .88);
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.55;
+  max-width: 820px;
+}
+
+.recap-hero .post-meta {
+  color: #fff;
+}
+
+.recap-page .article-section {
+  padding-top: 84px;
+}
+
+.recap-page .article-layout {
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 290px;
+}
+
+.recap-body {
+  max-width: 860px;
+}
+
+.recap-body > section {
+  background: transparent;
+}
+
+.recap-body > section,
+.recap-body > header {
+  scroll-margin-top: 95px;
+}
+
+.recap-body .article-lead {
+  font-size: 24px;
+  line-height: 1.65;
+}
+
+.recap-deck {
+  color: var(--recap-muted);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.recap-facts {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 42px 0 76px;
+  overflow: hidden;
+}
+
+.recap-fact {
+  background: var(--recap-ink);
+  color: #fff;
+  min-height: 146px;
+  padding: 28px;
+}
+
+.recap-fact strong {
+  color: #fff;
+  display: block;
+  font-size: 25px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.recap-fact span {
+  color: rgba(255, 255, 255, .7);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.recap-section {
+  border-top: 1px solid var(--recap-line);
+  margin-top: 84px;
+  padding-top: 72px;
+}
+
+.recap-section-label {
+  color: var(--recap-red) !important;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.recap-body .recap-section > h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  letter-spacing: -.035em;
+  line-height: 1.05;
+  margin: 0 0 28px;
+}
+
+.recap-body .recap-section > h3 {
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.recap-photo {
+  margin: 38px 0;
+}
+
+.recap-photo img,
+.recap-photo-grid img {
+  background: #ddd9d1;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recap-photo figcaption,
+.recap-photo-grid figcaption {
+  color: var(--recap-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+.recap-photo-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 42px 0 52px;
+}
+
+.recap-photo-grid figure {
+  margin: 0;
+}
+
+.recap-photo-grid figure:first-child:nth-last-child(3) {
+  grid-column: 1 / -1;
+}
+
+.recap-photo-grid.is-four img,
+.recap-photo-grid.is-three img {
+  aspect-ratio: 3 / 2;
+}
+
+.recap-pullquote {
+  border-bottom: 1px solid var(--recap-line);
+  border-top: 1px solid var(--recap-line);
+  color: var(--recap-ink);
+  font-size: clamp(25px, 3.6vw, 39px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+  margin: 58px 0;
+  padding: 42px 0;
+}
+
+.track-heading,
+.village-heading {
+  align-items: end;
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+  margin: 54px 0 22px;
+}
+
+.track-heading h3,
+.village-heading h3 {
+  font-size: 32px !important;
+  margin: 0 !important;
+}
+
+.track-heading span,
+.village-heading span {
+  color: var(--recap-muted);
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.talk-list,
+.workshop-list,
+.training-list {
+  display: grid;
+  gap: 18px;
+}
+
+.talk-card,
+.workshop-card,
+.training-card,
+.village-card {
+  background: #fff;
+  border: 1px solid var(--recap-line);
+  border-left: 4px solid var(--recap-red);
+  padding: 28px 30px;
+}
+
+.talk-card h4,
+.workshop-card h3,
+.training-card h3,
+.village-card h4 {
+  color: var(--recap-ink) !important;
+  font-size: 23px;
+  line-height: 1.3;
+  margin: 5px 0 8px;
+}
+
+.session-meta {
+  color: var(--recap-red) !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.session-speaker {
+  color: #34343a !important;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.talk-card p:last-child,
+.workshop-card p:last-child,
+.training-card p:last-child,
+.village-card p:last-child {
+  margin-bottom: 0;
+}
+
+.slides-link {
+  align-items: center;
+  border: 1px solid #d5d1ca;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+  margin-top: 14px;
+  padding: 7px 11px;
+}
+
+.recap-note {
+  background: #fff;
+  border: 1px solid var(--recap-line);
+  border-top: 4px solid var(--recap-red);
+  margin: 34px 0;
+  padding: 28px 30px;
+}
+
+.recap-note p:last-child {
+  margin-bottom: 0;
+}
+
+.village-card {
+  border-left-color: #26262a;
+  margin-top: 20px;
+}
+
+.village-card ul {
+  margin-bottom: 0;
+}
+
+.sponsor-tier {
+  background: #fff;
+  border: 1px solid var(--recap-line);
+  margin: 22px 0;
+  padding: 24px;
+}
+
+.sponsor-tier h3 {
+  font-size: 18px !important;
+  margin: 0 0 18px !important;
+}
+
+.sponsor-logos {
+  align-items: center;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sponsor-logos a {
+  align-items: center;
+  background: #f7f6f3;
+  border: 1px solid #ece9e3;
+  display: flex;
+  min-height: 104px;
+  justify-content: center;
+  padding: 18px;
+}
+
+.sponsor-logos a.sponsor-logo-dark {
+  background: #111216;
+  border-color: #2a2b30;
+}
+
+.sponsor-logos img {
+  border-radius: 0 !important;
+  height: auto;
+  max-height: 62px;
+  max-width: 150px;
+  object-fit: contain;
+  width: auto !important;
+}
+
+.recap-toc a {
+  border-bottom: 1px solid var(--recap-line);
+  color: var(--recap-ink);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.recap-toc a:hover,
+.recap-toc a:focus-visible {
+  color: var(--recap-red);
+}
+
+.recap-photo-credit {
+  color: var(--recap-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.recap-closing {
+  background: var(--recap-ink);
+  color: #fff;
+  margin: 70px 0 0;
+  padding: 46px;
+}
+
+.recap-closing h2,
+.recap-closing p {
+  color: #fff !important;
+}
+
+.recap-closing h2 {
+  font-size: clamp(34px, 5vw, 54px) !important;
+  margin-top: 0 !important;
+}
+
+.recap-closing p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .recap-page .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .recap-hero {
+    min-height: 610px;
+    padding: 145px 0 64px;
+  }
+
+  .recap-hero::after {
+    background: linear-gradient(0deg, rgba(7, 7, 9, .92) 0%, rgba(7, 7, 9, .48) 100%);
+  }
+
+  .recap-page .article-section {
+    padding-top: 56px;
+  }
+
+  .recap-body .article-lead {
+    font-size: 21px;
+  }
+
+  .recap-facts,
+  .recap-photo-grid,
+  .sponsor-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-photo-grid figure:first-child:nth-last-child(3) {
+    grid-column: auto;
+  }
+
+  .recap-section {
+    margin-top: 64px;
+    padding-top: 54px;
+  }
+
+  .track-heading,
+  .village-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .talk-card,
+  .workshop-card,
+  .training-card,
+  .village-card,
+  .recap-note {
+    padding: 23px 21px;
+  }
+
+  .recap-closing {
+    padding: 34px 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .recap-hero h1 {
+    font-size: 42px;
+  }
+
+  .recap-fact {
+    min-height: 0;
+  }
+}
