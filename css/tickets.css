@@ -1,0 +1,85 @@
+/* 2027 ticket comparison; isolated from historical pricing tables. */
+#section-ticket .ticket-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#section-ticket .ticket-option { display: flex; min-width: 0; }
+#section-ticket .ticket-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #101010;
+  border: 1px solid #383838;
+  border-bottom: 4px solid #be1f2e;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .25);
+}
+#section-ticket .ticket-card-header { padding: 32px 28px 24px; }
+#section-ticket .ticket-card-header h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #fff;
+}
+#section-ticket .ticket-card-header p {
+  margin: 0;
+  line-height: 1.6;
+  color: #ccc;
+}
+#section-ticket .ticket-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 28px 28px;
+}
+#section-ticket .ticket-card-body ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+#section-ticket .ticket-card-body li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid #303030;
+  color: #eee;
+  line-height: 1.5;
+}
+#section-ticket .ticket-card-body li i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: #e4535e;
+}
+#section-ticket a.ticket-card-action {
+  display: block;
+  margin-top: auto;
+  padding: 14px 18px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: #be1f2e;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+}
+#section-ticket a.ticket-card-action:hover { background: #a71b28; }
+#section-ticket a.ticket-card-action:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+@media (min-width: 768px) {
+  #section-ticket .ticket-card-header { min-height: 152px; }
+}
+@media (max-width: 767px) {
+  #section-ticket .ticket-options { grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 480px; }
+  #section-ticket .ticket-card-header { padding: 26px 22px 20px; }
+  #section-ticket .ticket-card-body { padding: 0 22px 22px; }
+}
