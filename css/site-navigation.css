@@ -1,0 +1,105 @@
+#mainmenu.index-navigation > li { font-size:16px; }
+    #mainmenu.index-navigation .nav-toggle { border:0; background:none; color:#fff; font:inherit; letter-spacing:inherit; text-transform:uppercase; padding:25px 14px; line-height:35px; cursor:pointer; }
+    #mainmenu.index-navigation .nav-group > ul { top:100%; left:50%; transform:translateX(-50%); width:260px; height:auto; margin:0; opacity:1; overflow:visible; box-shadow:0 12px 30px #0006; }
+    #mainmenu.index-navigation .nav-group > ul[hidden] { display:none !important; }
+    #mainmenu.index-navigation li li a, #mainmenu.index-navigation .nav-soon { display:block; width:100%; padding:11px 16px; line-height:1.5; text-align:center; font-size:15px; }
+    #mainmenu.index-navigation .nav-soon { color:#aaa; }
+    #mainmenu.index-navigation a:focus-visible, #mainmenu.index-navigation button:focus-visible { outline:2px solid #fff; outline-offset:-3px; }
+    #mainmenu.index-navigation .nav-ticket { background:#c51c32; color:#fff; padding:0 18px; margin:25px 0 25px 14px; }
+    #mainmenu.index-navigation .nav-ticket:after { display:none; }
+    header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:10px; padding-bottom:10px; }
+    header.smaller #mainmenu.index-navigation .nav-ticket { margin-top:10px; margin-bottom:10px; }
+    @media (min-width:993px) {
+      /* Override the template's compact-header rules without shrinking dropdowns. */
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation li li a {
+        padding:11px 16px;
+        font-size:15px;
+        line-height:1.5;
+      }
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-group > ul { top:100%; }
+      header.index-header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:17.5px; padding-bottom:17.5px; }
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-ticket { padding:0 18px; margin-top:0; margin-bottom:0; }
+
+      .index-header > .container > .row > .col-md-12 { display:flex; align-items:center; }
+      .index-header #logo { float:none; flex:0 0 auto; margin-right:32px; }
+      /* Center the menu at its natural width in the space beside the logo. */
+      .index-header #mainmenu.index-navigation {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        float: none;
+        margin: 0 auto !important;
+        padding: 0;
+        position: relative;
+        left: -24px;
+      }
+      .index-header #mainmenu.index-navigation > li { float:none; }
+      .index-header #mainmenu.index-navigation .nav-ticket { margin-top:0; margin-bottom:0; }
+    }
+    @media (max-width:992px) {
+      #mainmenu.index-navigation { max-height:calc(100dvh - 150px); overflow-y:auto; }
+      #mainmenu.index-navigation .nav-toggle { display:flex; align-items:center; justify-content:center; width:100%; padding:12px 0; text-align:center; line-height:24px; }
+      header.header-mobile #mainmenu.index-navigation .nav-group > ul { position:static; transform:none; width:100%; height:auto; padding:0 0 8px; box-shadow:none; }
+      #mainmenu.index-navigation .nav-ticket { margin:12px 0; padding:4px 18px; text-align:center; }
+      header.header-mobile #mainmenu.index-navigation li li { padding-left:0 !important; }
+      header.header-mobile #mainmenu.index-navigation .nav-group > ul { margin-left:0; padding-left:0; }
+      #mainmenu.index-navigation > li { text-align:center; }
+      header.header-mobile #mainmenu.index-navigation a { text-align:center; }
+      header.header-mobile #mainmenu.index-navigation { margin-left:0 !important; }
+    }
+    /* Match the history navigation typography, preserving the approved sizes. */
+    header.index-header #mainmenu.index-navigation,
+    header.index-header #mainmenu.index-navigation li,
+    header.index-header #mainmenu.index-navigation a,
+    header.index-header #mainmenu.index-navigation .nav-toggle,
+    header.index-header #mainmenu.index-navigation .nav-soon {
+      font-family:"Plus Jakarta Sans",Arial,sans-serif;
+      font-weight:600;
+      letter-spacing:normal;
+      text-transform:none;
+    }
+    header.index-header #mainmenu.index-navigation .nav-toggle:hover,
+    header.index-header #mainmenu.index-navigation .nav-toggle:focus-visible,
+    header.index-header #mainmenu.index-navigation .nav-toggle[aria-expanded="true"],
+    header.index-header #mainmenu.index-navigation li li a:hover,
+    header.index-header #mainmenu.index-navigation li li a:focus-visible {
+      color:#ee5261;
+      background:transparent;
+    }
+
+header.index-header .site-menu-toggle { display:none; border:1px solid #777; background:#181818; color:#fff; padding:10px 14px; font:600 14px 'Plus Jakarta Sans',Arial,sans-serif; border-radius:4px; cursor:pointer; }
+header.index-header .site-menu-toggle:focus-visible { outline:2px solid #fff; outline-offset:3px; }
+#mainmenu.index-navigation .nav-group > ul:not([hidden]) { display:block; visibility:visible; }
+@media(max-width:992px) {
+    header.index-header .site-menu-toggle { display:block; float:right; margin-top:22px; }
+    header.index-header #mainmenu.index-navigation { display:none !important; clear:both; }
+    header.index-header.site-menu-open #mainmenu.index-navigation { display:block !important; }
+    header.index-header.site-menu-open { height:auto !important; }
+    header.index-header #mainmenu.index-navigation .nav-group > ul { position:static; transform:none; width:100%; left:auto; }
+}
+/* The same menu on pages that do not use the conference template. */
+header.standalone-navigation { position:relative; z-index:100; background:#111; border-bottom:1px solid #333; color:#fff; text-align:left; }
+header.standalone-navigation *, header.standalone-navigation *::before, header.standalone-navigation *::after { box-sizing:border-box; }
+header.standalone-navigation .container { width:min(1320px, 94%); margin:auto; }
+header.standalone-navigation #logo a { display:block; background:none; padding:0; margin:0; }
+header.standalone-navigation #logo img { display:block; width:100px; height:auto; max-width:none; }
+header.standalone-navigation #mainmenu { list-style:none; padding:0; margin:0; }
+header.standalone-navigation #mainmenu li { list-style:none; position:relative; margin:0; padding:0; }
+header.standalone-navigation #mainmenu a { color:#fff; text-decoration:none; background:none; margin:0; font-size:15px; }
+header.standalone-navigation #mainmenu .nav-group > ul { position:absolute; background:#181818; list-style:none; padding:0; z-index:101; }
+header.standalone-navigation #mainmenu .nav-ticket { display:block; line-height:35px; background:#c51c32; padding:0 18px; }
+@media(max-width:992px) {
+    header.standalone-navigation .col-md-12 { display:flow-root; padding:12px 0; }
+    header.standalone-navigation #logo { float:left; }
+    header.standalone-navigation #mainmenu { width:100%; }
+    header.standalone-navigation #mainmenu .nav-group > ul { position:static; padding:0; }
+}
+
+/* Reset legacy submenu-marker positioning for unavailable navigation items. */
+header.index-header #mainmenu.index-navigation .nav-soon { position:static; float:none; height:auto; margin:0; background:none; cursor:default; }
+@media(max-width:992px) {
+    header.index-header #mainmenu.index-navigation li li a,
+    header.index-header #mainmenu.index-navigation .nav-soon { padding:11px 16px; font-size:15px; line-height:1.5; width:100%; }
+}
+header.standalone-navigation { width:100%; }

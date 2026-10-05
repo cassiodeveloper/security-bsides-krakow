@@ -123,78 +123,8 @@
     <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css">
     <link rel="stylesheet" href="fonts/et-line-font/style.css">
 
-    <!-- Index-only navigation proposal; replicate after approval. -->
-    <style>
-    #mainmenu.index-navigation > li { font-size:16px; }
-    #mainmenu.index-navigation .nav-toggle { border:0; background:none; color:#fff; font:inherit; letter-spacing:inherit; text-transform:uppercase; padding:25px 14px; line-height:35px; cursor:pointer; }
-    #mainmenu.index-navigation .nav-group > ul { top:100%; left:50%; transform:translateX(-50%); width:260px; height:auto; margin:0; opacity:1; overflow:visible; box-shadow:0 12px 30px #0006; }
-    #mainmenu.index-navigation .nav-group > ul[hidden] { display:none !important; }
-    #mainmenu.index-navigation li li a, #mainmenu.index-navigation .nav-soon { display:block; width:100%; padding:11px 16px; line-height:1.5; text-align:center; font-size:15px; }
-    #mainmenu.index-navigation .nav-soon { color:#aaa; }
-    #mainmenu.index-navigation a:focus-visible, #mainmenu.index-navigation button:focus-visible { outline:2px solid #fff; outline-offset:-3px; }
-    #mainmenu.index-navigation .nav-ticket { background:#c51c32; color:#fff; padding:0 18px; margin:25px 0 25px 14px; }
-    #mainmenu.index-navigation .nav-ticket:after { display:none; }
-    header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:10px; padding-bottom:10px; }
-    header.smaller #mainmenu.index-navigation .nav-ticket { margin-top:10px; margin-bottom:10px; }
-    @media (min-width:993px) {
-      /* Override the template's compact-header rules without shrinking dropdowns. */
-      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation li li a {
-        padding:11px 16px;
-        font-size:15px;
-        line-height:1.5;
-      }
-      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-group > ul { top:100%; }
-      header.index-header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:17.5px; padding-bottom:17.5px; }
-      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-ticket { padding:0 18px; margin-top:0; margin-bottom:0; }
 
-      .index-header > .container > .row > .col-md-12 { display:flex; align-items:center; }
-      .index-header #logo { float:none; flex:0 0 auto; margin-right:32px; }
-      /* Center the menu at its natural width in the space beside the logo. */
-      .index-header #mainmenu.index-navigation {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 auto;
-        float: none;
-        margin: 0 auto !important;
-        padding: 0;
-        position: relative;
-        left: -24px;
-      }
-      .index-header #mainmenu.index-navigation > li { float:none; }
-      .index-header #mainmenu.index-navigation .nav-ticket { margin-top:0; margin-bottom:0; }
-    }
-    @media (max-width:992px) {
-      #mainmenu.index-navigation { max-height:calc(100dvh - 150px); overflow-y:auto; }
-      #mainmenu.index-navigation .nav-toggle { display:flex; align-items:center; justify-content:center; width:100%; padding:12px 0; text-align:center; line-height:24px; }
-      header.header-mobile #mainmenu.index-navigation .nav-group > ul { position:static; transform:none; width:100%; height:auto; padding:0 0 8px; box-shadow:none; }
-      #mainmenu.index-navigation .nav-ticket { margin:12px 0; padding:4px 18px; text-align:center; }
-      header.header-mobile #mainmenu.index-navigation li li { padding-left:0 !important; }
-      header.header-mobile #mainmenu.index-navigation .nav-group > ul { margin-left:0; padding-left:0; }
-      #mainmenu.index-navigation > li { text-align:center; }
-      header.header-mobile #mainmenu.index-navigation a { text-align:center; }
-      header.header-mobile #mainmenu.index-navigation { margin-left:0 !important; }
-    }
-    /* Match the history navigation typography, preserving the approved sizes. */
-    header.index-header #mainmenu.index-navigation,
-    header.index-header #mainmenu.index-navigation li,
-    header.index-header #mainmenu.index-navigation a,
-    header.index-header #mainmenu.index-navigation .nav-toggle,
-    header.index-header #mainmenu.index-navigation .nav-soon {
-      font-family:"Plus Jakarta Sans",Arial,sans-serif;
-      font-weight:600;
-      letter-spacing:normal;
-      text-transform:none;
-    }
-    header.index-header #mainmenu.index-navigation .nav-toggle:hover,
-    header.index-header #mainmenu.index-navigation .nav-toggle:focus-visible,
-    header.index-header #mainmenu.index-navigation .nav-toggle[aria-expanded="true"],
-    header.index-header #mainmenu.index-navigation li li a:hover,
-    header.index-header #mainmenu.index-navigation li li a:focus-visible {
-      color:#ee5261;
-      background:transparent;
-    }
-    </style>
+    <link rel="stylesheet" href="/css/site-navigation.css">
 </head>
 <body id="homepage">
     <div id="wrapper">
@@ -204,10 +134,10 @@
                     <div class="col-md-12">
                         <div id="logo">
                             <a href="https://bsideskrakow.pl">
-                                <img class="sponsor-logo-small" src="images/logo-display.webp" alt="BSides Kraków" width="600" height="396" decoding="async">
+                                <img class="sponsor-logo-small" src="/images/logo-display.webp" alt="BSides Kraków" width="600" height="396" decoding="async">
                             </a>
                         </div>
-                            <span id="menu-btn"></span>
+                            <button type="button" class="site-menu-toggle" aria-expanded="false" aria-controls="mainmenu" aria-label="Toggle main navigation">Menu</button>
 <ul id="mainmenu" class="ms-2 index-navigation" aria-label="Main navigation">
                                 <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-conference">Conference</button>
                                 <ul id="nav-conference" hidden>
@@ -216,33 +146,33 @@
                                 <li><a href="#section-trainings">Trainings</a></li>
                                 <li><a href="#section-schedule">Schedule</a></li>
                                 <li><a href="#section-sponsors">Sponsors</a></li>
-                                <li><a href="after-party.html">After Party</a></li>
+                                <li><a href="/after-party.html">After Party</a></li>
                                 <li><span class="nav-soon" aria-disabled="true">Venue — SOON</span></li>
                                 </ul></li>
                                 <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-community">Community</button>
                                 <ul id="nav-community" hidden>
                                 <li><a href="/history.html">Our story</a></li>
-                                <li><a href="meetups.html">Meetups</a></li>
+                                <li><a href="/meetups.html">Meetups</a></li>
                                 <li><a href="/hacker-club/">Hacker Club</a></li>
                                 <li><a href="/hacker-club/membership/">Membership, Status &amp; Access</a></li>
                                 <li><a href="/hacker-club/founders-wall/">Founders Wall</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="/blog.html">Blog</a></li>
                                 </ul></li>
                                 <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-participate">Get involved</button>
                                 <ul id="nav-participate" hidden>
                                 <li><a href="https://sessionize.com/bsides-krakow-2027" target="_blank" rel="noopener noreferrer">CFP — Call for Papers</a></li>
-                                <li><span class="nav-soon" aria-disabled="true">CFS — SOON</span></li>
+                                <li><a href="/sponsorship.html">Become a Sponsor</a></li>
                                 <li><span class="nav-soon" aria-disabled="true">CFV — SOON</span></li>
                                 </ul></li>
                                 <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-past">Past editions</button>
                                 <ul id="nav-past" hidden>
-                                <li><a href="2026.html">2026</a></li>
-                                <li><a href="2025.html">2025</a></li>
-                                <li><a href="2024.html">2024</a></li>
-                                <li><a href="2023.html">2023</a></li>
-                                <li><a href="2022.html">2022</a></li>
+                                <li><a href="/2026.html">2026</a></li>
+                                <li><a href="/2025.html">2025</a></li>
+                                <li><a href="/2024.html">2024</a></li>
+                                <li><a href="/2023.html">2023</a></li>
+                                <li><a href="/2022.html">2022</a></li>
                                 </ul></li>
-                                <li><a class="nav-ticket" href="#section-register">Get tickets</a></li>
+                                <li><a class="nav-ticket" href="#section-ticket">Get tickets</a></li>
                                 </ul>
                     </div>
                 </div>
@@ -269,7 +199,7 @@
 								<div class="spacer-single"></div>
 								<a class="btn-custom text-white" href="https://sessionize.com/bsides-krakow-2027" target="_blank" rel="noopener noreferrer">Submit to CFP</a>&nbsp&nbsp&nbsp&nbsp
                                 <a class="btn-custom text-white" href="https://buytickets.at/securitybsideskrakw/2449963" target="_blank" rel="noopener noreferrer">Get your ticket</a>&nbsp&nbsp&nbsp&nbsp
-                                <span class="btn-custom text-white" aria-disabled="true">CFS - SOON</span>
+                                <a class="btn-custom text-white" href="/sponsorship.html">Become a Sponsor</a>
 							</div>
 						</div>
 					</div>
@@ -448,6 +378,8 @@
                         <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
                             <h1>Official Sponsors</h1>
                             <div class="separator"><span><i class="fa fa-square"></i></span></div>
+                            <p>Support Kraków's cybersecurity community. Explore our sponsorship packages and partnerships.</p>
+                            <a class="btn-custom text-white" href="/sponsorship.html">Become a Sponsor</a>
                             <div class="spacer-single"></div>
                         </div>
                         <div class="col-md-12 text-center wow fadeInUp">
@@ -729,48 +661,8 @@
     <script defer src="js/particles.js"></script>
     <script defer src="js/particles-settings.js"></script>
 
-    <script>
-    // This navigation is deliberately scoped to the index proposal.
-    (() => {
-        const nav = document.querySelector('.index-navigation');
-        const buttons = [...nav.querySelectorAll('.nav-toggle')];
-        function closeAll() {
-            buttons.forEach(button => {
-                button.setAttribute('aria-expanded', 'false');
-                document.getElementById(button.getAttribute('aria-controls')).hidden = true;
-            });
-        }
-        const desktopHover = window.matchMedia('(min-width: 993px) and (hover: hover)');
-        buttons.forEach(button => {
-            const group = button.closest('.nav-group');
-            group.addEventListener('mouseenter', () => {
-                if (!desktopHover.matches) return;
-                closeAll();
-                button.setAttribute('aria-expanded', 'true');
-                document.getElementById(button.getAttribute('aria-controls')).hidden = false;
-            });
-            group.addEventListener('mouseleave', () => {
-                if (desktopHover.matches) closeAll();
-            });
-        });
-        buttons.forEach(button => button.addEventListener('click', () => {
-            const open = button.getAttribute('aria-expanded') !== 'true';
-            closeAll();
-            button.setAttribute('aria-expanded', String(open));
-            document.getElementById(button.getAttribute('aria-controls')).hidden = !open;
-        }));
-        document.addEventListener('click', event => { if (!nav.contains(event.target)) closeAll(); });
-        nav.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-                const active = buttons.find(button => button.getAttribute('aria-expanded') === 'true');
-                closeAll();
-                if (active) active.focus();
-            }
-        });
-        nav.addEventListener('focusout', event => { if (!nav.contains(event.relatedTarget)) closeAll(); });
-        nav.addEventListener('click', event => { if (event.target.closest('a')) closeAll(); });
-    })();
-    </script>
 
-	</body>
+
+	    <script defer src="/js/site-navigation.js"></script>
+</body>
 </html>
