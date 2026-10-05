@@ -71,8 +71,6 @@
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" id="bootstrap-grid">
-    <link href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" id="bootstrap-reboot">
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/rev-settings.css" rel="stylesheet" type="text/css">
@@ -80,6 +78,11 @@
 
     <link rel="stylesheet" href="css/colors/bsides.css" type="text/css" id="colors">
 	<link rel="stylesheet" href="css/font-style.css" type="text/css">
+    <link rel="stylesheet" href="css/site-fonts.css">
+    <link rel="preload" as="image" href="images/bg/8.webp" fetchpriority="high">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css">
+    <link rel="stylesheet" href="fonts/et-line-font/style.css">
 </head>
 <body id="homepage">
     <div id="wrapper">
@@ -89,7 +92,7 @@
                     <div class="col-md-12">
                         <div id="logo">
                             <a href="https://bsideskrakow.pl">
-                                <img class="sponsor-logo-small" src="images/logo.png" alt="BSides Kraków">
+                                <img class="sponsor-logo-small" src="images/logo-display.webp" alt="BSides Kraków" width="600" height="396" decoding="async">
                             </a>
                         </div>
                             <span id="menu-btn"></span>
@@ -132,7 +135,7 @@
             </div>
         </header>
         <div id="content" class="no-bottom no-top">
-            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.jpg) fixed top center" data-stellar-background-ratio=".2">
+            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.webp) fixed top center" data-stellar-background-ratio=".2" style="background: url(images/bg/8.webp) fixed top center; background-size: cover;">
                 <div id="particles-js"></div>
 				<div class="center-y text-center z-index1000">
 					<div class="container">
@@ -157,7 +160,7 @@
 				</div>
             </section>
 			<section id="section-code-of-conduct" class="jarallax text-light">
-                <img src="images/bg/3.png" class="jarallax-img" alt="">
+                <img src="images/bg/3.png" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
                 <div class="container">
 						<div class="row">
                             <p>Security BSides Kraków 2026 takes place at the Faculty of Computer Science at AGH University of Krakow, Building D-17, Kawiory 21, 30-055 Kraków, Poland. <a href="https://maps.app.goo.gl/VXwu29F1TTWsBt8T9" target="_blank" rel="noopener noreferrer">Open the venue in Google Maps</a>.</p>
@@ -166,9 +169,9 @@
                             <h2>Meet the venue, this is to help you locate the Tracks & Villages </h2>
                             <p>Basically, all happens on 0 floor, Villages, Sponsors and Tracks 1 and 3. On the 1st floor, we have only Track 2.</p>
                             <p>Toilets are located on both floors. Pay attention to the security instructions on the building and follow the rules of the venue.</p>
-                            <img src="images/1.png" title="Ground floor" alt="Ground-floor map of the BSides Kraków venue at AGH Building D-17" />
+                            <img src="images/1.png" title="Ground floor" alt="Ground-floor map of the BSides Kraków venue at AGH Building D-17" width="2000" height="1414" decoding="async" loading="lazy">
                             &nbsp&nbsp
-                            <img src="images/2.png" title="First floor" alt="First-floor map of the BSides Kraków venue at AGH Building D-17" />
+                            <img src="images/2.png" title="First floor" alt="First-floor map of the BSides Kraków venue at AGH Building D-17" width="2000" height="1414" decoding="async" loading="lazy">
                         </div>
                     </div>
                 </section>
@@ -176,7 +179,7 @@
             <div class="container">
                 <div class="row align-items-middle">
                     <div class="col-md-3">
-                        <img src="images/logo.png" class="sponsor-logo-small" alt="BSides Kraków"><br />
+                        <img src="images/logo-display.webp" class="sponsor-logo-small" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy"><br />
                     </div>
                     <div class="col-md-6">
                         &copy; Copyright 2026 - Security BSides Kraków - All Rights Reserved<div class="footer-legal" style="margin-top:8px"><a href="/code-of-conduct.html">Code of Conduct</a> <span aria-hidden="true">&middot;</span> <a href="/privacy.html">Privacy</a></div>
@@ -229,10 +232,9 @@
         </div>
     </div>
     <div id="de-overlay"></div>
-    <script src="js/plugins.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/particles-settings.js"></script>
+    <script defer src="js/plugins.js"></script>
+    <script defer src="js/designesia.js"></script>
+    <script defer src="js/particles.js"></script>
+    <script defer src="js/particles-settings.js"></script>
 	</body>
 </html>

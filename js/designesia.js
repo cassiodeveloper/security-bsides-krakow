@@ -171,13 +171,13 @@ jQuery(document).ready(function () {
 	* custom background
 	* --------------------------------------------------*/
 	function custom_bg() {
-		$("*").css('background-color', function() {
+		$("[data-bgcolor]").css('background-color', function() {
 			return jQuery(this).data('bgcolor');
 		});
-		$("div,section").css('background', function() {
+		$("[data-bgimage]").css('background', function() {
 			return jQuery(this).data('bgimage');
 		});
-		$("div,section").css('background-size', function() {
+		$("[data-bgimage]").css('background-size', function() {
 			return 'cover';
 		});
 	}
@@ -308,56 +308,7 @@ jQuery(document).ready(function () {
     // preloader
     // --------------------------------------------------
 
-    //calling jPreLoader function with properties
-    jQuery('body').jpreLoader({
-        splashID: "#jSplash",
-        splashFunction: function () {  //passing Splash Screen script to jPreLoader
-            jQuery('#jSplash').children('section').not('.selected').hide();
-            jQuery('#jSplash').hide().fadeIn(800);
-            init_de();
-            var timer = setInterval(function () {
-                splashRotator();
-            }, 1500);
-        }
-    }, function () {	//jPreLoader callback function
-        clearInterval();
-
-        jQuery(function () {
-            var v_url = document.URL;
-
-            if (v_url.indexOf('#') != -1) {
-                var v_hash = v_url.substring(v_url.indexOf("#") + 1);
-
-
-                jQuery('html, body').animate({
-                    scrollTop: jQuery('#' + v_hash).offset().top - 70
-                }, 200);
-                return false;
-            }
-        });
-
-
-    });
-
-    // End of jPreLoader script
-
-    function splashRotator() {
-        var cur = jQuery('#jSplash').children('.selected');
-        var next = jQuery(cur).next();
-
-        if (jQuery(next).length != 0) {
-            jQuery(next).addClass('selected');
-        } else {
-            jQuery('#jSplash').children('section:first-child').addClass('selected');
-            next = jQuery('#jSplash').children('section:first-child');
-        }
-
-        jQuery(cur).removeClass('selected').fadeOut(100, function () {
-            jQuery(next).fadeIn(100);
-        });
-    }
-
-
+    // Content is visible immediately. Native fragment navigation needs no loader.
     // --------------------------------------------------
     // function
     // --------------------------------------------------
@@ -413,6 +364,7 @@ jQuery(document).ready(function () {
     };
 
 
+    var headerScrollBound = false;
     function init() {
 
         var sh = jQuery('#de-sidebar').css("height");
@@ -424,6 +376,8 @@ jQuery(document).ready(function () {
         var mq = window.matchMedia("(min-width: 993px)");
         var ms = window.matchMedia("(min-width: 768px)");
 
+        if (!headerScrollBound) {
+        headerScrollBound = true;
         window.addEventListener('scroll', function (e) {
 
             if (mq.matches) {
@@ -501,7 +455,8 @@ jQuery(document).ready(function () {
                 }
                 // side header on scroll close
             }
-        });
+        }, { passive: true });
+        }
 
 
         if (mq.matches) {
@@ -511,7 +466,7 @@ jQuery(document).ready(function () {
 
 
     }
-    window.onload = init();
+    init();
 
 
     // --------------------------------------------------
@@ -931,7 +886,7 @@ jQuery(document).ready(function () {
 	sequence();
 	
 	// document on load
-    jQuery(window).load(function () {
+    (function () {
 
         $(".jarallax").jarallax();
         video_autosize();		
@@ -1258,8 +1213,8 @@ jQuery(document).ready(function () {
         var target = $('.center-y');
         var targetHeight = target.outerHeight();
 		
-		jQuery('.animated').fadeTo(0, 0);
-        jQuery('.animated').each(function () {
+		jQuery('.animated[data-animation]').fadeTo(0, 0);
+        jQuery('.animated[data-animation]').each(function () {
             var imagePos = jQuery(this).offset().top;
             var timedelay = jQuery(this).attr('data-delay');
 
@@ -1312,7 +1267,7 @@ jQuery(document).ready(function () {
 			
 			de_count();
 
-			jQuery('.animated').each(function () {
+			jQuery('.animated[data-animation]').each(function () {
 				var imagePos = jQuery(this).offset().top;
 				var timedelay = jQuery(this).attr('data-delay');
 
@@ -1327,9 +1282,7 @@ jQuery(document).ready(function () {
 				}
 			});
 
-			jQuery(".nav-exit").on("click", function () {
-				$.magnificPopup.close();
-			});
+
 			
         }); // document scroll end //
 		
@@ -1338,8 +1291,23 @@ jQuery(document).ready(function () {
                  verticalOffset: 0
         });
     
-	}); // document load end //
+	})(); // DOM-ready setup; never wait for all images or third-party resources.
 	
+
+    jQuery(".nav-exit").on("click", function () { $.magnificPopup.close(); });
+
+    var imageLayoutPending = false;
+    document.addEventListener('load', function (event) {
+        if (event.target.tagName !== 'IMG' || !event.target.closest('#gallery, .grid, .de-video-container')) return;
+        if (imageLayoutPending) return;
+        imageLayoutPending = true;
+        requestAnimationFrame(function () {
+            grid_gallery();
+            if ($container.data('isotope')) $container.isotope('layout');
+            $('.grid').each(function () { if ($(this).data('isotope')) $(this).isotope('layout'); });
+            imageLayoutPending = false;
+        });
+    }, true);
 
     // mainmenu create span
     jQuery('#mainmenu li a').each(function () {
@@ -1458,10 +1426,13 @@ jQuery(document).ready(function () {
     // --------------------------------------------------
     $(function () {
         var x = 0;
-        setInterval(function () {
-            x -= 1;
-            $('.bg-loop').css('background-position', x + 'px 0');
-        }, 50);
+        if ($('.bg-loop').length) {
+            setInterval(function () {
+                if (document.hidden) return;
+                x -= 1;
+                $('.bg-loop').css('background-position', x + 'px 0');
+            }, 50);
+        }
     });
 
     // new added

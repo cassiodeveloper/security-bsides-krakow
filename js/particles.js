@@ -1310,6 +1310,7 @@ var pJS = function(tag_id, params){
 
 
   pJS.fn.vendors.draw = function(){
+    if (pJS.tmp.pagePaused) return;
 
     if(pJS.particles.shape.type == 'image'){
 

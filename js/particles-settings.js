@@ -1,4 +1,7 @@
-jQuery(window).load(function () {
+// Decorative animation starts after the content has had a chance to paint.
+(function () {
+function startParticles() {
+if (!document.getElementById('particles-js')) return;
 
 /* -----------------------------------------------
 /* How to use? : Check the GitHub README
@@ -134,4 +137,29 @@ particlesJS('particles-js',
 
 );
 
+
+var instance = window.pJSDom && window.pJSDom[window.pJSDom.length - 1];
+if (instance) {
+    var visible = true;
+    function syncAnimation() {
+        var paused = document.hidden || !visible;
+        instance.pJS.tmp.pagePaused = paused;
+        cancelAnimationFrame(instance.pJS.fn.drawAnimFrame);
+        if (!paused) instance.pJS.fn.vendors.draw();
+    }
+    document.addEventListener('visibilitychange', syncAnimation);
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+            syncAnimation();
+        }).observe(document.getElementById('particles-js'));
+    }
+}
+}
+requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+        if ('requestIdleCallback' in window) requestIdleCallback(startParticles, { timeout: 1500 });
+        else setTimeout(startParticles, 0);
+    });
 });
+})();

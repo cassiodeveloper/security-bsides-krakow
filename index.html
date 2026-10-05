@@ -106,8 +106,6 @@
 }</script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" id="bootstrap-grid">
-    <link href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" id="bootstrap-reboot">
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/rev-settings.css" rel="stylesheet" type="text/css">
@@ -119,62 +117,139 @@
 	<link rel="stylesheet" href="css/font-style.css" type="text/css">
     <link rel="stylesheet" href="css/blog.css" type="text/css">
     <link rel="stylesheet" href="css/blog-record.css" type="text/css">
+    <link rel="stylesheet" href="css/site-fonts.css">
+    <link rel="preload" as="image" href="images/bg/8.webp" fetchpriority="high">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css">
+    <link rel="stylesheet" href="fonts/et-line-font/style.css">
+
+    <!-- Index-only navigation proposal; replicate after approval. -->
+    <style>
+    #mainmenu.index-navigation > li { font-size:16px; }
+    #mainmenu.index-navigation .nav-toggle { border:0; background:none; color:#fff; font:inherit; letter-spacing:inherit; text-transform:uppercase; padding:25px 14px; line-height:35px; cursor:pointer; }
+    #mainmenu.index-navigation .nav-group > ul { top:100%; left:50%; transform:translateX(-50%); width:260px; height:auto; margin:0; opacity:1; overflow:visible; box-shadow:0 12px 30px #0006; }
+    #mainmenu.index-navigation .nav-group > ul[hidden] { display:none !important; }
+    #mainmenu.index-navigation li li a, #mainmenu.index-navigation .nav-soon { display:block; width:100%; padding:11px 16px; line-height:1.5; text-align:center; font-size:15px; }
+    #mainmenu.index-navigation .nav-soon { color:#aaa; }
+    #mainmenu.index-navigation a:focus-visible, #mainmenu.index-navigation button:focus-visible { outline:2px solid #fff; outline-offset:-3px; }
+    #mainmenu.index-navigation .nav-ticket { background:#c51c32; color:#fff; padding:0 18px; margin:25px 0 25px 14px; }
+    #mainmenu.index-navigation .nav-ticket:after { display:none; }
+    header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:10px; padding-bottom:10px; }
+    header.smaller #mainmenu.index-navigation .nav-ticket { margin-top:10px; margin-bottom:10px; }
+    @media (min-width:993px) {
+      /* Override the template's compact-header rules without shrinking dropdowns. */
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation li li a {
+        padding:11px 16px;
+        font-size:15px;
+        line-height:1.5;
+      }
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-group > ul { top:100%; }
+      header.index-header.smaller #mainmenu.index-navigation .nav-toggle { padding-top:17.5px; padding-bottom:17.5px; }
+      header.index-header.smaller:not(.header-bottom):not(.side-header) #mainmenu.index-navigation .nav-ticket { padding:0 18px; margin-top:0; margin-bottom:0; }
+
+      .index-header > .container > .row > .col-md-12 { display:flex; align-items:center; }
+      .index-header #logo { float:none; flex:0 0 auto; margin-right:32px; }
+      /* Center the menu at its natural width in the space beside the logo. */
+      .index-header #mainmenu.index-navigation {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        float: none;
+        margin: 0 auto !important;
+        padding: 0;
+        position: relative;
+        left: -24px;
+      }
+      .index-header #mainmenu.index-navigation > li { float:none; }
+      .index-header #mainmenu.index-navigation .nav-ticket { margin-top:0; margin-bottom:0; }
+    }
+    @media (max-width:992px) {
+      #mainmenu.index-navigation { max-height:calc(100dvh - 150px); overflow-y:auto; }
+      #mainmenu.index-navigation .nav-toggle { display:flex; align-items:center; justify-content:center; width:100%; padding:12px 0; text-align:center; line-height:24px; }
+      header.header-mobile #mainmenu.index-navigation .nav-group > ul { position:static; transform:none; width:100%; height:auto; padding:0 0 8px; box-shadow:none; }
+      #mainmenu.index-navigation .nav-ticket { margin:12px 0; padding:4px 18px; text-align:center; }
+      header.header-mobile #mainmenu.index-navigation li li { padding-left:0 !important; }
+      header.header-mobile #mainmenu.index-navigation .nav-group > ul { margin-left:0; padding-left:0; }
+      #mainmenu.index-navigation > li { text-align:center; }
+      header.header-mobile #mainmenu.index-navigation a { text-align:center; }
+      header.header-mobile #mainmenu.index-navigation { margin-left:0 !important; }
+    }
+    /* Match the history navigation typography, preserving the approved sizes. */
+    header.index-header #mainmenu.index-navigation,
+    header.index-header #mainmenu.index-navigation li,
+    header.index-header #mainmenu.index-navigation a,
+    header.index-header #mainmenu.index-navigation .nav-toggle,
+    header.index-header #mainmenu.index-navigation .nav-soon {
+      font-family:"Plus Jakarta Sans",Arial,sans-serif;
+      font-weight:600;
+      letter-spacing:normal;
+      text-transform:none;
+    }
+    header.index-header #mainmenu.index-navigation .nav-toggle:hover,
+    header.index-header #mainmenu.index-navigation .nav-toggle:focus-visible,
+    header.index-header #mainmenu.index-navigation .nav-toggle[aria-expanded="true"],
+    header.index-header #mainmenu.index-navigation li li a:hover,
+    header.index-header #mainmenu.index-navigation li li a:focus-visible {
+      color:#ee5261;
+      background:transparent;
+    }
+    </style>
 </head>
 <body id="homepage">
     <div id="wrapper">
-        <header class="transparent">
+        <header class="transparent index-header">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div id="logo">
                             <a href="https://bsideskrakow.pl">
-                                <img class="sponsor-logo-small" src="images/logo.png" alt="BSides Kraków">
+                                <img class="sponsor-logo-small" src="images/logo-display.webp" alt="BSides Kraków" width="600" height="396" decoding="async">
                             </a>
                         </div>
                             <span id="menu-btn"></span>
-                            <div class="header-extra">
-                                <div class="v-center">
-                                    <span id="b-menu">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </span>
-                                </div>
-                            </div>
-							<ul id="mainmenu" class="ms-2">
-								<li><a href="#section-about">About<span></span></a>
-                                    <ul>
-                                        <li><a target="_blank" href="meetups.html">Meetups</a></li>
-
-                                        <li><a href="https://sessionize.com/bsides-krakow-2027" target="_blank" rel="noopener noreferrer">CFP - Call for Papers</a></li>
-                                        <li><span aria-disabled="true">CFS - SOON</span></li>
-                                        <li><span aria-disabled="true">CFV - SOON</span></li>
-                                        <li><span aria-disabled="true">Venue - SOON</span></li>
-                                    </ul>
-                                </li>
-								<li class="club-nav-item"><a href="/hacker-club/">Hacker Club<span></span></a><ul><li><a href="/hacker-club/membership/">Membership, Status &amp; Access</a></li><li><a href="/hacker-club/founders-wall/">Founders Wall</a></li></ul></li><li><a href="#section-speakers">Speakers<span></span></a></li>
-                                <li><a href="#section-trainings">Trainings<span></span></a></li>
-                                <li><a href="#section-schedule">Schedule<span></span></a></li>
-
-								<li><a href="#section-sponsors">Sponsors<span></span></a></li>
-                                <li><a href="after-party.html">After Party<span></span></a></li>
-                                <li><a href="blog.html">Blog<span></span></a></li>
-								<li><a href="#section-register">Past<span></span></a>
-                                    <ul>
-                                        <li><a href="2026.html">2026</a></li>
-                                        <li><a href="2025.html">2025</a></li>
-                                        <li><a href="2024.html">2024</a></li>
-                                        <li><a href="2023.html">2023</a></li>
-                                        <li><a href="2022.html">2022</a></li>
-                                    </ul>
-                                </li>
-							</ul>
+<ul id="mainmenu" class="ms-2 index-navigation" aria-label="Main navigation">
+                                <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-conference">Conference</button>
+                                <ul id="nav-conference" hidden>
+                                <li><a href="#section-about">About the conference</a></li>
+                                <li><a href="#section-speakers">Speakers</a></li>
+                                <li><a href="#section-trainings">Trainings</a></li>
+                                <li><a href="#section-schedule">Schedule</a></li>
+                                <li><a href="#section-sponsors">Sponsors</a></li>
+                                <li><a href="after-party.html">After Party</a></li>
+                                <li><span class="nav-soon" aria-disabled="true">Venue — SOON</span></li>
+                                </ul></li>
+                                <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-community">Community</button>
+                                <ul id="nav-community" hidden>
+                                <li><a href="/history.html">Our story</a></li>
+                                <li><a href="meetups.html">Meetups</a></li>
+                                <li><a href="/hacker-club/">Hacker Club</a></li>
+                                <li><a href="/hacker-club/membership/">Membership, Status &amp; Access</a></li>
+                                <li><a href="/hacker-club/founders-wall/">Founders Wall</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                </ul></li>
+                                <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-participate">Get involved</button>
+                                <ul id="nav-participate" hidden>
+                                <li><a href="https://sessionize.com/bsides-krakow-2027" target="_blank" rel="noopener noreferrer">CFP — Call for Papers</a></li>
+                                <li><span class="nav-soon" aria-disabled="true">CFS — SOON</span></li>
+                                <li><span class="nav-soon" aria-disabled="true">CFV — SOON</span></li>
+                                </ul></li>
+                                <li class="nav-group"><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-past">Past editions</button>
+                                <ul id="nav-past" hidden>
+                                <li><a href="2026.html">2026</a></li>
+                                <li><a href="2025.html">2025</a></li>
+                                <li><a href="2024.html">2024</a></li>
+                                <li><a href="2023.html">2023</a></li>
+                                <li><a href="2022.html">2022</a></li>
+                                </ul></li>
+                                <li><a class="nav-ticket" href="#section-register">Get tickets</a></li>
+                                </ul>
                     </div>
                 </div>
             </div>
         </header>
         <div id="content" class="no-bottom no-top">
-            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.jpg) fixed top center" data-stellar-background-ratio=".2">
+            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.webp) fixed top center" data-stellar-background-ratio=".2" style="background: url(images/bg/8.webp) fixed top center; background-size: cover;">
                 <div id="particles-js"></div>
 				<div class="center-y text-center z-index1000">
 					<div class="container">
@@ -200,7 +275,7 @@
 					</div>
 				</div>
             </section>
-			<section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat">
+			<section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat" style="background: url(images/bg/1.png) fixed no-repeat; background-size: cover;">
 				<div class="wm wm-border dark wow fadeInDown">welcome</div>
                     <div class="container">
                         <div class="row align-items-center">
@@ -210,13 +285,13 @@
                                 <p>Our community is growing beyond the annual conference. Discover the <a href="/hacker-club/">BSides Kraków Hacker Club</a>, a planned permanent home for cybersecurity labs, workshops and collaboration in Kraków.</p>
                                 <p lang="pl">Security BSides Kraków to międzynarodowa, społecznościowa konferencja cyberbezpieczeństwa w Krakowie. Łączy specjalistów bezpieczeństwa IT, pentesterów, programistów i studentów z Polski oraz Europy, oferując prelekcje, warsztaty i praktyczną wymianę wiedzy.</p>
 								<div class="spacer10"></div>
-								<a href="#" class="btn-custom font-weight-bold text-white sm-mb-30">About Us</a>
+								<a href="history.html" class="btn-custom font-weight-bold text-white sm-mb-30">Our story</a>
                             </div>
 							<div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
                                 <div class="de-images">
-									<img class="di-small wow fadeIn" src="images/portfolio/4.jpg" alt="">
-									<img class="di-small-2" src="images/portfolio/7.jpg" alt="">
-									<img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/portfolio/3.jpg" alt="">
+									<img class="di-small wow fadeIn" src="images/recap-2026/dsc05199-960.webp" alt="BSides Kraków 2026 volunteers together outside the venue" loading="lazy" decoding="async" width="960" height="640">
+									<img class="di-small-2" src="images/recap-2026/dsc05372-960.webp" alt="Participants playing a cybersecurity tabletop game at BSides Kraków 2026" loading="lazy" decoding="async" width="960" height="640">
+									<img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/recap-2026/dsc05621-960.webp" alt="BSides Kraków 2026 participants together after the conference" loading="lazy" decoding="async" width="960" height="640">
 								</div>
                             </div>
 
@@ -290,7 +365,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-speakers" data-bgimage="url(images/bg/2.png) fixed center no-repeat">
+            <section id="section-speakers" data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="background: url(images/bg/2.png) fixed center no-repeat; background-size: cover;">
                 <div class="container"><div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
                         <h2>Speakers</h2>
@@ -300,7 +375,7 @@
                     </div>
                 </div></div>
             </section>
-            <section id="section-trainings" data-bgimage="url(images/bg/2.png) fixed center no-repeat">
+            <section id="section-trainings" data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="background: url(images/bg/2.png) fixed center no-repeat; background-size: cover;">
                 <div class="container"><div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
                         <h2>Trainings</h2>
@@ -310,7 +385,7 @@
                     </div>
                 </div></div>
             </section>
-            <section id="section-schedule" data-bgimage="url(images/bg/2.png) fixed center no-repeat">
+            <section id="section-schedule" data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="background: url(images/bg/2.png) fixed center no-repeat; background-size: cover;">
                 <div class="container"><div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
                         <h2>Schedule</h2>
@@ -321,7 +396,7 @@
                 </div></div>
             </section>
             <section id="section-ticket" class="jarallax text-light">
-                <img src="images/bg/2.jpg" class="jarallax-img" alt="">
+                <img src="images/bg/2.jpg" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
                 <div class="wm wm-border dark wow fadeInDown">tickets</div>
                 <div class="container">
                     <div class="row">
@@ -366,7 +441,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-sponsors" data-bgimage="url(images/bg/3.png) fixed center no-repeat">
+            <section id="section-sponsors" data-bgimage="url(images/bg/3.png) fixed center no-repeat" style="background: url(images/bg/3.png) fixed center no-repeat; background-size: cover;">
                 <div class="wm wm-border dark wow fadeInDown ">sponsors</div>
                 <div class="container">
                     <div class="row">
@@ -378,13 +453,13 @@
                         <div class="col-md-12 text-center wow fadeInUp">
                             <h3>BSides Nerd Sponsor (Host & Co-organizer)</h3>
                             <div class="spacer-single"></div>
-                            <!-- <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/agh.png" alt="AGH University" class="grey-hover sponsor-logo-big"></a>
-                            <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/logo CC AGH horizontal color.png" alt="AGH University" class="grey-hover sponsor-logo-big"></a> -->
+                            <!-- <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/agh.png" alt="AGH University" class="grey-hover sponsor-logo-big" width="1200" height="329" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/logo CC AGH horizontal color.png" alt="AGH University" class="grey-hover sponsor-logo-big" width="13644" height="3168" decoding="async" loading="lazy"></a> -->
                             <div class="spacer-double"></div>
 
                             <h3>BSides Nerd Sponsor (Live conference host / organizer)</h3>
                             <div class="spacer-single"></div>
-                            <!-- <a target="_blank" href="https://www.blackhillsinfosec.com/" title="Blackhills"><img src="images/logo/bhs.png" alt="Blackhills" class="grey-hover sponsor-logo"></a> -->
+                            <!-- <a target="_blank" href="https://www.blackhillsinfosec.com/" title="Blackhills"><img src="images/logo/bhs.png" alt="Blackhills" class="grey-hover sponsor-logo" width="1200" height="1201" decoding="async" loading="lazy"></a> -->
                             <div class="spacer-double"></div>
 
                             <h3>Badge Sponsor</h3>
@@ -403,12 +478,12 @@
 
                             <h3>Leading Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="http://nova8.pl/" title="Nova8 Cybersecurity"><img src="images/logo/nova8.png" alt="Nova8" class="grey-hover sponsor-logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="http://nova8.pl/" title="Nova8 Cybersecurity"><img src="images/logo/nova8.png" alt="Nova8" class="grey-hover sponsor-logo" width="1800" height="673" decoding="async" loading="lazy"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="spacer-double"></div>
 
                             <h3>Contributing Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://securehabits.nl" title="Secure Habits"><img src="images/logo/secure-habits.png" alt="Secure Habits" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://securehabits.nl" title="Secure Habits"><img src="images/logo/secure-habits.png" alt="Secure Habits" class="grey-hover sponsor-logo" width="1261" height="433" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Supporting Sponsor</h3>
@@ -421,19 +496,19 @@
 
                             <h3>Supporter Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://snyk.io/community/chapters/" title="DevSecCon Poland"><img src="images/logo/devseccon.png" alt="DevSecCon Poland" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://snyk.io/community/chapters/" title="DevSecCon Poland"><img src="images/logo/devseccon.png" alt="DevSecCon Poland" class="grey-hover sponsor-logo" width="661" height="400" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Community Partner</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://infosecmap.com/"><img src="images/logo/InfoSecMap-logo.png" alt="InfoSecMap is your global go-to platform to explore the cybersecurity ecosystem. Discover conferences, CTFs, meetups, podcasts, and more, plus opportunities like call for papers, sponsors, and volunteers. Always community-first and free to use" class="grey-hover sponsor-logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="https://infosecmap.com/"><img src="images/logo/InfoSecMap-logo.png" alt="InfoSecMap is your global go-to platform to explore the cybersecurity ecosystem. Discover conferences, CTFs, meetups, podcasts, and more, plus opportunities like call for papers, sponsors, and volunteers. Always community-first and free to use" class="grey-hover sponsor-logo" width="600" height="600" decoding="async" loading="lazy"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="spacer-double"></div>
 
                             <h3>Collaborator</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://cybersecgames.com/" title="CyberSec Games"><img src="images/logo/cybersecgames.svg" alt="CyberSec Games" class="grey-hover sponsor-logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a target="_blank" href="https://owasp.org/www-chapter-poland/" title="OWASP Poland"><img src="images/logo/OWASP.png" alt="OWASP Poland" class="grey-hover sponsor-logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a target="_blank" href="https://sessionize.com/" title="Sessonize"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-wide.png" alt="Sessionize" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://cybersecgames.com/" title="CyberSec Games"><img src="images/logo/cybersecgames.svg" alt="CyberSec Games" class="grey-hover sponsor-logo" decoding="async" loading="lazy"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="https://owasp.org/www-chapter-poland/" title="OWASP Poland"><img src="images/logo/OWASP.png" alt="OWASP Poland" class="grey-hover sponsor-logo" width="578" height="178" decoding="async" loading="lazy"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="https://sessionize.com/" title="Sessonize"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-wide.png" alt="Sessionize" class="grey-hover sponsor-logo" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Educational Partner</h3>
@@ -442,7 +517,7 @@
 
                             <h3>Media Partner</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.devsecopspodcast.com.br"><img src="images/logo/devsecopspodcast.png" alt="DevSecOps Podcast" class="grey-hover sponsor-logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="https://www.devsecopspodcast.com.br"><img src="images/logo/devsecopspodcast.png" alt="DevSecOps Podcast" class="grey-hover sponsor-logo" width="3500" height="2500" decoding="async" loading="lazy"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="spacer-double"></div>
                         </div>
                     </div>
@@ -471,7 +546,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <article class="blog-card">
-                                <a class="blog-card-image" href="blog-first-bsides-conference.html" style="background-image:url('images/portfolio/3.jpg')" aria-label="Read the first-time attendee guide"></a>
+                                <a class="blog-card-image" href="blog-first-bsides-conference.html" style="background-image:url('images/recap-2026/dsc04929-960.webp')" aria-label="Read the first-time attendee guide"></a>
                                 <div class="blog-card-body">
                                     <div class="blog-card-meta"><time datetime="2026-07-23">23 July 2026</time> &middot; Attendee guide</div>
                                     <h3><a href="blog-first-bsides-conference.html">Your first BSides conference: a practical guide</a></h3>
@@ -482,7 +557,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <article class="blog-card">
-                                <a class="blog-card-image" href="blog-why-community-security-events-matter.html" style="background-image:url('images/portfolio/1.jpg')" aria-label="Read why community security events matter"></a>
+                                <a class="blog-card-image" href="blog-why-community-security-events-matter.html" style="background-image:url('images/recap-2026/dsc05074-960.webp')" aria-label="Read why community security events matter"></a>
                                 <div class="blog-card-body">
                                     <div class="blog-card-meta"><time datetime="2026-07-23">23 July 2026</time> &middot; Community</div>
                                     <h3><a href="blog-why-community-security-events-matter.html">Why community cybersecurity events matter</a></h3>
@@ -495,53 +570,53 @@
                     <div class="text-center"><a href="blog.html" class="btn-custom text-white">Explore the blog</a></div>
                 </div>
             </section>
-            <section id="section-portfolio" class="no-top no-bottom" aria-label="section">
+            <section id="section-portfolio" class="no-top no-bottom" aria-label="Moments from BSides Kraków 2026">
                 <div id="gallery" class="gallery zoom-gallery full-gallery de-gallery pf_full_width wow fadeInUp" data-wow-delay=".3s">
                     <div class="item residential">
                         <div class="picframe">
-                            <a href="images/portfolio/1.jpg" title="2023">
+                            <a href="images/recap-2026/dsc05295-1600.webp" title="BSides Kraków 2026 — Talks & ideas">
                                 <span class="overlay">
                                     <span class="pf_text">
-                                        <span class="project-name">2023</span>
+                                        <span class="project-name">2026 — Talks & ideas</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/1.jpg" alt="2023">
+                                <img src="images/recap-2026/dsc05295-960.webp" alt="A presenter addressing the audience at BSides Kraków 2026" width="960" height="640" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>
                     <div class="item hospitaly">
                         <div class="picframe">
-                            <a href="images/portfolio/2.jpg" title="2022">
+                            <a href="images/recap-2026/dsc05372-1600.webp" title="BSides Kraków 2026 — Learning by doing">
                                 <span class="overlay">
                                     <span class="pf_text">
-                                        <span class="project-name">2022</span>
+                                        <span class="project-name">2026 — Learning by doing</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/2.jpg" alt="2022">
+                                <img src="images/recap-2026/dsc05372-960.webp" alt="Cybersecurity tabletop game participants at BSides Kraków 2026" width="960" height="640" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>
                     <div class="item hospitaly">
                         <div class="picframe">
-                            <a href="images/portfolio/3.jpg" title="2024">
+                            <a href="images/recap-2026/dsc05199-1600.webp" title="BSides Kraków 2026 — The crew">
                                 <span class="overlay">
                                     <span class="pf_text">
-                                        <span class="project-name">2024</span>
+                                        <span class="project-name">2026 — The crew</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/3.jpg" alt="2024">
+                                <img src="images/recap-2026/dsc05199-960.webp" alt="BSides Kraków 2026 volunteers posing outside the venue" width="960" height="640" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>
                     <div class="item residential">
                         <div class="picframe">
-                            <a href="images/portfolio/4.jpg" title="2022">
+                            <a href="images/recap-2026/dsc05621-1600.webp" title="BSides Kraków 2026 — The community">
                                 <span class="overlay">
                                     <span class="pf_text">
-                                        <span class="project-name">2022</span>
+                                        <span class="project-name">2026 — The community</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/4.jpg" alt="2022">
+                                <img src="images/recap-2026/dsc05621-960.webp" alt="BSides Kraków 2026 participants posing together after the conference" width="960" height="640" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>
@@ -589,7 +664,7 @@
                 </div>
             </section>
 			<section id="section-fun-facts" class="jarallax text-light">
-                <img src="images/bg/header-bg.jpg" class="jarallax-img" alt="">
+                <img src="images/bg/header-bg.jpg" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
                 <div class="container">
 						<div class="row">
                             <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
@@ -627,7 +702,7 @@
             <div class="container">
                 <div class="row align-items-middle">
                     <div class="col-md-3">
-                        <img src="images/logo.png" class="sponsor-logo-small" alt="BSides Kraków"><br />
+                        <img src="images/logo-display.webp" class="sponsor-logo-small" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy"><br />
                     </div>
                     <div class="col-md-6">
                         &copy; Copyright 2027 - Security BSides Kraków - All Rights Reserved<div class="footer-legal" style="margin-top:8px"><a href="/code-of-conduct.html">Code of Conduct</a> <span aria-hidden="true">&middot;</span> <a href="/privacy.html">Privacy</a></div>
@@ -648,33 +723,54 @@
         </footer>
         </div>
     </div>
-    <div id="de-extra-wrap" class="de_light">
-        <span id="b-menu-close">
-            <span></span>
-            <span></span>
-        </span>
-        <div class="de-extra-content">
-            <h3>Information</h3><p>Ticket registration and CFP for 2027 are open. CFS and CFV: SOON.</p><div class="spacer-single"></div><h3>Where &amp; When?</h3>
-            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-calendar-check-o id-color"></i>18 September 2027 (TBD &mdash; to be confirmed)</div>
-            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-map-marker id-color"></i>Venue: SOON</div>
-            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-phone id-color"></i><a href="https://wa.me/48534320228">+48 534 320 228</a></div>
-            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-envelope-o id-color"></i><a href="mailto:contact@bsideskrakow.pl" title="Email" target="_blank">contact@bsideskrakow.pl</a></div>
-            <div class="spacer-single"></div>
-            <h3>More</h3>
-            <ul>
-                <li><a href="https://sessionize.com/bsides-krakow-2027" target="_blank" rel="noopener noreferrer">CFP - Call for Papers</a></li>
-                <li><span aria-disabled="true">CFS - SOON</span></li>
-                <li><span aria-disabled="true">CFV - SOON</span></li>
-            </ul>
-        </div>
-    </div>
-    <div id="de-overlay"></div>
-    <script src="js/plugins.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/validation.js"></script>
+    <script defer src="js/plugins.js"></script>
+    <script defer src="js/designesia.js"></script>
 
-    <script src="js/particles.js"></script>
-    <script src="js/particles-settings.js"></script>
+    <script defer src="js/particles.js"></script>
+    <script defer src="js/particles-settings.js"></script>
+
+    <script>
+    // This navigation is deliberately scoped to the index proposal.
+    (() => {
+        const nav = document.querySelector('.index-navigation');
+        const buttons = [...nav.querySelectorAll('.nav-toggle')];
+        function closeAll() {
+            buttons.forEach(button => {
+                button.setAttribute('aria-expanded', 'false');
+                document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+            });
+        }
+        const desktopHover = window.matchMedia('(min-width: 993px) and (hover: hover)');
+        buttons.forEach(button => {
+            const group = button.closest('.nav-group');
+            group.addEventListener('mouseenter', () => {
+                if (!desktopHover.matches) return;
+                closeAll();
+                button.setAttribute('aria-expanded', 'true');
+                document.getElementById(button.getAttribute('aria-controls')).hidden = false;
+            });
+            group.addEventListener('mouseleave', () => {
+                if (desktopHover.matches) closeAll();
+            });
+        });
+        buttons.forEach(button => button.addEventListener('click', () => {
+            const open = button.getAttribute('aria-expanded') !== 'true';
+            closeAll();
+            button.setAttribute('aria-expanded', String(open));
+            document.getElementById(button.getAttribute('aria-controls')).hidden = !open;
+        }));
+        document.addEventListener('click', event => { if (!nav.contains(event.target)) closeAll(); });
+        nav.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                const active = buttons.find(button => button.getAttribute('aria-expanded') === 'true');
+                closeAll();
+                if (active) active.focus();
+            }
+        });
+        nav.addEventListener('focusout', event => { if (!nav.contains(event.relatedTarget)) closeAll(); });
+        nav.addEventListener('click', event => { if (event.target.closest('a')) closeAll(); });
+    })();
+    </script>
 
 	</body>
 </html>

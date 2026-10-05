@@ -46,8 +46,6 @@
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" id="bootstrap-grid">
-    <link href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" id="bootstrap-reboot">
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/rev-settings.css" rel="stylesheet" type="text/css">
@@ -55,6 +53,11 @@
 
     <link rel="stylesheet" href="css/colors/bsides.css" type="text/css" id="colors">
 	<link rel="stylesheet" href="css/font-style.css" type="text/css">
+    <link rel="stylesheet" href="css/site-fonts.css">
+    <link rel="preload" as="image" href="images/bg/8.webp" fetchpriority="high">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css">
+    <link rel="stylesheet" href="fonts/et-line-font/style.css">
 </head>
 <body id="homepage">
     <div id="wrapper">
@@ -64,7 +67,7 @@
                     <div class="col-md-12">
                         <div id="logo">
                             <a href="https://bsideskrakow.pl">
-                                <img class="sponsor-logo-small" src="images/logo.png" alt="BSides Kraków">
+                                <img class="sponsor-logo-small" src="images/logo-display.webp" alt="BSides Kraków" width="600" height="396" decoding="async">
                             </a>
                         </div>
                             <span id="menu-btn"></span>
@@ -106,7 +109,7 @@
             </div>
         </header>
         <div id="content" class="no-bottom no-top">
-            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.jpg) fixed top center" data-stellar-background-ratio=".2">
+            <section id="section-hero" class="full-height v-center text-light" data-bgimage="url(images/bg/8.webp) fixed top center" data-stellar-background-ratio=".2" style="background: url(images/bg/8.webp) fixed top center; background-size: cover;">
                 <div id="particles-js"></div>
 				<div class="center-y text-center z-index1000">
 					<div class="container">
@@ -129,7 +132,7 @@
 					</div>
 				</div>
             </section>
-			<section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat">
+			<section id="section-about" data-bgimage="url(images/bg/1.png) fixed no-repeat" style="background: url(images/bg/1.png) fixed no-repeat; background-size: cover;">
 				<div class="wm wm-border dark wow fadeInDown">welcome</div>
                     <div class="container">
                         <div class="row align-items-center">
@@ -141,9 +144,9 @@
                             </div>
 							<div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
                                 <div class="de-images">
-									<img class="di-small wow fadeIn" src="images/portfolio/4.jpg" alt="">
-									<img class="di-small-2" src="images/portfolio/5.jpg" alt="">
-									<img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/portfolio/1.jpg" alt="">
+									<img class="di-small wow fadeIn" src="images/portfolio/4.jpg" alt="" width="5009" height="3339" decoding="async" loading="lazy">
+									<img class="di-small-2" src="images/portfolio/5.jpg" alt="" width="4891" height="3261" decoding="async" loading="lazy">
+									<img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images/portfolio/1.jpg" alt="" width="4921" height="3281" decoding="async" loading="lazy">
 								</div>
                             </div>
 
@@ -218,7 +221,7 @@
                 </div>
             </section>
             <section id="section-speakers" class="jarallax text-light">
-                <img src="images/bg/1.jpg" class="jarallax-img" alt="">
+                <img src="images/bg/1.jpg" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
 				<div class="wm wm-border dark wow fadeInDown">speakers</div>
                 <div class="container">
                     <div class="row">
@@ -231,7 +234,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/cassio.png" class="img-responsive" alt="Cássio Pereira" />
+                                    <img src="images/team/cassio.png" class="img-responsive" alt="Cássio Pereira" width="768" height="1024" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Cássio Perera</h3>
@@ -252,7 +255,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/jefferson-macedo.jpg" class="img-responsive" alt="Jefferson Macedo" />
+                                    <img src="images/team/jefferson-macedo.jpg" class="img-responsive" alt="Jefferson Macedo" width="860" height="1280" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Jefferson Macedo</h3>
@@ -269,7 +272,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/julia-zdunczyk.jpg" class="img-responsive" alt="Julia Zduńczyk" />
+                                    <img src="images/team/julia-zdunczyk.jpg" class="img-responsive" alt="Julia Zduńczyk" width="1371" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Julia Zduńczyk</h3>
@@ -285,7 +288,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/spyros-gasteratos.jpg" class="img-responsive" alt="Spyros Gasteratos" />
+                                    <img src="images/team/spyros-gasteratos.jpg" class="img-responsive" alt="Spyros Gasteratos" width="2048" height="1362" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Spyros Gasteratos</h3>
@@ -303,7 +306,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/panagiotis-fiskilis.png" class="img-responsive" alt="Panagiotis Fiskilis" />
+                                    <img src="images/team/panagiotis-fiskilis.png" class="img-responsive" alt="Panagiotis Fiskilis" width="1002" height="1251" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Panagiotis Fiskilis</h3>
@@ -320,7 +323,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/ante-gojsalic.jpg" class="img-responsive" alt="Ante Gojsalic" />
+                                    <img src="images/team/ante-gojsalic.jpg" class="img-responsive" alt="Ante Gojsalic" width="800" height="800" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Ante Gojsalic</h3>
@@ -336,7 +339,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/wesley-silva.png" class="img-responsive" alt="Wesley Silva" />
+                                    <img src="images/team/wesley-silva.png" class="img-responsive" alt="Wesley Silva" width="726" height="726" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Wesley Silva</h3>
@@ -353,7 +356,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/diego-matos.jpg" class="img-responsive" alt="Diego Matos Martins" />
+                                    <img src="images/team/diego-matos.jpg" class="img-responsive" alt="Diego Matos Martins" width="400" height="400" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Diego Matos Martins</h3>
@@ -369,7 +372,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/dorota-kozlowska.jpg" class="img-responsive" alt="Dorota Kozlowska aka Woman in Red" />
+                                    <img src="images/team/dorota-kozlowska.jpg" class="img-responsive" alt="Dorota Kozlowska aka Woman in Red" width="952" height="960" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Dorota Kozlowska aka Woman in Red</h3>
@@ -387,7 +390,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/rishabh-gupta.jpg" class="img-responsive" alt="Rishabh Gupta" />
+                                    <img src="images/team/rishabh-gupta.jpg" class="img-responsive" alt="Rishabh Gupta" width="2031" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Rishabh Gupta</h3>
@@ -403,7 +406,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/ruslan-kiyanchuk.jpg" class="img-responsive" alt="Ruslan Kiyanchuk" />
+                                    <img src="images/team/ruslan-kiyanchuk.jpg" class="img-responsive" alt="Ruslan Kiyanchuk" width="1080" height="1080" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Ruslan Kiyanchuk</h3>
@@ -420,7 +423,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/aivars-kalvans.jpg" class="img-responsive" alt="Aivars Kalvāns" />
+                                    <img src="images/team/aivars-kalvans.jpg" class="img-responsive" alt="Aivars Kalvāns" width="400" height="400" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Aivars Kalvāns</h3>
@@ -438,7 +441,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/vlastimil-sindelar.png" class="img-responsive" alt="Vlastimil Sindelar" />
+                                    <img src="images/team/vlastimil-sindelar.png" class="img-responsive" alt="Vlastimil Sindelar" width="400" height="500" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Vlastimil Sindelar</h3>
@@ -455,7 +458,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/bodhisattva-das.png" class="img-responsive" alt="Bodhisattva Das" />
+                                    <img src="images/team/bodhisattva-das.png" class="img-responsive" alt="Bodhisattva Das" width="1527" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Bodhisattva Das</h3>
@@ -473,7 +476,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/noah-jelich.png" class="img-responsive" alt="Noah Jelich" />
+                                    <img src="images/team/noah-jelich.png" class="img-responsive" alt="Noah Jelich" width="1784" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Noah Jelich</h3>
@@ -490,7 +493,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/adrien-lasalle.jpg" class="img-responsive" alt="Adrien Lasalle" />
+                                    <img src="images/team/adrien-lasalle.jpg" class="img-responsive" alt="Adrien Lasalle" width="400" height="400" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Adrien Lasalle</h3>
@@ -506,7 +509,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/antonio-cortes.jpg" class="img-responsive" alt="Antonio Cortés aka @hackychucky" />
+                                    <img src="images/team/antonio-cortes.jpg" class="img-responsive" alt="Antonio Cortés aka @hackychucky" width="1134" height="1190" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Antonio Cortés aka @hackychucky</h3>
@@ -524,7 +527,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/roald-nefs.jpg" class="img-responsive" alt="Roald Nefs" />
+                                    <img src="images/team/roald-nefs.jpg" class="img-responsive" alt="Roald Nefs" width="1066" height="1066" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Roald Nefs</h3>
@@ -541,7 +544,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/kerim-abubakarov.png" class="img-responsive" alt="Reworr" />
+                                    <img src="images/team/kerim-abubakarov.png" class="img-responsive" alt="Reworr" width="1282" height="1322" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Reworr</h3>
@@ -558,7 +561,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/krystian-dzialowy.jpg" class="img-responsive" alt="Krystian Działowy" />
+                                    <img src="images/team/krystian-dzialowy.jpg" class="img-responsive" alt="Krystian Działowy" width="1536" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Krystian Działowy</h3>
@@ -574,7 +577,7 @@
                         <!-- <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/august-joseph.jpg" class="img-responsive" alt="August Joseph" />
+                                    <img src="images/team/august-joseph.jpg" class="img-responsive" alt="August Joseph" width="1080" height="1211" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>August Joseph</h3>
@@ -591,7 +594,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/tony-uv.png" class="img-responsive" alt="Tony UV" />
+                                    <img src="images/team/tony-uv.png" class="img-responsive" alt="Tony UV" width="400" height="599" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Tony UV</h3>
@@ -608,7 +611,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/luigi-gubello.jpg" class="img-responsive" alt="Luigi Gubello" />
+                                    <img src="images/team/luigi-gubello.jpg" class="img-responsive" alt="Luigi Gubello" width="512" height="512" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Luigi Gubello</h3>
@@ -625,7 +628,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/sam-stepanyan.jpg" class="img-responsive" alt="Sam Stepanyan" />
+                                    <img src="images/team/sam-stepanyan.jpg" class="img-responsive" alt="Sam Stepanyan" width="756" height="756" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Sam Stepanyan</h3>
@@ -642,7 +645,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/robert-shala.jpg" class="img-responsive" alt="Robert Shala" />
+                                    <img src="images/team/robert-shala.jpg" class="img-responsive" alt="Robert Shala" width="800" height="800" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Robert Shala</h3>
@@ -659,7 +662,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/armend-gashi.jpg" class="img-responsive" alt="Armend Gashi" />
+                                    <img src="images/team/armend-gashi.jpg" class="img-responsive" alt="Armend Gashi" width="576" height="576" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Armend Gashi</h3>
@@ -672,7 +675,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/mihai-vasilescu.jpg" class="img-responsive" alt="Mihai Vasilescu" />
+                                    <img src="images/team/mihai-vasilescu.jpg" class="img-responsive" alt="Mihai Vasilescu" width="1097" height="1188" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Mihai Vasilescu</h3>
@@ -685,7 +688,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/gosia.jpeg" class="img-responsive" alt="Gosia" />
+                                    <img src="images/team/gosia.jpeg" class="img-responsive" alt="Gosia" width="1200" height="1323" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Małgorzata Grabiec - Bąk</h3>
@@ -698,7 +701,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/agata.jpeg" class="img-responsive" alt="Agata Łabęcka" />
+                                    <img src="images/team/agata.jpeg" class="img-responsive" alt="Agata Łabęcka" width="3346" height="2886" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Agata Łabęcka</h3>
@@ -711,7 +714,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/SofiaGarcia-23-2.jpg" class="img-responsive" alt="Sofía García" />
+                                    <img src="images/team/SofiaGarcia-23-2.jpg" class="img-responsive" alt="Sofía García" width="600" height="800" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Sofía García</h3>
@@ -724,7 +727,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/pedro.jpg" class="img-responsive" alt="Pedro Dallegrave" />
+                                    <img src="images/team/pedro.jpg" class="img-responsive" alt="Pedro Dallegrave" width="1280" height="1003" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Pedro Dallegrave</h3>
@@ -737,7 +740,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/lukasz-pastuszak.jpeg" class="img-responsive" alt="Łukasz Pastuszak" />
+                                    <img src="images/team/lukasz-pastuszak.jpeg" class="img-responsive" alt="Łukasz Pastuszak" width="1536" height="2048" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Łukasz Pastuszak</h3>
@@ -753,7 +756,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/traveler.jpg" class="img-responsive" alt="Jon the Traveler" />
+                                    <img src="images/team/traveler.jpg" class="img-responsive" alt="Jon the Traveler" width="959" height="961" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Jon the Traveler</h3>
@@ -769,7 +772,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/aadesh-shinde.png" class="img-responsive" alt="Aadesh Shinde" />
+                                    <img src="images/team/aadesh-shinde.png" class="img-responsive" alt="Aadesh Shinde" width="400" height="400" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Aadesh Shinde</h3>
@@ -785,7 +788,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/js.webp" class="img-responsive" alt="John Strand" />
+                                    <img src="images/team/js.webp" class="img-responsive" alt="John Strand" width="768" height="768" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>John Strand</h3>
@@ -801,7 +804,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/sb.webp" class="img-responsive" alt="Steve Borosh" />
+                                    <img src="images/team/sb.webp" class="img-responsive" alt="Steve Borosh" width="1141" height="1219" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Steve Borosh</h3>
@@ -817,7 +820,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/jules.jpg" class="img-responsive" alt="Jules" />
+                                    <img src="images/team/jules.jpg" class="img-responsive" alt="Jules" width="600" height="600" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Julia Kim (Jules)</h3>
@@ -830,7 +833,7 @@
                         <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
                             <div class="de-team-list">
                                 <div class="team-pic">
-                                    <img src="images/team/andy.jpg" class="img-responsive" alt="Andy" />
+                                    <img src="images/team/andy.jpg" class="img-responsive" alt="Andy" width="600" height="600" decoding="async" loading="lazy">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Andy Hoernecke</h3>
@@ -844,7 +847,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-trainings" aria-label="section-services-tab" data-bgimage="url(images/bg/2.png) fixed center no-repeat">
+            <section id="section-trainings" aria-label="section-services-tab" data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="background: url(images/bg/2.png) fixed center no-repeat; background-size: cover;">
                 <div class="wm wm-border dark wow fadeInDown ">trainings</div>
                 <div class="container">
                     <div class="row">
@@ -871,7 +874,7 @@
                                                             <br /><span>Duration 8h</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/js.webp" class="img-circle" alt="John Strand" />
+                                                            <img src="images/team/js.webp" class="img-circle" alt="John Strand" width="768" height="768" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>John Strand</h4>
@@ -891,7 +894,7 @@
                                                             <br /><span>Duration 8h</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/sb.webp" class="img-circle" alt="Steve Borosh" />
+                                                            <img src="images/team/sb.webp" class="img-circle" alt="Steve Borosh" width="1141" height="1219" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Steve Borosh</h4>
@@ -916,7 +919,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-schedule" aria-label="section-services-tab" data-bgimage="url(images/bg/2.png) fixed center no-repeat">
+            <section id="section-schedule" aria-label="section-services-tab" data-bgimage="url(images/bg/2.png) fixed center no-repeat" style="background: url(images/bg/2.png) fixed center no-repeat; background-size: cover;">
                 <div class="wm wm-border dark wow fadeInDown ">schedule</div>
                 <div class="container">
                     <div class="row">
@@ -959,7 +962,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Registration</h4>
@@ -975,7 +978,7 @@
                                                         <div class="sc-time">08h45 - 09h
                                                             <br /><span>Duration 15m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/cassio.png" class="img-circle" alt="Cássio Pereira">
+                                                            <img src="images/team/cassio.png" class="img-circle" alt="Cássio Pereira" width="768" height="1024" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>BSides Kraków Founder</h4>
@@ -991,7 +994,7 @@
                                                         <div class="sc-time">09h - 09h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/panagiotis-fiskilis.png" class="img-circle" alt="Panagiotis Fiskilis">
+                                                            <img src="images/team/panagiotis-fiskilis.png" class="img-circle" alt="Panagiotis Fiskilis" width="1002" height="1251" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Panagiotis Fiskilis</h4>
@@ -1007,7 +1010,7 @@
                                                         <div class="sc-time">10h - 10h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/ante-gojsalic.jpg" class="img-circle" alt="Ante Gojsalić">
+                                                            <img src="images/team/ante-gojsalic.jpg" class="img-circle" alt="Ante Gojsalić" width="800" height="800" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Ante Gojsalić</h4>
@@ -1023,7 +1026,7 @@
                                                         <div class="sc-time">11h - 11h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/sb.webp" class="img-circle" alt="Steve Borosh">
+                                                            <img src="images/team/sb.webp" class="img-circle" alt="Steve Borosh" width="1141" height="1219" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Steve Borosh</h4>
@@ -1042,7 +1045,7 @@
                                                         <div class="sc-time">11h45 - 13h
                                                             <br /><span>Duration 1h15</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Lunch break</h4>
@@ -1058,7 +1061,7 @@
                                                         <div class="sc-time">13h - 13h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/jefferson-macedo.jpg" class="img-circle" alt="Jefferson Macedo">
+                                                            <img src="images/team/jefferson-macedo.jpg" class="img-circle" alt="Jefferson Macedo" width="860" height="1280" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Jefferson Macedo</h4>
@@ -1074,7 +1077,7 @@
                                                         <div class="sc-time">14h - 14h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/js.webp" class="img-circle" alt="John Strand">
+                                                            <img src="images/team/js.webp" class="img-circle" alt="John Strand" width="768" height="768" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>John Strand</h4>
@@ -1093,7 +1096,7 @@
                                                         <div class="sc-time">15h - 15h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/roald-nefs.jpg" class="img-circle" alt="Roald Nefs" />
+                                                            <img src="images/team/roald-nefs.jpg" class="img-circle" alt="Roald Nefs" width="1066" height="1066" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Roald Nefs</h4>
@@ -1110,7 +1113,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/robert-shala.jpg" class="img-circle" alt="Robert Shala" />
+                                                            <img src="images/team/robert-shala.jpg" class="img-circle" alt="Robert Shala" width="800" height="800" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Robert Shala aka zizkill</h4>
@@ -1126,7 +1129,7 @@
                                                         <div class="sc-time">17h - 17h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/julia-zdunczyk.jpg" class="img-circle" alt="Julia Zduńczyk" />
+                                                            <img src="images/team/julia-zdunczyk.jpg" class="img-circle" alt="Julia Zduńczyk" width="1371" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Julia Zduńczyk</h4>
@@ -1142,7 +1145,7 @@
                                                         <div class="sc-time">17h45 - 18h
                                                             <br /><span>Duration 15m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/cassio.png" class="img-circle" alt="Cássio Pereira" />
+                                                            <img src="images/team/cassio.png" class="img-circle" alt="Cássio Pereira" width="768" height="1024" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>BSides Kraków Founder</h4>
@@ -1167,7 +1170,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Registration</h4>
@@ -1184,7 +1187,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/kerim-abubakarov.png" class="img-circle" alt="Reworr">
+                                                            <img src="images/team/kerim-abubakarov.png" class="img-circle" alt="Reworr" width="1282" height="1322" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Reworr</h4>
@@ -1201,8 +1204,8 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/wesley-silva.png" class="img-circle" alt="Wesley Silva" />
-                                                            <img src="images/team/diego-matos.jpg" class="img-circle" alt="Diego Matos" />
+                                                            <img src="images/team/wesley-silva.png" class="img-circle" alt="Wesley Silva" width="726" height="726" decoding="async" loading="lazy">
+                                                            <img src="images/team/diego-matos.jpg" class="img-circle" alt="Diego Matos" width="400" height="400" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Wesley Silva</h4>
@@ -1220,7 +1223,7 @@
                                                         <div class="sc-time">11h - 11h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/dorota-kozlowska.jpg" class="img-circle" alt="Dorota Kozlowska">
+                                                            <img src="images/team/dorota-kozlowska.jpg" class="img-circle" alt="Dorota Kozlowska" width="952" height="960" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Dorota Kozlowska aka Woman in Red</h4>
@@ -1237,7 +1240,7 @@
                                                             <br /><span>Duration 1h15</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków" />
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Lunch break</h4>
@@ -1254,7 +1257,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/rishabh-gupta.jpg" class="img-circle" alt="Rishabh Gupta" />
+                                                            <img src="images/team/rishabh-gupta.jpg" class="img-circle" alt="Rishabh Gupta" width="2031" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Rishabh Gupta</h4>
@@ -1271,7 +1274,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/ruslan-kiyanchuk.jpg" class="img-circle" alt="Ruslan Kiyanchuk">
+                                                            <img src="images/team/ruslan-kiyanchuk.jpg" class="img-circle" alt="Ruslan Kiyanchuk" width="1080" height="1080" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Ruslan Kiyanchuk</h4>
@@ -1288,7 +1291,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/aivars-kalvans.jpg" class="img-circle" alt="Aivars Kalvāns" />
+                                                            <img src="images/team/aivars-kalvans.jpg" class="img-circle" alt="Aivars Kalvāns" width="400" height="400" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Aivars Kalvāns</h4>
@@ -1305,7 +1308,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/vlastimil-sindelar.png" class="img-circle" alt="Vlastimil Sindelar" />
+                                                            <img src="images/team/vlastimil-sindelar.png" class="img-circle" alt="Vlastimil Sindelar" width="400" height="500" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Vlastimil Sindelar</h4>
@@ -1322,7 +1325,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/bodhisattva-das.png" class="img-circle" alt="Bodhisattva Das" />
+                                                            <img src="images/team/bodhisattva-das.png" class="img-circle" alt="Bodhisattva Das" width="1527" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Bodhisattva Das</h4>
@@ -1347,7 +1350,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Registration</h4>
@@ -1364,7 +1367,7 @@
                                                             <br /><span>Duration 15m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/noah-jelich.png" class="img-circle" alt="Noah Jelich" />
+                                                            <img src="images/team/noah-jelich.png" class="img-circle" alt="Noah Jelich" width="1784" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Noah Jelich</h4>
@@ -1381,7 +1384,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/adrien-lasalle.jpg" class="img-circle" alt="AlrikRr">
+                                                            <img src="images/team/adrien-lasalle.jpg" class="img-circle" alt="AlrikRr" width="400" height="400" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Adrien Lasalle aka @AlrikRr</h4>
@@ -1398,7 +1401,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/antonio-cortes.jpg" class="img-circle" alt="hackychucky">
+                                                            <img src="images/team/antonio-cortes.jpg" class="img-circle" alt="hackychucky" width="1134" height="1190" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Antonio Cortés aka @hackychucky</h4>
@@ -1415,7 +1418,7 @@
                                                             <br /><span>Duration 1h15</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Lunch break</h4>
@@ -1432,8 +1435,8 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/gosia.jpeg" class="img-circle" alt="Gosia" />
-                                                            <img src="images/team/agata.jpeg" class="img-circle" alt="Agata" />
+                                                            <img src="images/team/gosia.jpeg" class="img-circle" alt="Gosia" width="1200" height="1323" decoding="async" loading="lazy">
+                                                            <img src="images/team/agata.jpeg" class="img-circle" alt="Agata" width="3346" height="2886" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Małgorzata Grabiec - Bąk</h4>
@@ -1451,7 +1454,7 @@
                                                         <div class="sc-time">15h - 15h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/aadesh-shinde.png" class="img-circle" alt="Aadesh Shinde" />
+                                                            <img src="images/team/aadesh-shinde.png" class="img-circle" alt="Aadesh Shinde" width="400" height="400" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Aadesh Shinde</h4>
@@ -1476,7 +1479,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Registration</h4>
@@ -1493,7 +1496,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/spyros-gasteratos.jpg" class="img-circle" alt="Spyros">
+                                                            <img src="images/team/spyros-gasteratos.jpg" class="img-circle" alt="Spyros" width="2048" height="1362" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Spyros Gasteratos</h4>
@@ -1510,7 +1513,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/sam-stepanyan.jpg" class="img-circle" alt="Sam Stepanyan" />
+                                                            <img src="images/team/sam-stepanyan.jpg" class="img-circle" alt="Sam Stepanyan" width="756" height="756" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Sam Stepanyan</h4>
@@ -1527,7 +1530,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/luigi-gubello.jpg" class="img-circle" alt="Luigi Gubello" />
+                                                            <img src="images/team/luigi-gubello.jpg" class="img-circle" alt="Luigi Gubello" width="512" height="512" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Luigi Gubello</h4>
@@ -1544,7 +1547,7 @@
                                                             <br /><span>Duration 1h15</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Lunch break</h4>
@@ -1561,7 +1564,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/tony-uv.png" class="img-circle" alt="Tony UV" />
+                                                            <img src="images/team/tony-uv.png" class="img-circle" alt="Tony UV" width="400" height="599" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Tony UV</h4>
@@ -1578,8 +1581,8 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/andy.jpg" class="img-circle" alt="Andy">
-                                                            <img src="images/team/jules.jpg" class="img-circle" alt="Jules">
+                                                            <img src="images/team/andy.jpg" class="img-circle" alt="Andy" width="600" height="600" decoding="async" loading="lazy">
+                                                            <img src="images/team/jules.jpg" class="img-circle" alt="Jules" width="600" height="600" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Andy Hoernecke</h4>
@@ -1598,7 +1601,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/krystian-dzialowy.jpg" class="img-circle" alt="Krystian Działowy" />
+                                                            <img src="images/team/krystian-dzialowy.jpg" class="img-circle" alt="Krystian Działowy" width="1536" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Krystian Działowy</h4>
@@ -1615,7 +1618,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/pedro.jpg" class="img-circle" alt="Pedro Dallegrave" />
+                                                            <img src="images/team/pedro.jpg" class="img-circle" alt="Pedro Dallegrave" width="1280" height="1003" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Pedro Dallegrave</h4>
@@ -1631,7 +1634,7 @@
                                                         <div class="sc-time">17h - 17h45
                                                             <br /><span>Duration 45m</span></div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/lukasz-pastuszak.jpeg" class="img-circle" alt="Łukasz Pastuszak" />
+                                                            <img src="images/team/lukasz-pastuszak.jpeg" class="img-circle" alt="Łukasz Pastuszak" width="1536" height="2048" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Łukasz Pastuszak</h4>
@@ -1656,7 +1659,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Registration</h4>
@@ -1673,7 +1676,7 @@
                                                             <br /><span>Duration all day long.</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" />
+                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" width="959" height="961" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Jon Traveler</h4>
@@ -1690,7 +1693,7 @@
                                                             <br /><span>Duration all day long.</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="https://metactf.com/wp-content/uploads/2024/02/metactf-logo-new-rev.svg" class="img-circle" alt="MetaCTF" />
+                                                            <img src="https://metactf.com/wp-content/uploads/2024/02/metactf-logo-new-rev.svg" class="img-circle" alt="MetaCTF" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>MetaCTF</h4>
@@ -1707,7 +1710,7 @@
                                                             <br /><span>Duration 1h</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków" />
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Lunch break</h4>
@@ -1724,7 +1727,7 @@
                                                             <br /><span>Duration 45m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" />
+                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" width="959" height="961" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Jon Traveler</h4>
@@ -1741,7 +1744,7 @@
                                                             <br /><span>Duration 15m</span>
                                                         </div>
                                                         <div class="sc-pic">
-                                                            <img src="images/logo.png" class="img-circle" alt="BSides Kraków">
+                                                            <img src="images/logo-display.webp" class="img-circle" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Coffee break</h4>
@@ -1756,7 +1759,7 @@
                                                     <div class="schedule-item">
                                                         <div class="sc-time">17h</div>
                                                         <div class="sc-pic">
-                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" />
+                                                            <img src="images/team/traveler.jpg" class="img-circle" alt="Jon the Traveler" width="959" height="961" decoding="async" loading="lazy">
                                                         </div>
                                                         <div class="sc-name">
                                                             <h4>Jon Traveler</h4>
@@ -1779,7 +1782,7 @@
                 </div>
             </section>
             <section id="section-ticket" class="jarallax text-light">
-                <img src="images/bg/2.jpg" class="jarallax-img" alt="">
+                <img src="images/bg/2.jpg" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
                 <div class="wm wm-border dark wow fadeInDown">tickets</div>
 				<div class="container">
                     <div class="row">
@@ -1908,7 +1911,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-sponsors" data-bgimage="url(images/bg/3.png) fixed center no-repeat">
+            <section id="section-sponsors" data-bgimage="url(images/bg/3.png) fixed center no-repeat" style="background: url(images/bg/3.png) fixed center no-repeat; background-size: cover;">
                 <div class="wm wm-border dark wow fadeInDown ">sponsors</div>
                 <div class="container">
                     <div class="row">
@@ -1920,73 +1923,73 @@
                         <div class="col-md-12 text-center wow fadeInUp">
                             <h3>BSides Nerd Sponsor (Host & Co-organizer)</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/agh.png" alt="AGH University" class="grey-hover sponsor-logo-big"></a>
+                            <a target="_blank" href="https://www.informatyka.agh.edu.pl/en/" title="AGH Informatyka"><img src="images/logo/agh.png" alt="AGH University" class="grey-hover sponsor-logo-big" width="1200" height="329" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>BSides Nerd Sponsor (Live conference host / organizer)</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.antisyphontraining.com/" title="Antisyphon Training"><img src="images/logo/antisyphon.png" alt="Antisyphon Training" class="grey-hover sponsor-logo-small"></a>
-                            <a target="_blank" href="https://www.blackhillsinfosec.com/" title="Blackhills"><img src="images/logo/bhs.png" alt="Blackhills" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://www.antisyphontraining.com/" title="Antisyphon Training"><img src="images/logo/antisyphon.png" alt="Antisyphon Training" class="grey-hover sponsor-logo-small" width="584" height="600" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://www.blackhillsinfosec.com/" title="Blackhills"><img src="images/logo/bhs.png" alt="Blackhills" class="grey-hover sponsor-logo" width="1200" height="1201" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Badge Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="http://nova8.pl/" title="Nova8 Cybersecurity"><img src="images/logo/nova8.png" alt="Nova8" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="http://nova8.pl/" title="Nova8 Cybersecurity"><img src="images/logo/nova8.png" alt="Nova8" class="grey-hover sponsor-logo" width="1800" height="673" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Leash Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://purplebirdsecurity.com/" title="Purple Bird Security"><img src="images/logo/pb.png" alt="Purple Bird Security" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://purplebirdsecurity.com/" title="Purple Bird Security"><img src="images/logo/pb.png" alt="Purple Bird Security" class="grey-hover sponsor-logo" width="1920" height="1080" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Bag Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://smithy.security/" title="Smithy Security"><img src="images/logo/smithy.svg" alt="Smithy Security" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://smithy.security/" title="Smithy Security"><img src="images/logo/smithy.svg" alt="Smithy Security" class="grey-hover sponsor-logo" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Leading Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://checkmarx.com/" title="Checkmarx"><img src="images/logo/checkmarx.png" alt="Checkmarx" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://checkmarx.com/" title="Checkmarx"><img src="images/logo/checkmarx.png" alt="Checkmarx" class="grey-hover sponsor-logo" width="1890" height="574" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Contributing Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://velite.io/" title="Velite"><img src="images/logo/Velite_logo_white.png" alt="VELITE" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://jobs.netflix.com/" title="Netflkix"><img src="images/logo/Netflix_Logo_CMYK.png" alt="Netflkix" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://splx.ai/" title="SPLX ai"><img src="images/logo/splx.png" alt="SPLX" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://velite.io/" title="Velite"><img src="images/logo/Velite_logo_white.png" alt="VELITE" class="grey-hover sponsor-logo" width="1600" height="680" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://jobs.netflix.com/" title="Netflkix"><img src="images/logo/Netflix_Logo_CMYK.png" alt="Netflkix" class="grey-hover sponsor-logo" width="1801" height="756" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://splx.ai/" title="SPLX ai"><img src="images/logo/splx.png" alt="SPLX" class="grey-hover sponsor-logo" width="1677" height="480" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Supporting Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.aikido.dev/" title="Blaze"><img src="images/logo/aikido.png" alt="Aikido" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://unimus.net/" title="Unimus"><img src="images/logo/unimus.png" alt="Unimus" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://metactf.com/" title="Blaze"><img src="https://metactf.com/wp-content/uploads/2024/02/metactf-logo-new-rev.svg" alt="MetaCTF" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://www.aikido.dev/" title="Blaze"><img src="images/logo/aikido.png" alt="Aikido" class="grey-hover sponsor-logo" width="1624" height="368" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://unimus.net/" title="Unimus"><img src="images/logo/unimus.png" alt="Unimus" class="grey-hover sponsor-logo" width="707" height="353" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://metactf.com/" title="Blaze"><img src="https://metactf.com/wp-content/uploads/2024/02/metactf-logo-new-rev.svg" alt="MetaCTF" class="grey-hover sponsor-logo" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Notable Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.blazeinfosec.com/" title="Blaze"><img src="images/logo/blaze.png" alt="Blaze" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://www.blazeinfosec.com/" title="Blaze"><img src="images/logo/blaze.png" alt="Blaze" class="grey-hover sponsor-logo" width="1000" height="1000" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Supporter Sponsor</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://cycode.com/" title="CyCode"><img src="images/logo/cycode.png" alt="CyCode" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://snyk.io/community/chapters/" title="DevSecCon Poland"><img src="images/logo/devseccon.png" alt="DevSecCon Poland" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://cycode.com/" title="CyCode"><img src="images/logo/cycode.png" alt="CyCode" class="grey-hover sponsor-logo" width="645" height="352" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://snyk.io/community/chapters/" title="DevSecCon Poland"><img src="images/logo/devseccon.png" alt="DevSecCon Poland" class="grey-hover sponsor-logo" width="661" height="400" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Community Partner</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://pagedout.institute/"><img src="images/logo/pagedout-logo-white-small-256.png" alt="PagedOUT" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://hackarcana.com/"><img src="images/logo/hackArcana-logo-horizontal-white.png" alt="Hack Arcana" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://pagedout.institute/"><img src="images/logo/pagedout-logo-white-small-256.png" alt="PagedOUT" class="grey-hover sponsor-logo" width="256" height="69" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://hackarcana.com/"><img src="images/logo/hackArcana-logo-horizontal-white.png" alt="Hack Arcana" class="grey-hover sponsor-logo" width="1200" height="602" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
 
                             <h3>Collaborator</h3>
                             <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.sentry.security/" title="Sentry Security"><img src="images/logo/sentry.png" alt="Sentry Security" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://zeroday.agh.edu.pl/" title="ZeroDay AGH"><img src="images/logo/zd.png" alt="Zero Day" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://owasp.org/www-chapter-poland/" title="OWASP Poland"><img src="images/logo/OWASP.png" alt="OWASP Poland" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://sessionize.com/" title="Sessonize"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-wide.png" alt="Sessionize" class="grey-hover sponsor-logo"></a>
-                            <a target="_blank" href="https://gynvael.coldwind.pl/?blog=1&lang=en"><img src="images/logo/g3.png" alt="Gynvael Coldwind" class="grey-hover sponsor-logo"></a>
+                            <a target="_blank" href="https://www.sentry.security/" title="Sentry Security"><img src="images/logo/sentry.png" alt="Sentry Security" class="grey-hover sponsor-logo" width="1392" height="427" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://zeroday.agh.edu.pl/" title="ZeroDay AGH"><img src="images/logo/zd.png" alt="Zero Day" class="grey-hover sponsor-logo" width="500" height="500" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://owasp.org/www-chapter-poland/" title="OWASP Poland"><img src="images/logo/OWASP.png" alt="OWASP Poland" class="grey-hover sponsor-logo" width="578" height="178" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://sessionize.com/" title="Sessonize"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-wide.png" alt="Sessionize" class="grey-hover sponsor-logo" decoding="async" loading="lazy"></a>
+                            <a target="_blank" href="https://gynvael.coldwind.pl/?blog=1&lang=en"><img src="images/logo/g3.png" alt="Gynvael Coldwind" class="grey-hover sponsor-logo" width="214" height="125" decoding="async" loading="lazy"></a>
                             <div class="spacer-double"></div>
                         </div>
                     </div>
@@ -2002,7 +2005,7 @@
                                         <span class="project-name">2023</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/1.jpg" alt="2023">
+                                <img src="images/portfolio/1.jpg" alt="2023" width="4921" height="3281" decoding="async" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -2014,7 +2017,7 @@
                                         <span class="project-name">2022</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/2.jpg" alt="2022">
+                                <img src="images/portfolio/2.jpg" alt="2022" width="5058" height="3372" decoding="async" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -2026,7 +2029,7 @@
                                         <span class="project-name">2024</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/3.jpg" alt="2024">
+                                <img src="images/portfolio/3.jpg" alt="2024" width="5316" height="3544" decoding="async" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -2038,7 +2041,7 @@
                                         <span class="project-name">2022</span>
                                     </span>
                                 </span>
-                                <img src="images/portfolio/4.jpg" alt="2022">
+                                <img src="images/portfolio/4.jpg" alt="2022" width="5009" height="3339" decoding="async" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -2086,7 +2089,7 @@
                 </div>
             </section>
 			<section id="section-fun-facts" class="jarallax text-light">
-                <img src="images/bg/header-bg.jpg" class="jarallax-img" alt="">
+                <img src="images/bg/header-bg.jpg" class="jarallax-img" alt="" width="1920" height="1080" decoding="async">
                 <div class="container">
 						<div class="row">
                             <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
@@ -2124,7 +2127,7 @@
             <div class="container">
                 <div class="row align-items-middle">
                     <div class="col-md-3">
-                        <img src="images/logo.png" class="sponsor-logo-small" alt="BSides Kraków"><br />
+                        <img src="images/logo-display.webp" class="sponsor-logo-small" alt="BSides Kraków" width="600" height="396" decoding="async" loading="lazy"><br />
                     </div>
                     <div class="col-md-6">
                         &copy; Copyright 2025 - Security BSides Kraków - All Rights Reserved<div class="footer-legal" style="margin-top:8px"><a href="/code-of-conduct.html">Code of Conduct</a> <span aria-hidden="true">&middot;</span> <a href="/privacy.html">Privacy</a></div>
@@ -2177,11 +2180,10 @@
         </div>
     </div>
     <div id="de-overlay"></div>
-    <script src="js/plugins.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/particles-settings.js"></script>
+    <script defer src="js/plugins.js"></script>
+    <script defer src="js/designesia.js"></script>
+    <script defer src="js/countdown-custom.js"></script>
+    <script defer src="js/particles.js"></script>
+    <script defer src="js/particles-settings.js"></script>
 	</body>
 </html>
