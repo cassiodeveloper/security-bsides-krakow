@@ -35,3 +35,8 @@
 .badge-gallery img { width:100%; height:auto; aspect-ratio:3/4; object-fit:contain; }
 .badge-gallery figcaption { margin-top:12px; font-size:12px; line-height:1.6; color:var(--muted); }
 @media(max-width:700px) { .badge-story { margin-top:40px; padding-top:28px; } .badge-gallery { grid-template-columns:1fr; gap:28px; } }
+
+.speaker-slides { margin-top:64px; padding-top:40px; border-top:1px solid var(--line); }
+.speaker-slides h3 { font-size:clamp(26px,3vw,38px); margin:16px 0; }
+.speaker-slides > p:not(.eyebrow) { max-width:680px; }
+@media(max-width:700px) { .speaker-slides { margin-top:40px; padding-top:28px; } }
