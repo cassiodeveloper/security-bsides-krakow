@@ -263,3 +263,10 @@ body.hacker-club { display: block; background: #111; color: #c4c4c9; font-family
 }
 .club-profile-photo.club-photo-fernando { object-position: 32% top; }
 .club-wall-photo.club-photo-fernando { object-position: center top; }
+
+/* Physical space: address and honest photo placeholders. */
+.club-space-address { font-style: normal; font-size: 22px; line-height: 1.8; margin: 24px 0; }
+.club-space-photo { min-height: 220px; padding: 32px; border: 1px dashed #754650; border-radius: 4px; background: linear-gradient(135deg,#2b1b22,#171719); display: flex; flex-direction: column; justify-content: flex-end; }
+.club-space-photo > span { color: #ed8995; font: 14px Consolas,monospace; margin-bottom: auto; padding-bottom: 36px; }
+.club-space-photo p { margin: 0; color: #bbb; }
+.club-space .club-flow-button { overflow-wrap: anywhere; max-width: 100%; }

@@ -26,7 +26,9 @@
         if (!anchor) return;
         var url = new URL(anchor.href, window.location.href);
         var ctx = context(anchor);
-        if (url.origin === 'https://buy.stripe.com') {
+        if (anchor.dataset.spaceAction === 'directions' || anchor.dataset.spaceAction === 'contact') {
+            send('hc_space_click', { placement: ctx.placement, action: anchor.dataset.spaceAction });
+        } else if (url.origin === 'https://buy.stripe.com') {
             var options = {
                 '/4gM4gsaNkaw99rI0md0Jq03': 'full',
                 '/9B67sE7B833H1Zgb0R0Jq04': 'installments'

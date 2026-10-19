@@ -1,0 +1,67 @@
+/* Story-specific styles; the existing site supplies type, grid, navigation and footer. */
+body.our-dragon { background:#111; color:#c4c4c9; font-size:16px; line-height:1.85; }
+.our-dragon #wrapper { background:#111; }
+.our-dragon header.index-header { position:relative; background:#111; }
+.our-dragon section { padding:90px 0; background:#111; }
+.our-dragon h1,.our-dragon h2,.our-dragon h3,.our-dragon strong { color:#fff; }
+.our-dragon h1 { font-size:clamp(38px,5vw,68px); line-height:1.07; letter-spacing:-.045em; margin:0 0 28px; }
+.our-dragon h1 span { color:#f07783; }
+.our-dragon h2 { font-size:clamp(28px,3.4vw,44px); line-height:1.18; letter-spacing:-.035em; margin-bottom:26px; }
+.our-dragon h3 { font-size:22px; line-height:1.35; }
+.our-dragon p { margin-bottom:22px; }
+.our-dragon main a:not(.btn-custom) { color:#f297a0; text-decoration:underline; text-underline-offset:4px; }
+.our-dragon a:focus-visible,.our-dragon button:focus-visible { outline:3px solid #fff; outline-offset:5px; }
+.our-dragon .dragon-hero { padding:65px 0 0; background:radial-gradient(ellipse at 90% 30%,#421b21 0,transparent 65%),#111; }
+.dragon-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:70px; align-items:start; }
+.dragon-hero .dragon-grid { align-items:center; }
+.our-dragon .dragon-eyebrow { font:12px/1.7 Consolas,monospace; color:#f0848c; letter-spacing:.14em; text-transform:uppercase; margin-bottom:24px; }
+.our-dragon .dragon-lead { color:#fff; font-size:clamp(20px,2.2vw,26px); line-height:1.55; }
+.dragon-identity { margin:0; align-self:center; text-align:center; }
+.dragon-identity img { display:block; width:100%; height:auto; }
+.dragon-identity figcaption { margin-top:28px; font:12px/1.8 Consolas,monospace; color:#c4b5b8; }
+.our-dragon .dragon-trail { margin:65px 0 0; border-top:1px solid #ffffff26; padding:24px 0; display:flex; flex-wrap:wrap; gap:20px; font:12px/1.8 Consolas,monospace; color:#c4b5b8; }
+.dragon-trail span { color:#f0848c; }
+.our-dragon .dragon-alt { background:#191719; }
+.dragon-intro { max-width:740px; }
+.our-dragon .dragon-note { color:#aaaab3; font-size:13px; line-height:1.8; }
+.dragon-chapters { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); list-style:none; padding:0; margin:48px 0 30px; counter-reset:chapter; }
+.dragon-chapters li { border-top:2px solid #be1f2e; padding:28px 24px 0 0; position:relative; counter-increment:chapter; }
+.dragon-chapters li::before { content:'0' counter(chapter); display:block; font:40px/1.4 Consolas,monospace; color:#f0848c; margin-bottom:20px; }
+.dragon-chapters li + li { padding-left:24px; border-left:1px solid #ffffff20; }
+.dragon-chapters .dragon-eyebrow { display:block; margin-bottom:12px; }
+.dragon-chapters p { font-size:14px; }
+.dragon-timeline { list-style:none; border-left:1px solid #754148; padding:0 0 0 32px; margin:0; }
+.dragon-timeline li { position:relative; padding-bottom:24px; }
+.dragon-timeline li::before { content:''; position:absolute; left:-38px; top:9px; width:11px; height:11px; background:#f07783; border-radius:50%; }
+.dragon-timeline p { margin:8px 0 0; }
+.our-dragon .dragon-photo-section { background:#171719; }
+.dragon-photo { margin:36px 0 55px; }
+.dragon-photo img { display:block; width:100%; height:auto; }
+.dragon-photo figcaption { padding-top:14px; font-size:12px; line-height:1.8; }
+.dragon-visit { display:grid; grid-template-columns:1.5fr 1fr; gap:60px; padding:40px; background:#21191c; border-left:4px solid #be1f2e; align-items:center; }
+.dragon-visit h2 { font-size:30px; }
+.dragon-visit .dragon-note { margin:22px 0 0; }
+.dragon-coordinates { font:14px/1.7 Consolas,monospace; }
+.our-dragon .dragon-punchline { color:#f297a0; font-size:clamp(22px,2.6vw,30px); font-weight:700; line-height:1.5; }
+.dragon-final-mark { padding:35px; border:1px solid #ffffff26; background:radial-gradient(ellipse,#35191e,transparent 70%); }
+.our-dragon .dragon-closing { text-align:center; background:radial-gradient(ellipse at 50% 100%,#37181e,transparent 70%),#111; }
+.dragon-closing p { max-width:760px; margin-left:auto; margin-right:auto; }
+.dragon-closing-logo { width:230px; max-width:100%; height:auto; margin:12px auto 26px; }
+.dragon-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:24px; align-items:center; }
+.our-dragon .btn-custom { background:#be1f2e; color:#fff; white-space:normal; text-align:center; }
+.our-dragon .dragon-sources { padding:42px 0; border-top:1px solid #ffffff20; }
+.dragon-sources h2 { font-size:18px; letter-spacing:0; }
+.dragon-sources ul { font-size:13px; padding-left:20px; }
+.dragon-sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.dragon-skip { position:fixed; left:16px; top:-100px; padding:12px 20px; background:#111; color:#fff; z-index:10000; }
+.dragon-skip:focus { top:16px; }
+.our-dragon footer img { height:auto; }
+@media(max-width:991px) { .dragon-grid { gap:36px; } .dragon-chapters { grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 0; } .dragon-chapters li:nth-child(3) { border-left:0; padding-left:0; } .dragon-visit { gap:30px; padding:28px; } }
+@media(max-width:767px) { .our-dragon section { padding:58px 0; } .our-dragon .dragon-hero { padding-top:36px; } .dragon-grid,.dragon-visit { grid-template-columns:1fr; } .dragon-identity { max-width:440px; margin:auto; } .dragon-hero .dragon-identity { padding:20px 16px 0; } .our-dragon .dragon-trail { gap:12px; margin-top:40px; } .dragon-final-mark { padding:24px; } }
+@media(max-width:420px) { .dragon-chapters { grid-template-columns:1fr; } .dragon-chapters li + li { padding-left:0; border-left:0; } }
+@media(prefers-reduced-motion:reduce) { .our-dragon *, .our-dragon *::before, .our-dragon *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+
+/* User-initiated playback keeps motion optional and video off the initial load. */
+.dragon-animation { margin:55px 0 0; }
+.dragon-animation video { display:block; width:100%; height:auto; background:#000; }
+.dragon-animation figcaption { margin-top:14px; font-size:13px; line-height:1.8; }

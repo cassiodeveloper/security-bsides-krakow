@@ -43,3 +43,5 @@ This verifies event generation, not receipt by Google or GA4 account settings.
 References:
 - https://developers.google.com/analytics/devguides/collection/ga4/events
 - https://developers.google.com/tag-platform/gtagjs/reference
+### Physical space page
+The /hacker-club/space/ page sends hc_space_click with action=directions or action=contact and placement. These record outbound intent, not completed visits. Local browser checks intercept Google requests to avoid test traffic.
