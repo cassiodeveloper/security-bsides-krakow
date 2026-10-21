@@ -2,7 +2,7 @@
     "meta": {
         "title": "BSides Kraków Meetups",
         "timezone": "Europe/Warsaw",
-        "updatedAt": "2026-04-01"
+        "updatedAt": "2026-10-21"
     },
     "meetups": [
         {
@@ -403,6 +403,52 @@
                     "url": "https://www.antisyphontraining.com/"
                 }
             ]
-        }        
+        },
+        {
+            "id": "2026-10-28-october-meetup",
+            "title": "Security & AI",
+            "date": "2026-10-28",
+            "startTime": "17:00",
+            "endTime": "20:30",
+            "venueName": "Studencka 8",
+            "address": "Studencka 8, 31-116 Kraków, Poland",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Studencka+8&query_place_id=ChIJQbDO-AtbFkcR8yP7oNgz0b4",
+            "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/317070140/",
+            "theme": "Security & AI",
+            "speakers": [
+                {
+                    "name": "Cássio Pereira",
+                    "role": "BSides Kraków Community updates",
+                    "link": ""
+                },
+                {
+                    "name": "Derek Banks",
+                    "role": "Your Agent Has a Shell - Securing and Investigating AI Agent Deployments",
+                    "link": ""
+                }
+            ],
+            "tags": [
+                "Community",
+                "Meetup",
+                "AI Security",
+                "AI Agents",
+                "Incident Response"
+            ],
+            "status": "scheduled",
+            "language": "EN",
+            "notes": "17:00 - BSides Kraków Community updates with Cássio Pereira. 17:30 - Your Agent Has a Shell: Securing and Investigating AI Agent Deployments with Derek Banks. Drinks, appetizers and networking.",
+            "sponsors": [
+                {
+                    "name": "Blackhills Information Security",
+                    "logoUrl": "./images/logo/bhs.png",
+                    "url": "https://www.blackhillsinfosec.com/"
+                },
+                {
+                    "name": "Antisyphon Training",
+                    "logoUrl": "./images/logo/antisyphon.png",
+                    "url": "https://www.antisyphontraining.com/"
+                }
+            ]
+        }
     ]
 }
