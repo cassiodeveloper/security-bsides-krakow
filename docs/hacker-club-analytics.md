@@ -45,3 +45,4 @@ References:
 - https://developers.google.com/tag-platform/gtagjs/reference
 ### Physical space page
 The /hacker-club/space/ page sends hc_space_click with action=directions or action=contact and placement. These record outbound intent, not completed visits. Local browser checks intercept Google requests to avoid test traffic.
+Regular plan buttons emit hc_subscription_click with membership_plan, monthly_price, currency and placement. Explicit plan attributes distinguish Fanatic from the shared Founder installment URL; clicks do not represent completed subscriptions.

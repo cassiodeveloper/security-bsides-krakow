@@ -29,6 +29,17 @@
         if (anchor.dataset.spaceAction === 'directions' || anchor.dataset.spaceAction === 'contact') {
             send('hc_space_click', { placement: ctx.placement, action: anchor.dataset.spaceAction });
         } else if (url.origin === 'https://buy.stripe.com') {
+            var membershipPlan = anchor.dataset.membershipPlan;
+            var monthlyPrices = { supporter: 50, fan: 150, fanatic: 500 };
+            if (Object.prototype.hasOwnProperty.call(monthlyPrices, membershipPlan)) {
+                send('hc_subscription_click', {
+                    placement: ctx.placement,
+                    membership_plan: membershipPlan,
+                    monthly_price: monthlyPrices[membershipPlan],
+                    currency: 'PLN'
+                });
+                return;
+            }
             var options = {
                 '/4gM4gsaNkaw99rI0md0Jq03': 'full',
                 '/9B67sE7B833H1Zgb0R0Jq04': 'installments'
