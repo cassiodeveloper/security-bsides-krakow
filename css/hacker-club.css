@@ -270,3 +270,12 @@ body.hacker-club { display: block; background: #111; color: #c4c4c9; font-family
 .club-space-photo > span { color: #ed8995; font: 14px Consolas,monospace; margin-bottom: auto; padding-bottom: 36px; }
 .club-space-photo p { margin: 0; color: #bbb; }
 .club-space .club-flow-button { overflow-wrap: anywhere; max-width: 100%; }
+
+/* Real space photos preserve the complete portrait framing. */
+.club-space-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-top: 32px; }
+.club-space-gallery figure { margin: 0; min-width: 0; background: #1b1b1e; border: 1px solid #37373c; border-radius: 6px; overflow: hidden; }
+.club-space-gallery a { display: block; }
+.club-space-gallery a:focus-visible { outline: 3px solid #ed8995; outline-offset: -3px; }
+.club-space-gallery img { display: block; width: 100%; height: auto; }
+.club-space-gallery figcaption { padding: 18px 22px; color: #d8bdc5; }
+@media(max-width:767px) { .club-space-gallery { grid-template-columns: 1fr; gap: 24px; } }
