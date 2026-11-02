@@ -279,3 +279,15 @@ body.hacker-club { display: block; background: #111; color: #c4c4c9; font-family
 .club-space-gallery img { display: block; width: 100%; height: auto; }
 .club-space-gallery figcaption { padding: 18px 22px; color: #d8bdc5; }
 @media(max-width:767px) { .club-space-gallery { grid-template-columns: 1fr; gap: 24px; } }
+
+/* Physical space availability, only mounted inside /hacker-club/. */
+.hacker-club .club-live-status { --live-color: #ff8993; color: #ff8993; }
+.hacker-club .club-live-status.is-open { --live-color: #73e6a5; color: #73e6a5; }
+.club-live-dot { display: inline-block; flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--live-color); box-shadow: 0 0 0 4px color-mix(in srgb, var(--live-color) 12%, transparent); }
+.hacker-club #mainmenu .club-live-menu { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; white-space: nowrap; }
+.hacker-club .club-live-banner { display: flex; align-items: center; gap: 22px; padding: 20px 24px; margin: 8px 0 32px; border: 1px solid #634047; border-radius: 6px; background: #20171a; }
+.hacker-club .club-live-banner.is-open { background: #14231c; border-color: #315f46; }
+.club-live-banner .club-live-dot { width: 12px; height: 12px; }
+.club-live-banner strong { display: block; color: var(--live-color); font-size: 26px; line-height: 1.4; }
+.club-live-eyebrow { display: block; color: #c4c4c9; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+[data-club-live-detail] { display: block; color: #d6d6dc; font-size: 13px; line-height: 1.6; }
