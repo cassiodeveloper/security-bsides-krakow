@@ -1,0 +1,19 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { normalize, publicUrl, section } from './export-projects.mjs';
+import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+const url='https://github.com/Security-BSides-Krakow/hacker-club-projects/discussions/1';
+const discussion={id:'D_1',title:'A safe title',url,body:'### Description\n\nBuild it\n\n### Category\n\nHardware & Electronics\n\n### Complexity\n\nMedium',upvoteCount:2,updatedAt:'2026-11-02T00:00:00Z'};
+function item(status='Planned') {return {updatedAt:'2026-11-02T01:00:00Z',status:{name:status},category:{name:'Hardware & Electronics'},content:{__typename:'Issue',id:'I_1',title:'Approved',body:`### Description\n\nAgreed scope\n\n### Original Discussion\n\n${url}`,url:'https://github.com/Security-BSides-Krakow/hacker-club-projects/issues/1',updatedAt:'2026-11-02T00:00:00Z',assignees:{nodes:[]},repository:{nameWithOwner:'Security-BSides-Krakow/hacker-club-projects',isPrivate:false}}};}
+test('discussion maps to Proposed with real votes and form metadata',()=>{const [p]=normalize([discussion]);assert.equal(p.status,'Proposed');assert.equal(p.votes,2);assert.equal(p.complexity,'Medium');assert.equal(p.description,'Build it');});
+test('review uses organizer label; absent votes remain unavailable',()=>{const [p]=normalize([{...discussion,upvoteCount:null,labels:{nodes:[{name:'status:under-review'}]}}]);assert.equal(p.status,'Under Review');assert.equal(p.votes,null);});
+test('approved project retains discussion identity without duplicates',()=>{const p=normalize([discussion],[item()]);assert.equal(p.length,1);assert.equal(p[0].id,'D_1');assert.equal(p[0].status,'Planned');assert.equal(p[0].kind,'project');assert.equal(p[0].votes,2);assert.equal(p[0].discussion_url,url);});
+test('all lifecycle statuses map exactly and legacy remains Unknown',()=>{for(const status of ['Proposed','Under Review','Planned','In Progress','On Hold','Completed'])assert.equal(normalize([discussion],[item(status)])[0].status,status);assert.equal(normalize([discussion],[item('Done')])[0].status,'Unknown');});
+test('deleted discussion retains approved issue and hides voting',()=>{const [p]=normalize([],[item()]);assert.equal(p.discussion_url,null);assert.equal(p.votes,null);assert.ok(p.issue_url);});
+test('private and unrelated repository items never export',()=>{const a=item();a.content.repository.isPrivate=true;const b=item();b.content.repository.nameWithOwner='other/repo';assert.equal(normalize([],[a,b]).length,0);});
+test('duplicate approved issues fail safely',()=>assert.throws(()=>normalize([discussion],[item(),item()]),/duplicate/));
+test('canonical URL validation rejects executable and lookalike destinations',()=>{for(const u of ['javascript:alert(1)',url.replace('github.com','githubXcom'),url+'?x=1',url.replace('/1','/1/evil'),url.replace('Security-BSides-Krakow','other')])assert.equal(publicUrl(u,'discussions'),null);assert.equal(publicUrl(url,'discussions'),url);});
+test('malformed public resources abort rather than overwrite good data',()=>assert.throws(()=>normalize([{...discussion,updatedAt:'invalid'}]),/Invalid/));
+test('Markdown is exported as plain text, never evaluated',()=>{assert.equal(section(discussion.body,'Category'),'Hardware & Electronics');const [p]=normalize([{...discussion,title:'<img src=x onerror=alert(1)>'}]);assert.equal(p.title,'<img src=x onerror=alert(1)>');});
+test('failed synchronization preserves the last valid snapshot byte for byte',()=>{const file='assets/data/hacker-club-projects.json';const before=readFileSync(file);const run=spawnSync(process.execPath,['scripts/export-projects.mjs'],{env:{...process.env,PROJECT_BOARD_USE_GH:'',PROJECT_BOARD_TOKEN:'',GITHUB_TOKEN:''},encoding:'utf8'});assert.notEqual(run.status,0);assert.match(run.stderr,/Missing server-side/);assert.deepEqual(readFileSync(file),before);});

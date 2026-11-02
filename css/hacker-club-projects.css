@@ -1,0 +1,22 @@
+.project-board .club-hero { padding-bottom: 55px; }
+.project-board .project-hero-logo { width: 240px; max-width: 100%; height: auto; justify-self: center; }
+.project-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin:40px 0 0; }
+.project-stats div { padding:20px; border-top:1px solid #614047; }
+.project-stats dt { color:#c4c4c9; font-size:14px; font-weight:400; }
+.project-stats dd { color:#fff; font:700 38px/1.4 Consolas,monospace; margin:0; }
+.project-filters { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:16px; margin:30px 0 18px; }
+.project-filters label { display:block; color:#fff; font-size:13px; }
+.project-filters input,.project-filters select { display:block; width:100%; min-height:48px; margin-top:6px; padding:10px; border:1px solid #68616b; border-radius:4px; color:#fff; background:#202024; font:inherit; }
+.project-reset { background:none; border:1px solid #68616b; border-radius:4px; color:#fff; padding:8px 16px; cursor:pointer; }
+.project-card { display:flex; flex-direction:column; min-width:0; overflow-wrap:anywhere; }
+.project-tags { display:flex; flex-wrap:wrap; gap:10px; font:12px/1.6 Consolas,monospace; margin-bottom:22px; }
+.project-status { color:#ffc0c7; padding:2px 8px; background:#391d24; border:1px solid #8a4a57; border-radius:3px; }
+.project-meta { display:grid; grid-template-columns:auto 1fr; gap:6px 15px; margin:24px 0; font-size:13px; }
+.project-meta dt { color:#aaaab3; font-weight:400; }
+.project-meta dd { color:#fff; margin:0; }
+.project-links { display:flex; flex-wrap:wrap; gap:12px 20px; margin-top:auto; padding-top:18px; border-top:1px solid #424047; }
+.hacker-club .project-links a { color:#f69aa4; font-size:13px; text-decoration:underline; }
+.project-grid { margin-top:28px; }
+.project-board [hidden] { display:none; }
+@media(max-width:991px) { .project-filters {grid-template-columns:1fr 1fr;} .project-board .project-hero-logo {width:180px;} }
+@media(max-width:575px) { .project-filters,.project-stats {grid-template-columns:1fr;} .project-stats {gap:0;} .project-stats div {display:flex; align-items:center; justify-content:space-between;} .project-board .club-hero {padding-top:45px;} }

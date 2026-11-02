@@ -1,0 +1,58 @@
+body:
+  - type: markdown
+    attributes:
+      value: "Welcome! Use the discussion title as your short project name. A simple idea is enough to start. Native upvotes inform prioritization; organizers review approval."
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should we build?
+    validations:
+      required: true
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals
+      description: What do you want to achieve or learn?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Choose the closest area.
+      options:
+        - Hardware & Electronics
+        - Cybersecurity & CTF
+        - AI & Automation
+        - 3D Printing & Makers
+        - Infrastructure & Networking
+        - Community & Education
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources Needed
+      description: Hardware, tools, expertise, funding or volunteers.
+    validations:
+      required: false
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexity
+      description: Your best estimate; organizers can help refine it.
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false
+  - type: textarea
+    id: participation
+    attributes:
+      label: How Can Others Participate?
+      description: Beginners, documentation, testing and mentoring are welcome.
+    validations:
+      required: true

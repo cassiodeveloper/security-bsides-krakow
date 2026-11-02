@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hacker Club public project snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source_url",
+    "submit_url",
+    "project_url",
+    "projects"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_url": {
+      "const": "https://github.com/Security-BSides-Krakow/hacker-club-projects"
+    },
+    "submit_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "project_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description",
+          "category",
+          "status",
+          "kind",
+          "votes",
+          "complexity",
+          "maintainer",
+          "discussion_url",
+          "issue_url",
+          "project_url",
+          "updated_at"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 420
+          },
+          "category": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "status": {
+            "enum": [
+              "Proposed",
+              "Under Review",
+              "Planned",
+              "In Progress",
+              "On Hold",
+              "Completed",
+              "Unknown"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "idea",
+              "project"
+            ]
+          },
+          "votes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "complexity": {
+            "enum": [
+              "Low",
+              "Medium",
+              "High",
+              null
+            ]
+          },
+          "maintainer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "discussion_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "issue_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "project_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
