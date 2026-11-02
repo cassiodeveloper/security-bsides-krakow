@@ -1,0 +1,15 @@
+name: Repository improvement
+description: Suggest an improvement to this repository. Use Project Ideas for new Hacker Club projects.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this improve?
+      description: Describe the need and who benefits. A simple explanation is welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested approach
+      description: Optional; you do not need a technical solution to raise an improvement.

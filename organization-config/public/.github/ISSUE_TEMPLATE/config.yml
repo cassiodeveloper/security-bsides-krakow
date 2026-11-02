@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Propose a Hacker Club project
+    url: https://github.com/Security-BSides-Krakow/hacker-club-projects/discussions/new?category=project-ideas
+    about: Share an idea, discuss it and find collaborators.
+  - name: Community questions and volunteering
+    url: https://github.com/Security-BSides-Krakow/hacker-club-projects/discussions
+    about: Ask questions and offer your help.
+  - name: Private security reporting
+    url: https://github.com/Security-BSides-Krakow/.github/blob/main/SECURITY.md
+    about: Read how to report vulnerabilities without exposing sensitive details publicly.

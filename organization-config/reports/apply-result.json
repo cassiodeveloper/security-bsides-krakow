@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-11-02T21:48:09.105Z",
+  "completed": [
+    "Public profile, community health files and maintainer handbook published",
+    "Organization profile and least-privilege membership defaults updated",
+    "Role team Organizers: explicit public repository permissions",
+    "Role team Project Maintainers: explicit public repository permissions",
+    "Role team Community Triage: explicit public repository permissions",
+    "Actions allow-list, read-only workflow tokens and external-contributor approval configured"
+  ],
+  "warnings": [
+    {
+      "operation": "members_can_delete_repositories",
+      "error": "Expected false; actual true"
+    },
+    {
+      "operation": "members_can_change_repo_visibility",
+      "error": "Expected false; actual true"
+    },
+    {
+      "operation": "members_can_invite_outside_collaborators",
+      "error": "Expected false; actual true"
+    },
+    {
+      "operation": "two_factor_requirement_enabled",
+      "error": "Expected true; actual false"
+    }
+  ]
+}
