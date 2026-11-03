@@ -291,3 +291,8 @@ body.hacker-club { display: block; background: #111; color: #c4c4c9; font-family
 .club-live-banner strong { display: block; color: var(--live-color); font-size: 26px; line-height: 1.4; }
 .club-live-eyebrow { display: block; color: #c4c4c9; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 [data-club-live-detail] { display: block; color: #d6d6dc; font-size: 13px; line-height: 1.6; }
+
+.club-community-purpose { margin: 28px 0; padding: 22px 24px; border-left: 4px solid #e32235; background: #24171d; max-width: 900px; }
+.club-community-purpose strong { display: block; color: #fff; font-size: 19px; line-height: 1.5; }
+.hacker-club .club-community-purpose p { margin: 12px 0; font-size: 15px; line-height: 1.7; color: #ddd; }
+.club-community-purpose a { color: #f49ba6; text-decoration: underline; }
