@@ -8,6 +8,11 @@ export function publicUrl(value, kind) {
   if (typeof value !== 'string') return null;
   if (kind === 'project') return /^https:\/\/github\.com\/orgs\/Security-BSides-Krakow\/projects\/[1-9][0-9]*(?:\/views\/[1-9][0-9]*)?$/.test(value) ? value : null;
   const prefix = `${base}/${kind}/`;
+  const organizationDiscussions = `https://github.com/orgs/${config.owner}/discussions/`;
+  if (kind === 'discussions' && value.startsWith(organizationDiscussions)) {
+    const number = value.slice(organizationDiscussions.length);
+    return /^[1-9][0-9]*$/.test(number) ? `${prefix}${number}` : null;
+  }
   return value.startsWith(prefix) && /^[1-9][0-9]*$/.test(value.slice(prefix.length)) ? value : null;
 }
 export function section(body, heading) {
@@ -17,12 +22,13 @@ function text(value, limit) { return String(value || '').replace(/[\u0000-\u001f
 export function normalize(discussions, items = [], projectUrl = null) {
   const result = new Map();
   for (const d of discussions) {
-    if (!publicUrl(d.url, 'discussions') || !d.id || !Number.isFinite(Date.parse(d.updatedAt))) throw Error('Invalid public discussion');
+    const discussionUrl = publicUrl(d.url, 'discussions');
+    if (!discussionUrl || !d.id || !Number.isFinite(Date.parse(d.updatedAt))) throw Error('Invalid public discussion');
     const category = text(section(d.body, 'Category'), 100) || 'Other';
-    result.set(d.url, { id: d.id, title: text(d.title, 200), description: text(section(d.body, 'Description') || d.body, 420), category,
+    result.set(discussionUrl, { id: d.id, title: text(d.title, 200), description: text(section(d.body, 'Description') || d.body, 420), category,
       status: d.labels?.nodes.some(label => label.name === 'status:under-review') ? 'Under Review' : 'Proposed', kind: 'idea', votes: Number.isInteger(d.upvoteCount) && d.upvoteCount >= 0 ? d.upvoteCount : null,
       complexity: ['Low','Medium','High'].includes(section(d.body, 'Complexity')) ? section(d.body, 'Complexity') : null,
-      maintainer: null, discussion_url: d.url, issue_url: null, project_url: null, updated_at: d.updatedAt });
+      maintainer: null, discussion_url: discussionUrl, issue_url: null, project_url: null, updated_at: d.updatedAt });
   }
   const usedIssues = new Set();
   for (const item of items) {
@@ -30,8 +36,8 @@ export function normalize(discussions, items = [], projectUrl = null) {
     if (!issue || issue.__typename !== 'Issue' || issue.repository?.isPrivate || issue.repository?.nameWithOwner !== `${config.owner}/${config.repository}`) continue;
     if (!publicUrl(issue.url, 'issues') || usedIssues.has(issue.url)) throw Error('Invalid or duplicate project issue');
     usedIssues.add(issue.url);
-    const ref = section(issue.body, 'Original Discussion');
-    if (!publicUrl(ref, 'discussions')) throw Error('Approved issue needs a canonical Original Discussion URL');
+    const ref = publicUrl(section(issue.body, 'Original Discussion'), 'discussions');
+    if (!ref) throw Error('Approved issue needs a canonical Original Discussion URL');
     const prior = result.get(ref);
     if (prior?.issue_url) throw Error('Multiple issues for one discussion');
     const status = item.status?.name;

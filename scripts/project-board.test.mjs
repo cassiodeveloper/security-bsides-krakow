@@ -11,6 +11,21 @@ test('review uses organizer label; absent votes remain unavailable',()=>{const [
 test('approved project retains discussion identity without duplicates',()=>{const p=normalize([discussion],[item()]);assert.equal(p.length,1);assert.equal(p[0].id,'D_1');assert.equal(p[0].status,'Planned');assert.equal(p[0].kind,'project');assert.equal(p[0].votes,2);assert.equal(p[0].discussion_url,url);});
 test('all lifecycle statuses map exactly and legacy remains Unknown',()=>{for(const status of ['Proposed','Under Review','Planned','In Progress','On Hold','Completed'])assert.equal(normalize([discussion],[item(status)])[0].status,status);assert.equal(normalize([discussion],[item('Done')])[0].status,'Unknown');});
 test('deleted discussion retains approved issue and hides voting',()=>{const [p]=normalize([],[item()]);assert.equal(p.discussion_url,null);assert.equal(p.votes,null);assert.ok(p.issue_url);});
+test('organization discussion URLs match repository URLs in either source', () => {
+  const orgUrl = 'https://github.com/orgs/Security-BSides-Krakow/discussions/1';
+  assert.equal(normalize([{ ...discussion, url: orgUrl }])[0].discussion_url, url);
+  const orgReference = item();
+  orgReference.content.body = orgReference.content.body.replace(url, orgUrl);
+  for (const [source, issue] of [[{ ...discussion, url: orgUrl }, item()], [discussion, orgReference]]) {
+    const projects = normalize([source], [issue]);
+    assert.equal(projects.length, 1);
+    assert.equal(projects[0].id, discussion.id);
+    assert.equal(projects[0].discussion_url, url);
+    assert.equal(projects[0].kind, 'project');
+  }
+  assert.equal(publicUrl(orgUrl.replace('Security-BSides-Krakow', 'other'), 'discussions'), null);
+  assert.equal(publicUrl(`${orgUrl}/extra`, 'discussions'), null);
+});
 test('private and unrelated repository items never export',()=>{const a=item();a.content.repository.isPrivate=true;const b=item();b.content.repository.nameWithOwner='other/repo';assert.equal(normalize([],[a,b]).length,0);});
 test('duplicate approved issues fail safely',()=>assert.throws(()=>normalize([discussion],[item(),item()]),/duplicate/));
 test('canonical URL validation rejects executable and lookalike destinations',()=>{for(const u of ['javascript:alert(1)',url.replace('github.com','githubXcom'),url+'?x=1',url.replace('/1','/1/evil'),url.replace('Security-BSides-Krakow','other')])assert.equal(publicUrl(u,'discussions'),null);assert.equal(publicUrl(url,'discussions'),url);});
