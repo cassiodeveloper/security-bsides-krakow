@@ -44,3 +44,13 @@ O fechamento por horário é recalculado a cada segundo nas páginas abertas.
 O indicador aparece somente em `/hacker-club/` e suas subpáginas.
 Há um destaque adicional em `/hacker-club/index.html` e `/hacker-club/space/index.html`.
 Sirva o site por HTTP para testar localmente; abrir via file:// não permite o fetch.
+
+## Notificações no Discord
+
+Crie um webhook no canal que deve receber os avisos. No GitHub, em
+Settings → Secrets and variables → Actions, salve a URL como secret do
+repositório com o nome `HACKER_CLUB_DISCORD_WEBHOOK_URL`.
+
+O workflow envia uma mensagem quando um push na `main` confirma uma abertura,
+atualiza a confirmação ou marca o espaço como fechado. O fechamento automático
+por horário acontece no site e não gera mensagem.

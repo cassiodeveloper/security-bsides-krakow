@@ -1,0 +1,52 @@
+name: Notify Discord of Hacker Club status
+
+on:
+  push:
+    branches: [main]
+    paths: [hacker-club/status.json]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Announce status change
+        env:
+          BEFORE: ${{ github.event.before }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.HACKER_CLUB_DISCORD_WEBHOOK_URL }}
+        run: |
+          node --input-type=module <<'JS'
+          import { execFileSync } from 'node:child_process';
+          import { readFileSync } from 'node:fs';
+
+          const path = 'hacker-club/status.json';
+          const status = JSON.parse(readFileSync(path, 'utf8'));
+          const previous = JSON.parse(execFileSync('git', ['show', `${process.env.BEFORE}:${path}`], { encoding: 'utf8' }));
+          if (typeof status.open !== 'boolean') throw new Error('Status must contain a boolean open field.');
+          const openingChanged = status.open && ['updatedAt', 'openFrom', 'validUntil']
+            .some(field => status[field] !== previous[field]);
+          if (status.open === previous.open && !openingChanged) process.exit(0);
+
+          const webhook = process.env.DISCORD_WEBHOOK_URL;
+          if (!webhook) {
+            console.log('Discord notification skipped: configure HACKER_CLUB_DISCORD_WEBHOOK_URL.');
+            process.exit(0);
+          }
+          const message = status.open ? '🟢 **Hacker Club is open!**' : '🔴 **Hacker Club is closed.**';
+          const response = await fetch(webhook, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              content: `${message}\nhttps://bsideskrakow.pl/hacker-club/space/`,
+              allowed_mentions: { parse: [] }
+            }),
+            signal: AbortSignal.timeout(15000)
+          }).catch(() => { throw new Error('Could not reach Discord webhook.'); });
+          if (!response.ok) throw new Error(`Discord webhook returned HTTP ${response.status}.`);
+          JS
