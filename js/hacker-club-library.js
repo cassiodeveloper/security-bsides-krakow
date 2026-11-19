@@ -77,11 +77,13 @@
         if (!pinInput.value) return;
         try {
             var result = await api({ action: 'lookup', code: code, pin: pinInput.value });
-            if (result.ok) renderBook(result.book);
+            if (result.ok) renderBook(result.book); else message.textContent = result.error || '';
         } catch (_) { /* public status is already shown */ }
     }
 
     nameInput.addEventListener('input', function () { if (current) renderBook(current); });
+    // Entering the PIN alone reveals who has the book, without changing its state.
+    pinInput.addEventListener('change', function () { if (current && current.status === 'borrowed') lookup(); });
 
     form.addEventListener('submit', async function (event) {
         event.preventDefault();

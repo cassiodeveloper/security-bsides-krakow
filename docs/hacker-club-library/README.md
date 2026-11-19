@@ -38,7 +38,10 @@ Apps Script publicado como web app.
 4. Na planilha: **Extensões > Apps Script**. Apague o conteúdo e cole
    [`Code.gs`](./Code.gs). Salve.
 5. No Apps Script: **Configurações do projeto (engrenagem) > Propriedades do
-   script > Adicionar**: `LIBRARY_PIN` = um PIN de 4 a 6 dígitos.
+   script > Adicionar**:
+   - `LIBRARY_PIN` = um PIN de 4 a 6 dígitos.
+   - `SPREADSHEET_ID` = o ID da planilha, o trecho da URL entre `/d/` e `/edit`.
+     (Web apps do Apps Script não enxergam a planilha "ativa", por isso o ID.)
 6. **Implantar > Nova implantação > Tipo: App da Web**.
    - Executar como: **Eu**
    - Quem pode acessar: **Qualquer pessoa**

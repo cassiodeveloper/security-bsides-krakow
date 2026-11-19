@@ -5,7 +5,8 @@
  *   books  : code | title | author | status | holder | since
  *   events : timestamp | code | action | person | previous_holder
  *
- * Script property LIBRARY_PIN holds the shared club PIN (posted on the shelf).
+ * Script properties: LIBRARY_PIN (shared club PIN, posted on the shelf) and
+ * SPREADSHEET_ID (the Sheet's ID from its URL).
  * Setup steps: docs/hacker-club-library/README.md
  */
 
@@ -62,8 +63,14 @@ function json(body) {
   return ContentService.createTextOutput(JSON.stringify(body)).setMimeType(ContentService.MimeType.JSON);
 }
 
-function booksSheet() { return SpreadsheetApp.getActive().getSheetByName('books'); }
-function eventsSheet() { return SpreadsheetApp.getActive().getSheetByName('events'); }
+// Web apps cannot rely on the active (container) spreadsheet, so open it by ID.
+function spreadsheet() {
+  var id = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');
+  if (!id) throw new Error('Set the SPREADSHEET_ID script property.');
+  return SpreadsheetApp.openById(id);
+}
+function booksSheet() { return spreadsheet().getSheetByName('books'); }
+function eventsSheet() { return spreadsheet().getSheetByName('events'); }
 
 function readBooks() {
   var rows = booksSheet().getDataRange().getValues().slice(1);
@@ -107,12 +114,12 @@ function doPost(e) {
   try { request = JSON.parse(e.postData.contents); } catch (_) { return json({ ok: false, error: 'Invalid request.' }); }
   var code = String(request.code || '').trim().toUpperCase();
   if (!CODE_PATTERN.test(code)) return json({ ok: false, error: 'Unknown book code.' });
-  var pin = checkPin(request.pin);
-  if (!pin.ok) return json(pin);
-
+  // Lock first so the PIN failure counter and book updates are serialised.
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(10000)) return json({ ok: false, error: 'Library is busy. Please try again.' });
   try {
+    var pin = checkPin(request.pin);
+    if (!pin.ok) return json(pin);
     var book = readBooks().filter(function (b) { return b.code === code; })[0];
     if (!book) return json({ ok: false, error: 'Unknown book code.' });
     var view = function (b) { var out = publicBook(b); out.holder = b.holder; out.since = b.since; return out; };
