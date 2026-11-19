@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library QR Labels | BSides Kraków Hacker Club</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="/css/site-fonts.css">
+    <style>
+        :root { color-scheme: light; }
+        body { margin: 0; padding: 24px; background: #f2f2f2; color: #111; font-family: Arial, sans-serif; }
+        .toolbar { max-width: 900px; margin: 0 auto 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+        .toolbar p { flex: 1 1 320px; margin: 0; font-size: 14px; line-height: 1.6; }
+        .toolbar button { background: #be1f2e; color: #fff; border: 0; border-radius: 3px; padding: 12px 18px; font-weight: 700; cursor: pointer; }
+        .sheet { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, 6cm); gap: 6mm; justify-content: center; }
+        .label { width: 6cm; height: 8.5cm; box-sizing: border-box; padding: 4mm; background: #111; color: #fff; border: 1px dashed #999; display: flex; flex-direction: column; align-items: center; text-align: center; break-inside: avoid; }
+        .label img.logo { height: 9mm; width: auto; margin-bottom: 2mm; }
+        .label .qr { background: #fff; padding: 2mm; line-height: 0; }
+        .label .qr svg { width: 38mm; height: 38mm; display: block; }
+        .label .code { font: 700 15pt/1.2 Consolas, monospace; letter-spacing: .08em; margin-top: 2.5mm; color: #f0848c; }
+        .label .title { font-size: 8pt; line-height: 1.3; margin-top: 1.5mm; max-height: 2.6em; overflow: hidden; }
+        .label .hint { font-size: 7pt; margin-top: auto; color: #ccc; }
+        .status { text-align: center; }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .toolbar, .status { display: none; }
+            .sheet { gap: 4mm; justify-content: start; }
+            .label { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<div class="toolbar">
+    <p>One label per book, printed on A4. Cut along the dashed lines and stick each label inside the cover. Each QR opens <code>bsideskrakow.pl/hacker-club/library/?b=CODE</code>. To print specific codes only, add <code>?codes=HCL-001,HCL-002</code> to this page URL.</p>
+    <button type="button" onclick="window.print()">Print labels</button>
+</div>
+<p class="status" id="status">Loading books…</p>
+<div class="sheet" id="sheet"></div>
+<script src="/js/vendor/qrcode-generator-1.4.4.js"></script>
+<script src="/js/hacker-club-library-config.js"></script>
+<script>
+(function () {
+    'use strict';
+    var CODE = /^HCL-\d{3}$/;
+    var sheet = document.getElementById('sheet');
+    var status = document.getElementById('status');
+
+    function label(book) {
+        var qr = qrcode(0, 'M');
+        qr.addData('https://bsideskrakow.pl/hacker-club/library/?b=' + book.code);
+        qr.make();
+        var el = document.createElement('div');
+        el.className = 'label';
+        var logo = document.createElement('img');
+        logo.className = 'logo'; logo.src = '/images/hacker-club-logo.webp'; logo.alt = 'BSides Kraków Hacker Club';
+        var box = document.createElement('div');
+        box.className = 'qr';
+        box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+        var code = document.createElement('div');
+        code.className = 'code'; code.textContent = book.code;
+        var title = document.createElement('div');
+        title.className = 'title'; title.textContent = book.title || '';
+        var hint = document.createElement('div');
+        hint.className = 'hint'; hint.textContent = 'Scan to borrow or return · Hacker Club library';
+        el.append(logo, box, code, title, hint);
+        return el;
+    }
+
+    function render(books) {
+        books = books.filter(function (b) { return CODE.test(b.code); });
+        books.forEach(function (b) { sheet.appendChild(label(b)); });
+        status.textContent = books.length ? '' : 'No books to print.';
+    }
+
+    var requested = (new URLSearchParams(location.search).get('codes') || '').toUpperCase().split(',')
+        .map(function (c) { return c.trim(); }).filter(Boolean);
+    if (requested.length || !window.HCL_LIBRARY_API) {
+        render(requested.map(function (code) { return { code: code }; }));
+        if (!requested.length) status.textContent = 'Library API is not configured. Add ?codes=HCL-001,HCL-002 to the URL.';
+        return;
+    }
+    fetch(window.HCL_LIBRARY_API, { cache: 'no-store' }).then(function (r) { return r.json(); })
+        .then(function (data) { render((data && data.books) || []); })
+        .catch(function () { status.textContent = 'Could not load books. Add ?codes=HCL-001,HCL-002 to the URL.'; });
+}());
+</script>
+</body>
+</html>
