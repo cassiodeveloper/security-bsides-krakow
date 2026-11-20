@@ -52,7 +52,10 @@ Apps Script publicado como web app.
    window.HCL_LIBRARY_API = 'https://script.google.com/macros/s/.../exec';
    ```
 
-   Commit e push na `main`.
+   Commit e push na `main`. Ao trocar a URL, aumente também o `?v=` das tags
+   `<script>` do config em `hacker-club/library/index.html` e
+   `hacker-club/library/labels/index.html`, senão navegadores com cache
+   continuam chamando a URL antiga.
 8. Abra `https://bsideskrakow.pl/hacker-club/library/labels/`, imprima as
    etiquetas e cole uma em cada livro. Cole o PIN na estante.
 
