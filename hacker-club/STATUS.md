@@ -1,9 +1,9 @@
-# Status do espaço
+# Space status
 
-Edite `hacker-club/status.json` e faça commit/push para publicar no GitHub Pages.
-O status inicial é fechado. O site consulta o JSON a cada minuto, sem cache de navegador.
+Edit `hacker-club/status.json` and commit/push to publish on GitHub Pages.
+The initial status is closed. The site checks the JSON every minute, bypassing the browser cache.
 
-## Abrir durante o dia
+## Open during the day
 
 ```json
 {
@@ -14,11 +14,11 @@ O status inicial é fechado. O site consulta o JSON a cada minuto, sem cache de 
 }
 ```
 
-A confirmação só vale no mesmo dia em Europe/Warsaw, de segunda a sexta,
-das 09:00 até as 18:00. Não existe abertura automática às 09:00.
-Use `validUntil` se quiser encerrar antes das 18:00.
+The confirmation is only valid on the same day in Europe/Warsaw, Monday to Friday,
+from 09:00 until 18:00. There is no automatic opening at 09:00.
+Use `validUntil` to close earlier than 18:00.
 
-## Abertura excepcional à noite
+## Exceptional evening opening
 
 ```json
 {
@@ -29,28 +29,28 @@ Use `validUntil` se quiser encerrar antes das 18:00.
 }
 ```
 
-Os dois limites são obrigatórios para uma exceção. A janela vale a partir de
-`openFrom`, inclusive, até `validUntil`, exclusive. `updatedAt` deve ser menor
-ou igual ao início da janela. Sábado e domingo permanecem sempre fechados,
-inclusive durante uma janela explícita. Use +01:00 no inverno e +02:00 no verão,
-ou timestamps UTC terminados em Z.
+Both limits are required for an exception. The window starts at `openFrom`,
+inclusive, and ends at `validUntil`, exclusive. `updatedAt` must be earlier than
+or equal to the start of the window. Saturday and Sunday are always closed, even
+during an explicit window. Use +01:00 in winter and +02:00 in summer, or UTC
+timestamps ending in Z.
 
-## Fechar
+## Close
 
-Defina `open` como `false`. Atualize `updatedAt` e limpe os limites opcionais.
-JSON inválido, falha de leitura ou confirmação expirada resultam em fechado.
-O fechamento por horário é recalculado a cada segundo nas páginas abertas.
+Set `open` to `false`. Update `updatedAt` and clear the optional limits.
+Invalid JSON, a failed read or an expired confirmation all result in closed.
+The time-based closing is recalculated every second on open pages.
 
-O indicador aparece somente em `/hacker-club/` e suas subpáginas.
-Há um destaque adicional em `/hacker-club/index.html` e `/hacker-club/space/index.html`.
-Sirva o site por HTTP para testar localmente; abrir via file:// não permite o fetch.
+The indicator only appears on `/hacker-club/` and its subpages.
+There is an extra highlight on `/hacker-club/index.html` and `/hacker-club/space/index.html`.
+Serve the site over HTTP to test locally; opening it via file:// blocks the fetch.
 
-## Notificações no Discord
+## Discord notifications
 
-Crie um webhook no canal que deve receber os avisos. No GitHub, em
-Settings → Secrets and variables → Actions, salve a URL como secret do
-repositório com o nome `HACKER_CLUB_DISCORD_WEBHOOK_URL`.
+Create a webhook in the channel that should receive the alerts. On GitHub, in
+Settings → Secrets and variables → Actions, save the URL as a repository secret
+named `HACKER_CLUB_DISCORD_WEBHOOK_URL`.
 
-O workflow envia uma mensagem quando um push na `main` confirma uma abertura,
-atualiza a confirmação ou marca o espaço como fechado. O fechamento automático
-por horário acontece no site e não gera mensagem.
+The workflow sends a message when a push to `main` confirms an opening, updates
+the confirmation or marks the space as closed. The automatic time-based closing
+happens on the site and does not send a message.
