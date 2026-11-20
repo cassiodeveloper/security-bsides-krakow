@@ -1,2 +1,2 @@
 // Apps Script web app URL for the Hacker Club library (docs/hacker-club-library/README.md).
-window.HCL_LIBRARY_API = 'https://script.google.com/macros/s/AKfycbwLTTnrv1gszrXa1zvHWVJnmgzooGhWd554DceZsjbMLkh3V1mcn9UI3H15f7tfMQkS/exec';
+window.HCL_LIBRARY_API = 'https://script.google.com/macros/s/AKfycbzj659Izh4lh8hut2lYVUaQTt3YfJ9yguX4UTs0fFw_8E44YNVu1dZ9KG2Yly3HwENO/exec';

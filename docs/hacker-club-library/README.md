@@ -56,6 +56,37 @@ Apps Script publicado como web app.
 8. Abra `https://bsideskrakow.pl/hacker-club/library/labels/`, imprima as
    etiquetas e cole uma em cada livro. Cole o PIN na estante.
 
+## Conta dedicada e escopos
+
+O web app precisa de `SpreadsheetApp.openById`, e isso exige o escopo de
+**todas** as planilhas da conta (`spreadsheets.currentonly` não funciona em
+web app). Por isso a planilha e o script ficam numa conta Google só do
+Hacker Club, com MFA e sem mais nada dentro.
+
+O [`appsscript.json`](./appsscript.json) fixa os escopos em só
+`spreadsheets`. Se alguém editar o código pra usar Gmail, Drive ou outro
+serviço, ele falha até uma nova autorização do dono. Para usar: Configurações
+do projeto > marque "Mostrar arquivo de manifesto appsscript.json no editor",
+abra o arquivo no editor e cole o conteúdo.
+
+### Migrar de uma conta para outra
+
+1. Na conta nova, abra a planilha copiada > Extensões > Apps Script.
+   Se o script veio junto na cópia, confira se o código é o `Code.gs` atual;
+   senão, cole.
+2. Cole o `appsscript.json` (acima).
+3. Propriedades do script: `LIBRARY_PIN` e `SPREADSHEET_ID` com o ID da
+   **planilha nova**. Se as propriedades vieram na cópia, o ID antigo
+   está errado: troque.
+4. Implantar > Nova implantação > App da Web (Eu / Qualquer pessoa).
+   Autorize: a tela deve pedir só acesso a Planilhas.
+5. Troque a URL `/exec` em `js/hacker-club-library-config.js`, commit e push.
+6. Teste o roteiro (check-out, check-in, transfer, PIN errado).
+7. Na conta antiga: arquive a implantação antiga (Implantar > Gerenciar
+   implantações > Arquivar), apague a planilha antiga (o script vinculado
+   vai junto) e revogue o acesso do projeto em
+   https://myaccount.google.com/permissions.
+
 ## Adicionar um livro
 
 Adicione uma linha em `books` com o próximo código (`HCL-003`), `status`
