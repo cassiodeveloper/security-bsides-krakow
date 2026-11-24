@@ -2,7 +2,7 @@
     "meta": {
         "title": "BSides Kraków Meetups",
         "timezone": "Europe/Warsaw",
-        "updatedAt": "2026-10-21"
+        "updatedAt": "2026-11-24"
     },
     "meetups": [
         {
@@ -449,6 +449,53 @@
                     "url": "https://www.antisyphontraining.com/"
                 }
             ]
+        },
+        {
+          "id": "2026-11-25-november-meetup",
+          "title": "AI-SDLC",
+          "date": "2026-11-25",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "venueName": "Świętego Filipa 23",
+          "address": "Świętego Filipa 23, 31-150 Kraków, Poland",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%C5%9Awi%C4%99tego+Filipa+23&query_place_id=ChIJj6G9NAVbFkcRy0pmRAplCCo",
+          "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/317268319/",
+          "theme": "AI-SDLC",
+          "speakers": [
+            {
+              "name": "Rafaela Durlo",
+              "role": "Findings triage and fix with AI agents",
+              "link": ""
+            },
+            {
+              "name": "Cássio Pereira",
+              "role": "BSides Kraków Community updates / Threat Modeling with AI",
+              "link": ""
+            }
+          ],
+          "tags": [
+            "Community",
+            "Meetup",
+            "AI",
+            "SDLC",
+            "AI Agents",
+            "Threat Modeling"
+          ],
+          "status": "scheduled",
+          "language": "EN",
+          "notes": "17:00 - BSides Kraków Community updates with Cássio Pereira. 17:15 - Findings triage and fix with AI agents with Rafaela Durlo. 18:00 - Threat Modeling with AI with Cássio Pereira. Drinks, appetizers and networking.",
+          "sponsors": [
+                {
+                    "name": "Nova8 Cybersecurity",
+                    "logoUrl": "./images/logo/nova8.png",
+                    "url": "http://nova8.pl"
+                },
+                {
+                    "name": "AI Security Engineers / DevSecCon Community",
+                    "logoUrl": "./images/logo/DSC.avif",
+                    "url": "https://snyk.io/community/chapters/"
+                }
+          ]
         }
     ]
 }
