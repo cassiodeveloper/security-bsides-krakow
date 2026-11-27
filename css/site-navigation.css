@@ -36,6 +36,11 @@
       }
       .index-header #mainmenu.index-navigation > li { float:none; }
       .index-header #mainmenu.index-navigation .nav-ticket { margin-top:0; margin-bottom:0; }
+      header.index-header #mainmenu.index-navigation .nav-group > ul {
+        max-height:calc(100dvh - 100px);
+        overflow:auto;
+        overscroll-behavior:contain;
+      }
     }
     @media (max-width:992px) {
       #mainmenu.index-navigation { max-height:calc(100dvh - 150px); overflow-y:auto; }

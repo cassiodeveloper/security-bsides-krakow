@@ -207,7 +207,7 @@ jQuery(document).ready(function () {
     // --------------------------------------------------
     function init_de() {
 
-        enquire.register("screen and (max-width: 993px)", {
+        enquire.register("screen and (max-width: 992px)", {
             match: function () {
                 $('header').addClass("header-mobile");
             },

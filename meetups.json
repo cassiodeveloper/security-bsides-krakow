@@ -484,6 +484,11 @@
           "status": "scheduled",
           "language": "EN",
           "notes": "17:00 - BSides Kraków Community updates with Cássio Pereira. 17:15 - Findings triage and fix with AI agents with Rafaela Durlo. 18:00 - Threat Modeling with AI with Cássio Pereira. Drinks, appetizers and networking.",
+          "slides": [
+            {
+              "url": "./slides/11-26/threat-modeling-with-ai-cassio-pereira.pptx"
+            }
+          ],
           "sponsors": [
                 {
                     "name": "Nova8 Cybersecurity",

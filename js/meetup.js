@@ -95,7 +95,7 @@ function card(m, now){
         <div class="sponsorLogos">
           ${slides.slice(0, 10).map(s => {
             const url = safeText(s.url);
-            if(url) return `<a class="btn primary" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Download"}">Download slides</a>`;
+            if(url) return `<a class="btn primary" href="${url}" download>Download slides</a>`;
           }).join("")}
         </div>
       </div>
