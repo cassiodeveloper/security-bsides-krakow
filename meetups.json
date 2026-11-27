@@ -533,9 +533,14 @@
           "notes": "A practical introduction to local AI and LLMs in cybersecurity with Piotr Nowakowski, followed by Backdoors & Breaches with Dorota Kozłowska and Antisyphon Training, plus a hacker movie screening. Food and drinks will be provided.",
           "sponsors": [
             {
-              "name": "Antisyphon Training",
-              "logoUrl": "./images/logo/antisyphon.png",
-              "url": "https://www.antisyphontraining.com/"
+                "name": "Blackhills Information Security",
+                "logoUrl": "./images/logo/bhs.png",
+                "url": "https://www.blackhillsinfosec.com/"
+            },
+            {
+                "name": "Antisyphon Training",
+                "logoUrl": "./images/logo/antisyphon.png",
+                "url": "https://www.antisyphontraining.com/"
             }
           ]
         }
