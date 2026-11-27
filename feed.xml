@@ -8,8 +8,15 @@
     <copyright>Copyright 2026 Security BSides Krakow</copyright>
     <generator>BSides Krakow static blog</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 01 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 08:00:00 GMT</lastBuildDate>
     <atom:link href="https://bsideskrakow.pl/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inside the BSides Kraków Hacker Club</title>
+      <link>https://bsideskrakow.pl/blog-hacker-club-beyond-the-meetup.html</link>
+      <guid isPermaLink="true">https://bsideskrakow.pl/blog-hacker-club-beyond-the-meetup.html</guid>
+      <pubDate>Fri, 27 Nov 2026 08:00:00 GMT</pubDate>
+      <description>See what’s taking shape at the Hacker Club beyond the November meetup, from a lending library to community projects.</description>
+    </item>
     <item>
       <title>BSides Kraków 2026: Thank You, Kraków!</title>
       <link>https://bsideskrakow.pl/blog-bsides-krakow-2026-recap.html</link>
