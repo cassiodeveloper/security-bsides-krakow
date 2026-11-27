@@ -2,7 +2,7 @@
     "meta": {
         "title": "BSides Kraków Meetups",
         "timezone": "Europe/Warsaw",
-        "updatedAt": "2026-11-24"
+        "updatedAt": "2026-11-27"
     },
     "meetups": [
         {
@@ -495,6 +495,48 @@
                     "logoUrl": "./images/logo/DSC.avif",
                     "url": "https://snyk.io/community/chapters/"
                 }
+          ]
+        },
+        {
+          "id": "2026-12-17-december-meetup",
+          "title": "Hackers’ Christmas Meetup",
+          "date": "2026-12-17",
+          "startTime": "17:00",
+          "endTime": "21:00",
+          "venueName": "Studencka 8",
+          "address": "Studencka 8, 31-116 Kraków, Poland",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Studencka+8&query_place_id=ChIJQbDO-AtbFkcR8yP7oNgz0b4",
+          "registrationUrl": "https://www.meetup.com/security-bsides-krakow-meetups/events/317603861/",
+          "theme": "Local AI in Cybersecurity & Community Christmas",
+          "speakers": [
+            {
+              "name": "Piotr Nowakowski",
+              "role": "We Have a Datacenter at Home: Intro to Local AI in Cybersecurity",
+              "link": ""
+            },
+            {
+              "name": "Dorota Kozłowska",
+              "role": "Backdoors & Breaches with Antisyphon Training",
+              "link": ""
+            }
+          ],
+          "tags": [
+            "Community",
+            "Meetup",
+            "AI Security",
+            "Local AI",
+            "Incident Response",
+            "Backdoors & Breaches"
+          ],
+          "status": "scheduled",
+          "language": "EN",
+          "notes": "A practical introduction to local AI and LLMs in cybersecurity with Piotr Nowakowski, followed by Backdoors & Breaches with Dorota Kozłowska and Antisyphon Training, plus a hacker movie screening. Food and drinks will be provided.",
+          "sponsors": [
+            {
+              "name": "Antisyphon Training",
+              "logoUrl": "./images/logo/antisyphon.png",
+              "url": "https://www.antisyphontraining.com/"
+            }
           ]
         }
     ]
